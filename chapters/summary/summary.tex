@@ -1,0 +1,88 @@
+\newpage
+\section{Summary and outlook} \label{toc:zusammenfassungundausblick}
+
+\subsection{Hypothesis testing} \label{toc:ueberpruefungderhypothesen}
+
+In der vorliegenden Arbeit wurde beantwortet, ob es mittels Anwendung eines \ac{BI} Prozesses möglich ist,
+Mining Rechenzentren zu optimieren. Um diese Frage beantworten zu können, wurden im ersten Schritt in Kapitel
+\ref{toc:grundlagenbusinessintelligence} und \ref{toc:grundlagenkryptomining} die Grundlagen für das Verständnis
+von Business Intelligence, Mining von Kryptowährungen und die finanziellen \acp{KPI} von Mining Rechenzentren
+gelegt. Dieses Wissen wird als Grundlage für den darauf folgenden Teil (Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence})
+verwendet, um eine deduktive Argumentation zu betreiben, die eine erste Antwort auf die Haupthypothese gibt.
+Diese Argumentation teilt sich in mehrere Schritte auf. Im ersten Schritt wurden die Datenquellen identifiziert,
+die zur Verfügung stehen. Diese wurden auf eine Eignung für einen \ac{BI} Prozess hin analysiert. Folgend
+wurden alle relevanten \acp{KPI} für jede Teilhypothese identifiziert. Das Ergebnis dieser Analyse war, dass
+die Datenquellen geeignet und ausreichend für die Realisierung eines \ac{BI} Prozesses sind. Im nächsten Schritt
+wurden verschiedene Analyseverfahren aufgelistet, die für die Bearbeitung der Daten in Betracht kommen können.
+Dazu wurden diese Verfahren kurz beschrieben und mögliche Beispiele und Ansätze innerhalb der Teilhypothesen
+identifiziert. Dadurch ist feststellbar, dass die Analysemethoden für den Fall von deskriptiver
+\ac{BI} ausreichen. Bei Vorhersagemodellen ist eine Beantwortung zu diesem Zeitpunkt noch nicht möglich. Im folgenden Kapitel
+(Kapitel \ref{toc:planungeinesbiprozessesfuereinminingrechenzentrum}) wurde auf Grundlage der bisher erarbeiteten
+Ergebnissen eine Fallstudie durchgeführt, die innerhalb der Genesis Group stattfand. Diese Fallstudie
+prüft die innerbetriebliche Umsetzbarkeit der bisherigen Ergebnisse und ergänzt diese. Dazu wurde im ersten Schritt
+eine Stakeholderanalyse durchgeführt. Diese wird für die Planung eines innerbetrieblichen \ac{BI} Prozesses
+benötigt. Folgend wurden die einzelnen Schritte des Prozesses analysiert und mögliche Softwareprodukte identifiziert.
+Es wurde zudem ein Fokus auf die Präsentation der Daten gelegt, da dies noch nicht innerhalb der
+vorhergehenden Argumentation besprochen worden ist. Schlussendlich wurde die Fallstudie analysiert und ein Ergebnis
+für die Haupthypothese gebildet.
+
+Auf Basis der Argumentation und der Fallstudie ist feststellbar, dass die Teilhypothesen und dadurch auch die Haupthypothese
+wahr sind. Es ist möglich, dass Rechenzentren, die Mining von Kryptowährungen betreiben, durch die Anwendung eines \ac{BI}
+Prozesses finanziell optimiert werden können.
+
+Es existieren jedoch Limitationen bei dem gewählten Vorgehen innerhalb dieser Arbeit. Dazu zählen die folgenden Punkte:
+\begin{itemize}
+    \item Letztendlich ist der \ac{BI} Prozess in der vorliegenden Arbeit im theoretischen Kontext geplant worden. Ob ein
+    solcher Prozess tatsächlich in der Realität funktioniert, kann nur geklärt werden, indem diese Planung in der Praxis
+    umgesetzt wird. Die Wahrscheinlichkeit, dass das nicht funktioniert, ist jedoch sehr gering, da die Fallstudie
+    die praktische Umsetzung bestmöglich abdecken soll.
+    \item Die verschiedenen Formen der Analyse wurden im Laufe der Arbeit aufgezeigt. Jedoch wurde auf eine
+    konkrete Ausarbeitung dieser Analyseformen und deren Implementierung verzichtet. Es kann daher nur eine Umsetzung der
+    Analysealgorithmen aussagen, ob diese den Anforderungen genügen.
+    \item Die Integration eines \ac{BI} Prozesses wurde nur anhand der vorliegenden Datenquellen besprochen. Bei dem Fehlen
+    oder bei Existenz zusätzlicher Datenquellen kann sich die Gestaltung des \ac{BI} Prozesses in einer Art und Weise
+    ändern, wie es nicht in dieser Arbeit besprochen wurde. Allerdings sind die aufgezeigten Datenquellen mit einer
+    hohen Wahrscheinlichkeit in jedem Unternehmen verfügbar, das sich am Mining beteiligt. Auch bei Verwendung anderer
+    Typen von Mining Hardware können sich die Parameter ändern, die zu einer Änderung des \ac{BI} Prozesses führen.
+    \item Andere Konsensalgorithmen als \ac{PoW} wurden in dieser Arbeit nicht besprochen. Diese müssen individuell angepasst
+    in einen \ac{BI} Prozess überführt werden.
+\end{itemize}
+
+Trotz dieser Punkte ist es möglich die Haupthypothese als beantwortet anzusehen, da alle Datenquellen, die in dieser
+Arbeit verwendet worden sind, in jeglichen Unternehmen am Markt verfügbar sind. Nur in Spezialfällen müssen
+kleine Anpassungen vorgenommen werden, die jedoch nicht die Gesamtaussage dieser Arbeit verändern werden.
+
+\subsection{Further research approaches} \label{toc:ausblick}
+
+Aus den Limitationen, die in Kapitel \ref{toc:ueberpruefungderhypothesen} identifiziert wurden, können weitere
+Forschungsansätze abgeleitet werden. Diese Arbeit hatte den Fokus auf \ac{BI} im Umfeld der Bitcoin Blockchain und deren
+relevanten Technologien. Jedoch existieren auch andere Anwendungsfälle der Blockchain Technologie, deren Untersuchung im
+\ac{BI} Kontext interessant sein kann. Dazu zählen unter anderem die folgenden Technologien:
+\begin{itemize}
+    \item \textbf{\ac{DeFi}: }Im Zuge dieser Arbeit wurden Tauschbörsen als Datenquelle verwendet. Diese sind von Natur
+    aus zentralisierte Dienstleistungen von einzelnen Unternehmen, wie beispielsweise Binance\footnote{https://www.binance.com/en}
+    oder Kraken\footnote{https://www.kraken.com}. Entwickler arbeiten bereits an der dezentralen Entsprechung dieser
+    Dienstleistungen, die unter dem Schlagwort \ac{DeFi} genannt werden.\footcite[Cf.][]{wiesflecker2021trends} Auch wird
+    durch diese Technologie ein Kreditwesen im Bereich der Kryptowährungen eingeführt, was gerade für Unternehmen interessant
+    sein kann, die Liquidität bei Kryptowährungen benötigen.\footcite[Cf.][]{wiesflecker2021trends} Die
+    Erforschung der Rolle von \ac{DeFi} im Bereich \ac{BI} ist daher ein aktuelles Beispiel einer auf diese Arbeit
+    aufbauenden Forschungslücke.
+    \item \textbf{Smart Contracts: }Seit einiger Zeit werden auch sogenannte Smart Contracts mit Hilfe der Blockchain
+    Technologie abgebildet. Das bekannteste Beispiel für die Umsetzung ist die Ethereum
+    Blockchain.\footcite[Cf.][]{wiesflecker2021trends} Smart Contracts sind dezentrale Entsprechungen klassischer Verträge
+    innerhalb einer Blockchain.\footcite[Cf.][]{wiesflecker2021trends} Da gerade Verträge mit Kunden, Dienstleistern
+    und Lieferanten interessant für \ac{BI} Systeme sind, wäre daher die Erforschung des dezentralen Pendants eine
+    Lücke, in welcher noch Forschung betrieben werden kann.
+    \item \textbf{\acp{NFT}: }Diese Tokens repräsentieren einmalige Werte.\footcite[Cf.][]{wiesflecker2021trends} 
+    Dabei können solche Tokens beispielsweise relevante Investments von Unternehmen in Kunst, Instrumente
+    und andere einmalige Anlagewerte repräsentieren. Wie und ob diese mit dem Bereich \ac{BI} zusammenspielen, kann im Rahmen
+    einer weiteren Arbeit zu diesem Thema bearbeitet werden. 
+    \item \textbf{Weitere Konsensalgorithmen und Währungen: }Wie eingangs zu dieser Arbeit beschrieben, wurden nur die Bitcoin
+    Blockchain und der \ac{PoW} Konsensalgorithmus innerhalb dieser Arbeit analysiert. Da noch weitere Konsensalgorithmen,
+    wie beispielsweise \ac{PoS}, existieren, wäre die Untersuchung weiterer Kryptowährungen und Konsensalgorithmen
+    von Interesse. Durch eine solche Untersuchung kann diese Arbeit in geeigneter Art und Weise ergänzt werden und
+    das Thema \ac{BI} und Kryptowährungen vertieft werden.
+\end{itemize}
+
+Aufgrund der Bewahrheitung der Haupthypothese dieser Arbeit können diese Aspekte die Einsatzmöglichkeiten von \ac{BI} im
+Kryptomining Kontext vertiefen und weitere mögliche Anwendungsfälle identifizieren.
