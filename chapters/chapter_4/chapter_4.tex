@@ -1,286 +1,296 @@
 \newpage
-\section{Planung eines Business Intelligence Prozesses für ein Mining Rechenzentrum} \label{toc:planungeinesbiprozessesfuereinminingrechenzentrum}
+\section{Planning of a business intelligence process for a mining data center} \label{toc:planungeinesbiprozessesfuereinminingrechenzentrum}
 
-Im folgenden Kapitel wird evaluiert, ob ein \ac{BI} Prozess unter den Bedingungen, die in vorhergehenden Kapitel erarbeitet
-worden sind, betrieblich durchführbar ist. Für diese Prüfung existieren unter anderem zwei Ansätze, die in der Veröffentlichung
-"`Business Intelligence Stategy"' von John Boyer et al. beschrieben werden:\footcite[Vgl.][S. 102]{boyer2010business}
+The following chapter evaluates whether an \ac{BI} process is operationally feasible under the conditions developed in the previous chapter.
+For this examination exist among other things two approaches, which are described in the publication
+"Business Intelligence Stategy" by John Boyer et al:\footcite[Cf.][p. 102]{boyer2010business}
 
 \begin{itemize}
-    \item \textbf{Analyse der Stakeholder: } In Kapitel \ref{toc:stakeholderanalyse} werden die Stakeholder des betreffenden
-    \ac{BI} Prozesses identifiziert. Damit ist es möglich, technologische Ansätze zur Realisierung zu identifizieren
-    und zu analyieren, ob dieser Prozess ausreichend Unterstützung innerhalb des Betriebes erfahren wird. Diese Unterstützung
-    hängt in erster Linie davon ab, wie viele Stakeholder vom Mehrwert eines \ac{BI} Prozesses profitieren.
-    Anhand dessen werden in Kapitel \ref{toc:datenpraesentation}
-    die passenden Präsentationsformen der Daten identifiziert.\footcite[Vgl.][S. 102]{boyer2010business}
-    \item \textbf{Technologische Umgebung: }Es wird die technologische Umgebung innerhalb des Betriebes analysiert.
-    Dadurch können Komponenten identifiziert werden, die bereits exisitieren und nur integriert werden
-    müssen.\footcite[Vgl.][S. 102]{boyer2010business} Zusätzlich
-    kann die Argumentation aus Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} damit erweitert bzw. unterstützt
-    werden. Als technologische Basis für die Realisierung wird die Google Cloud in Betracht gezogen, da diese innerhalb der
-    Genesis Group stark genutzt wird.
+    \item \textbf{Stakeholder analysis: } In chapter \ref{toc:stakeholderanalyse} the stakeholders of the concerned
+    \ac{BI} Process are identified. This makes it possible to identify technological approaches to realization
+    and to analyze whether this process will have sufficient support within the company. This support
+    depends primarily on how many stakeholders benefit from the added value of a \ac{BI} process.
+    Based on this, in chapter \ref{toc:datenpraesentation}
+    identifies the appropriate forms of data presentation.\footcite[Cf.][p. 102]{boyer2010business}
+    \item \textbf{Technological environment:}The technological environment within the business is analyzed.
+    This allows components to be identified that already exist and only need to be integrated.\footcite[Cf.][p. 102]{boyer2010business} Additionally
+    the argumentation from chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} can be extended or supported with it.
+    As technological basis for the realization the Google Cloud is considered, since this is used within the
+    Genesis Group is strongly used.
 \end{itemize}
 
-Um aussagekräftige Ergebnisse auf diese beiden Punkte zu erhalten, wird eine kleine Fallstudie in Kapitel
-\ref{toc:fallstudiendesign} konzipiert, damit die betriebliche Umsetzbarkeit geprüft werden kann. Gegen Ende des Kapitels werden die
-Ergebnisse aus dieser Studie kurz zusammengefasst und evaluiert. Eine kritische Bewertung der gesamten Argumentation findet
-im Fazit dieser Arbeit statt.
+To obtain meaningful results on these two points, a small case study is designed in chap.
+\ref{toc:fallstudiendesign} is designed so that operational feasibility can be tested. Towards the end of the chapter, the
+results from this study are briefly summarized and evaluated. A critical evaluation of the entire argumentation takes place
+in the conclusion of this thesis.
 
-\subsection{Design und Methodik der Fallstudie} \label{toc:fallstudiendesign}
+\subsection{Case study design and methodology} \label{toc:fallstudiendesign}
 
-In diesem Teil wird der prinzipielle Aufbau der Fallstudie beschrieben. Für das Design der Fallstudie wird das Vorgehen von
-Göthlich verwendet.\footcite[Vgl.][]{gothlich2003fallstudien} Die Herangehensweise ist zusammenfassend in Abbildung
-\ref{figure:casestudydesign} dargestellt.
+In this part, the basic structure of the case study is described. For the design of the case study the approach of
+Göthlich.\footcite[Cf.][]{gothlich2003fallstudien} The approach is summarized in Fig.
+\ref{figure:casestudydesign}.
 
 \begin{figure}[H]
-    \caption{Aufbau und Design einer Fallstudie}
+    \caption{Case study design and methodology}
     \includegraphics[width=0.8\textwidth]{casestudydesign}
     \label{figure:casestudydesign}
     \\
-    \cite[Quelle: In Anlehnung an][S. 8ff]{gothlich2003fallstudien}
+    \cite[Source: Based on][pp. 8]{gothlich2003fallstudien}
 \end{figure}
 
-Im Folgenden werden die einzelnen Schritte beschrieben und dadurch das Design
-festgelegt:\footcite[Vgl.][S. 8ff]{gothlich2003fallstudien}
+In the following, the individual steps are described and thereby the design is
+defined:\footcite[Cf.][pp. 8]{gothlich2003fallstudien}
 \begin{itemize}
-    \item \textbf{Planung und Design: }Im ersten Schritt werden die Problemstellung und die Ziele genannt, die durch die Fallstudie
-    abgedeckt werden sollen. Die Problemstellung ist bereits in Kapitel \ref{toc:motivation} und \ref{toc:hypothesenundabgrenzungderarbeit}
-    hinreichend beschrieben. Das Ziel dieser Fallstudie ist es, die Beantwortung der Hypothesen in Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}
-    durch eine Prüfung der betrieblichen Umsetzbarkeit zu erweitern. Es soll die Belastbarkeit der Aussagen dieser Arbeit zu vergrößert werden, indem
-    auf Basis der theoretischen Analyse eine Anwendung in der Praxis geplant wird.
-    Daher ist das Forschungsziel in der Studie explorativer Natur.\footcite[Vgl.][S. 8]{gothlich2003fallstudien}
-    Diese Fallstudie wird ein einziges Mal in dieser Form durchgeführt (``Single-Case''). Dadurch entfällt eine mögliche Replikation dieser Studie.\footcite[Vgl.][S. 8f]{gothlich2003fallstudien}
-    \item \textbf{Datenerhebung: }In diesem Schritt werden die Datenquellen definiert, die für die Fallstudie zur Verfügung stehen. Neben den
-    Datenquellen, die in Kapitel \ref{toc:klassifizierungderdaten} beschrieben sind, stehen zusätzlich noch interne Dokumente der Genesis
-    Group zur Verfügung. Diese sind im Anhang zu dieser Arbeit zu finden. Daher basiert die Fallstudie aus Dokumenten und Artefakten.\footcite[Vgl.][Tabelle 1 ]{gothlich2003fallstudien}
-    \item \textbf{Analyse: }Es wird im Zuge der Analyse ein Modell für einen beispielhaften \ac{BI} Prozess errichtet,
-    der innerhalb der Genesis Group Anwendung finden kann. Anhand dessen wird geprüft, ob die Einführung möglich ist und dadurch die
-    Hypothesen dieser Arbeit unterstützt werden können. Dafür werden "`Ursache-Wirkungs-Ketten"' und logische Modelle verwendet.\footcite[Vgl.][S. 11]{gothlich2003fallstudien}
-    Bei diesen beiden Analysemodellen wird stark Bezug auf ein betriebliches Umfeld genommen.
-    \item \textbf{Bericht: }Der letzte Schritt beschäftigt sich mit der Veröffentlichung dieser Fallstudie. Da diese Fallstudie im Rahmen
-    dieser Arbeit stattfindet, ist eine Veröffentlichung bereits vorgesehen. Eine Begutachtung ist dennoch sinnvoll und wird im Zuge
-    der nachträglichen innerbetrieblichen Evaluation vorgenommen.
+    \item \textbf{Planning and design: }The first step is to state the problem and the objectives to be covered by the case study.
+    The problem statement is already described in chapter \ref{toc:motivation} and \ref{toc:hypothesenundabgrenzungderarbeit}.
+    The goal of this case study is to answer the hypotheses in chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}
+    by examining its operational feasibility. It is to be increased the resilience of the statements of this work, in that
+    planning an application in practice on the basis of the theoretical analysis.
+    Therefore, the research objective in the study is exploratory in nature.\footcite[Cf.][p. 8]{gothlich2003fallstudien}
+    This case study is conducted once in this form ("single case"). This eliminates any possible replication of this study.\footcite[Cf.][pp. 8]{gothlich2003fallstudien}
+    \item \textbf{Data collection: }This step defines the data sources available for the case study. In addition to the
+    data sources described in chapter \ref{toc:klassifizierungderdaten}, additional internal documents of the Genesis
+    Group are available. These can be found in the appendix to this thesis. Therefore, the case study is based on documents and artifacts.\footcite[Cf.][Table 1 ]{gothlich2003fallstudien}
+    \item \textbf{Analysis: }In the course of the analysis, a model for an exemplary \ac{BI} Process,
+    which can be applied within the Genesis Group, will be created. On the basis of this it is examined whether the introduction is possible and thereby the
+    hypotheses of this thesis can be supported. For this purpose, "cause-effect chains" and logical models are used.\footcite[Cf.][p. 11]{gothlich2003fallstudien}
+    In both of these analytical models, strong reference is made to an operational environment.
+    \item \textbf{Report: }The final step deals with the publication of this case study. Since this case study takes place in the context
+    of this thesis, a publication is already planned. A peer review is nevertheless useful and will be done in the course of
+    of the subsequent internal evaluation.
 \end{itemize}
 
-Im Folgenden wird eine Stakeholderanalyse am Beispiel der Genesis Group vorgenommen. Mit Hilfe der Ergebnisse dieser Analyse und dem zusätzlichen
-theoretischen Wissen aus dieser Arbeit wird in Kapitel \ref{toc:planungdesbiprozesses} ein bespielhafter \ac{BI} Prozess erstellt und dieser
-in Kapitel \ref{toc:abschliessendebewertung} abschließend auf dessen Durchführbarkeit geprüft.
+In the following, a stakeholder analysis is performed using the Genesis Group as an example. With the help of the results of this analysis and the additional
+theoretical knowledge from this thesis, an exemplary \ac{BI} process will be created in chapter \ref{toc:planungdesbiprozesses} and will
+finally be checked for its feasibility in chapter \ref{toc:abschliessendebewertung}.
 
-\subsection{Stakeholderanalyse für einen internen Business Intelligence Prozess} \label{toc:stakeholderanalyse}
+\subsection{Stakeholder analysis for an internal business intelligence process} \label{toc:stakeholderanalyse}
 
-Die folgende Stakeholderanalyse basiert in erster Linie auf der Veröffentlichung "`A Stakeholder Model of Business
-Intelligence"' von Claire A. Simmers.\footcite[Vgl.][]{simmers2004stakeholder} Diese Arbeit beschäftigt sich mit
-der Stakeholderanalyse im Bereich \ac{BI} und wird für die vorliegende Analyse verwendet. Ausgehend von
-Abbildung 14.2 in dieser Veröffentlichung wird die Analyse der Stakeholder betrieben und werden damit die einzelnen Personen oder Gruppen identifiziert,
-die Interesse an der erfolgreichen Einführung eines \ac{BI} Prozesses haben.\footcite[Vgl.][Abb. 14.2]{simmers2004stakeholder}
+The following stakeholder analysis is primarily based on the publication "A Stakeholder Model of Business
+Intelligence" by Claire A. Simmers.\footcite[Cf.][]{simmers2004stakeholder} This work deals with
+stakeholder analysis in the field of \ac{BI} and is used for the present analysis. Based on
+Figure 14.2 in this publication, the stakeholder analysis is operated and thus the individual persons or groups are identified,
+who have an interest in the successful implementation of a \ac{BI} Process.\footcite[Cf.][Fig. 14.2]{simmers2004stakeholder}
 
-Die folgenden Stakeholder können für die Optimierung von Kryptomining Rechenzentren im Cloud Mining Umfeld identifiziert
-werden:\footcite[Vgl.][Abb. 14.2]{simmers2004stakeholder}\footcite[Vgl.][S. 52]{reed2009s}
+The following stakeholders can be identified for cryptomining data center optimization in the cloud mining environment:\footcite[Cf.][Fig. 14.2]{simmers2004stakeholder}\footcite[Cf.][p. 52]{reed2009s}
+
 \begin{itemize}
-    \item \textbf{Eigentümer des Unternehmens: }Die Eigentümer der Genesis Group sind für die strategischen Entscheidungen verantwortlich und
-    haben ein Interesse an der erfolgreichen Einführung
-    eines solchen \ac{BI} Prozesses. Dies können Gründe, wie die Verbesserung des Mining Ertrags, Vorteile am Cloud Mining Markt
-    durch eine höhere Effizienz der Rechenzentren und eine Entscheidungsunterstützung hinsichtlich des Neu- oder Ausbaus von Mining
-    Rechenzentren, sein. Daher sind vor allen \ac{HT0.1} und \ac{HT0.3} für diese Personen relevant.
-    \item \textbf{Arbeitnehmer: }Eine weitere relevante Gruppe sind die Arbeitnehmer der Genesis Group. Diese profitieren
-    durch die Einführung von \ac{BI} gerade in Hinblick auf die Zeitersparnis, Prozessoptimierung und
-    Entscheidungsunterstützung (Vgl. Kapitel \ref{toc:strategischermehrwert}). Diese Gruppe ist in die folgenden Untergruppen
-    aufteilbar:
+    \item \textbf{Company owners: }The owners of Genesis Group are responsible for the strategic decisions and
+    have an interest in the successful implementation
+    of such a \ac{BI} Process. This may include reasons such as improving mining revenue, advantages in the cloud mining market
+    through increased data center efficiency, and decision support regarding the new or expansion of mining
+    data centers. Therefore, \ac{HT0.1} and \ac{HT0.3} are mainly relevant to these individuals.
+    \item \textbf{Employees: }Another relevant group are the employees of the Genesis Group. These benefit
+    by the introduction of \ac{BI} especially with regard to time savings, process optimization and
+    decision support (Cf. chapter \ref{toc:strategischermehrwert}). This group can be divided into the following subgroups:
     \begin{itemize}
-        \item Geschäftsführung: Diese Gruppe hat maßgeblich Interesse an der Entscheidungsunterstützung, die ein \ac{BI} Prozess
-        bietet. Taktische Entscheidungen, die den Betrieb von Rechenzentren betreffen, werden von dieser Gruppe
-        getätigt. Aus diesem Grund hat die Geschäftsführung Interesse an einer korrekten Darstellung des Cashflows eines Rechenzentrums, was
-        in \ac{HT0.3} geprüft wird.
-        \item Management der Rechenzentren: Diese Gruppe verwaltet die existierenden Rechenzentren und ist im Bereich
-        der operativen Entscheidungen anzutreffen. Sie hat Interesse am Betrieb möglichst effizienter Hardware (\ac{HT0.2}),
-        am Cashflow eines Rechenzentrums (\ac{HT0.3}) und an der Optimierung der personellen Ausstattung eines Mining Rechenzentrums
+        \item Business management: This group has significant interest in the decision support that a \ac{BI} Process
+        provides. Tactical decisions that affect data center operations are made by this group.
+        For this reason, management has an interest in an accurate representation of a data center's cash flow, which is
+        is reviewed in \ac{HT0.3}.
+        \item Management of the data centers: This group manages the existing data centers and can be found in the area of operational decisions.
+        It has an interest in operating the most efficient hardware possible (\ac{HT0.2}),
+        the cash flow of a data center (\ac{HT0.3}) and the optimization of the staffing of a mining data center
         (\ac{HT0.4}).
-        \item Controlling: Die Controlling Abteilung übernimmt die finanzielle Überwachung der Rechenzentren. Daher hat diese
-        Gruppe von Personen unmittelbares Interesse an einem schnellen und korrekten Zugang zu den finanziellen Daten, aus denen
-        letztendlich der Cashflow berechnet werden kann (\ac{HT0.3}).
-        \item IT: Die technischen Abteilungen sind in erster Linie die Wartung und den Betrieb der vorhandenen Hardware zuständig.
-        Daher benötigen diese vor allem technische \acp{KPI}, die durch \ac{HT0.2} abgedeckt werden. Durch die Verfügbarkeit
-        dieser Daten kann die Effizienz der Hardware besser abgeschätzt und mögliche Verbesserungen identifiziert werden.
+        \item Controlling: The controlling department is responsible for the financial monitoring of the data centers. Therefore, this
+        group of people has direct interest in a fast and correct access to the financial data from which
+        ultimately the cash flow can be calculated (\ac{HT0.3}).
+        \item IT: The technical departments are primarily responsible for maintaining and operating the existing hardware.
+        Therefore, they mainly need technical \acp{KPI}, which is covered by \ac{HT0.2}. Due to the availability
+        of this data, the efficiency of the hardware can be better estimated and possible improvements identified.
     \end{itemize}
-    \item \textbf{Investoren: }Investoren haben vor dem Tätigen einer Investition Interesse an Daten, Fakten und Vorhersagen, die
-    nachvollziehbar und transparent sind. Aus diesen Gründen gehört die Gruppe der Investoren auch zu den Stakeholdern eines \ac{BI} Prozesses,
-    da dieser genau diese Anforderungen dieser Stakeholder an ein Investitionsobjekt erfüllt.
-    \item \textbf{Lieferanten: }Lieferanten, wie beispielsweise Hardwarelieferanten oder Energieversorger, sind Stakeholder eines
-    \ac{BI} Prozesses. Deren verfügbare Daten werden unter anderem in einem solchen Prozess verwendet, um den Einkauf des Unternehmens
-    optimieren zu können. Mittels \ac{BI} ist es beispielsweise möglich, die passende Hardware für ein Mining Rechenzentrum zu identifizieren
-    oder auch die Auswahl des Energieversorgers zu unterstützen.
-    \item \textbf{Kunden: }Desweiteren sind die Kunden, die einen Cloud Mining Vertrag mit der Genesis Group haben, Stakeholder. Diese
-    haben analog zu den Unternehmenseigentümern das Interesse an einem möglichst hohen und gleichzeitig stabilen Ertrag durch das Mining. 
-    Daher hat diese Gruppe ein Interesse an der Verwendung der bestmöglichsten Hardware, Software und Mining Pools.
+    \item \textbf{Investors: }Investors are interested in data, facts, and predictions that are
+    are comprehensible and transparent. For these reasons, the group of investors is also one of the stakeholders in a \ac{BI} process,
+    since it fulfills exactly these requirements of these stakeholders for an investment object.
+    \item \textbf{Suppliers: }Suppliers, such as hardware suppliers or energy providers, are stakeholders of an
+    \ac{BI} Process. Their available data is used in such a process, among other things, to optimize the company's purchasing activities.
+    By means of \ac{BI}, it is possible, for example, to identify the appropriate hardware for a mining data center
+    or to support the selection of the energy supplier.
+    \item \textbf{Customers: }Furthermore, the customers who have a cloud mining contract with Genesis Group are stakeholders. These
+    have an interest, analogous to the company owners, in obtaining the highest possible and at the same time stable revenue from mining. 
+    Therefore, this group has an interest in using the best possible hardware, software and mining pools.
 \end{itemize}
 
-Die relavanten Stakeholder aus der Analyse sind in Abbildung \ref{figure:internalstakeholder} zusammenfassend visualisiert.
+The relavant stakeholders from the analysis are summarized visualized in Figure \ref{figure:internalstakeholder}.
 
 \begin{figure}[H]
-    \caption{Stakeholder und deren Hauptinteresse an einem internen \ac{BI} Prozess}
+    \caption{Stakeholders and their main interest in an internal \ac{BI} process}
     \includegraphics[width=0.8\textwidth]{internalstakeholder}
     \label{figure:internalstakeholder}
 \end{figure}
 
-Es existieren noch weitere Gruppen von Stakeholdern, die jedoch keinen Einfluss auf die \ac{BI} Auswertung haben.
-Dazu zählen politische Gruppen, Regierungen und das Gemeinwesen.\footcite[Vgl.][Abb. 14.2]{simmers2004stakeholder}
+Other groups of stakeholders exist but have no influence on the \ac{BI} evaluation.
+These include political groups, governments, and the community.\footcite[Cf.][Fig. 14.2]{simmers2004stakeholder}
 
-\subsection{Planung des Business Intelligence Prozesses} \label{toc:planungdesbiprozesses}
+\subsection{Planning of the Business Intelligence process} \label{toc:planungdesbiprozesses}
 
-Im folgenden Teil wird ein beispielhafter \ac{BI} Prozess in einem betrieblichen Umfeld geplant. Der Betrieb, für den dieser Prozess
-geplant wird, ist die Genesis Group und ist bereits in Kapitel \ref{toc:motivation} beschrieben worden. Für die Planung werden
-die Schlussfolgerungen aus Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} verwendet. Innerhalb der Genesis Group
-wird für die IT Infrastruktur die Google Cloud verwendet, weshalb in den folgenden Kapiteln passende Beispielprodukte aus dieser Cloud
-identifiziert werden.\footcite[Vgl.][]{googlecloud2021dw} Analog zu einem \ac{BI} Prozess ist die folgende Studie in die Schritte der Datenbeschaffung
-(Kapitel \ref{toc:datenhaltung}), Datenanalyse (Kapitel \ref{toc:datenanalyse}) und Datenpräsentation (Kapitel \ref{toc:datenpraesentation})
-unterteilt. Am Ende findet eine Bewertung der Studie statt, welche die Argumentation der Teilhypothesen aus Kapitel
-\ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} mit prüft und gegebenenfalls ergänzt.
+In the following part, an exemplary \ac{BI} Process in an operational environment is planned. The company for which this process is
+is planned is the Genesis Group and has already been described in chapter \ref{toc:motivation}. For the planning
+the conclusions from chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} are used. Within the Genesis Group
+the Google Cloud is used for the IT infrastructure, which is why suitable sample products from this cloud are identified in the following
+chapters.\footcite[Cf.][]{googlecloud2021dw} Analogous to a \ac{BI} Process, the following study is divided into the steps of data acquisition
+(chapter \ref{toc:datenhaltung}), data analysis (chapter \ref{toc:datenanalyse}), and data presentation (chapter \ref{toc:datenpraesentation}).
+At the end, there is an evaluation of the study, which includes the argumentation of the sub-hypotheses from chapter
+\ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} and supplements it if necessary.
 
-\subsubsection{Beschaffung der Daten} \label{toc:datenhaltung}
+
+\subsubsection{Data acquisition} \label{toc:datenhaltung}
 
 Als Datenquellen werden die in Kapitel \ref{toc:klassifizierungderdaten} aufgezeigten Schnittstellen und Systeme verwendet.
 Wie aus Tabelle \ref{tbl:klassifizierunginternedaten} und \ref{tbl:klassifizierungexternedaten} hervorgeht, sind alle Datenquellen für die
 Verwendung innerhalb eines \ac{BI} geeignet und können daher in dementsprechenden \ac{ETL} Pipelines verwendet werden.
 Eine Möglichkeit \ac{ETL} Pipelines in der Cloud errichten zu können, ist die Verwendung des "`Cloud Data Fusion"'
-Dienstes.\footcite[Vgl.][]{googlecloud2021dw} Dieser ist auf den Aufbau solcher Pipelines spezialisiert und bietet zudem Schnittstellen
-zu einem Data Warehouse in der Cloud an. Das Data Warehouse an sich wird über den "`Big Query"' Dienst realisiert.\footcite[Vgl.][]{googlecloud2021dw}
+Dienstes.\footcite[Cf.][]{googlecloud2021dw} Dieser ist auf den Aufbau solcher Pipelines spezialisiert und bietet zudem Schnittstellen
+zu einem Data Warehouse in der Cloud an. Das Data Warehouse an sich wird über den "`Big Query"' Dienst realisiert.\footcite[Cf.][]{googlecloud2021dw}
 Dieses Warehouse ist der zentrale Ort, an dem alle relevanten Daten für die Analysephase des \ac{BI} Prozesses gespeichert werden und
-ist daher zusammen mit den \ac{ETL} Pipelines für den Aufbau von \ac{BI} nicht wegzudenken.\footcite[Vgl.][S. 105ff]{loshin2012business}
+ist daher zusammen mit den \ac{ETL} Pipelines für den Aufbau von \ac{BI} nicht wegzudenken.\footcite[Cf.][pp. 105]{loshin2012business}
 Das Data Warehouse wird über den "`Cloud Data Fusion"' Dienst befüllt. Nach diesem Schritt sind alle benötigten Daten intern
 im eigenen Data Warehouse verfügbar. Deshalb ist anzunehmen,
 dass die Erhebung und die Beschaffung von Daten unter Zuhilfenahme der Google Cloud möglich ist und die betriebliche
 Umsetzung für diesen Schritt gegeben ist.
 
-\subsubsection{Analyse der Daten} \label{toc:datenanalyse}
+The interfaces and systems shown in chapter \ref{toc:klassifizierungderdaten} are used as data sources.
+As shown in table \ref{tbl:klassifizierunginternedaten} and \ref{tbl:klassifizierungexternedaten}, all data sources are suitable for the
+use within \ac{BI} and can therefore be used in corresponding \ac{ETL} pipelines.
+One way to build \ac{ETL} pipelines in the cloud is to use the "Data Fusion"
+service.\footcite[Cf.][]{googlecloud2021dw} This specializes in setting up such pipelines and also provides interfaces
+to a data warehouse in the cloud. The data warehouse itself is realized via the "Big Query" service.\footcite[Cf.][]{googlecloud2021dw}
+This warehouse is the central location where all relevant data for the analysis phase of the \ac{BI} process is stored and
+is therefore indispensable together with the \ac{ETL} pipelines for building a \ac{BI} process.\footcite[Cf.][pp. 105]{loshin2012business}
+The data warehouse is populated via the "Cloud Data Fusion" service. After this step, all required data is available internally
+in the own data warehouse. Therefore, it can be assumed
+that the collection and the acquisition of data with the help of the Google Cloud is possible and that the operational implementation for this step is given.
 
-Für die Analyse der Daten, die nun in einem Data Warehouse vorliegen, werden die Analyseverfahren verwendet, die in
-Kapitel \ref{toc:analyseverfahrenbi} beschrieben sind. In der Google Cloud liegen für die Realisierung dieser Verfahren
-mehrere mögliche Produkte vor.\footcite[Vgl.][]{googlecloud2021dw} Dazu zählen das Produkt "`Looker"', das eine \ac{OLAP} Plattform für \ac{BI}
-ist, der "`Dataflow"' Dienst, der Datensätze in Echtzeit sowie als Stapelverarbeitung analysiert und "`Dataproc"', welcher
-unter anderem die Möglichkeit des Betriebes von Apache Spark bietet.\footcite[Vgl.][]{googlecloud2021dw} Alle diese Werkzeuge reichen aus, um die Analysephase
-eines \ac{BI} Prozesses abbilden zu können. 
+\subsubsection{Data analysis} \label{toc:datenanalyse}
 
-Das Resultat aus Kapitel \ref{toc:zusammenfassendebetrachtung} war, dass die Implementierung eines \ac{BI} Prozesses möglich ist, jedoch
-Schwierigkeiten bei der Vorhersage des Bitcoin Tauschkurses vorliegen. Diese Problematik beschränkt sich nicht direkt auf Bitcoin
-selbst, sondern ist für die Vorhersage jeglicher Börsenkurse der Fall. 
-Eine Möglichkeit mit Vorhersagemodellen zu arbeiten, ist nicht die Vorhersage eines konkreten
-Kurses, sondern die Bildung verschiedener Szenarien, die mögliche Reaktionen und Entscheidungen des Managements beinhalten.\footcite[Vgl.][]{appendix:mcpreis}
-Eine passende Möglichkeit ist dabei die Anwendung stochastischer Modelle, insbesondere von Monte-Carlo-Simulationen.\footcite[Vgl.][S. 28]{cocco2016modeling}
-Diese werden bereits für die Szenarienbildung in der Genesis Group verwendet. Die vorliegende Monte-Carlo-Simulation wurde
-am 06.11.2020 angefertigt.\footcite[Vgl.][]{appendix:mcpreis} Bei dem Vergleich zu den realen Daten aus dieser Zeit ist bemerkbar, dass sich diese Form der Simulation
-für Vorhersagenmodelle für die nahe Zukunft (< 1 Monat) eignet.\footcite[Vgl.][]{appendix:btcusd} Die weiteren Ereignisse waren maßgeblich durch Social Media
-bestimmt und konnten daher nicht im Rahmen dieser Simulation abgebildet werden.
-Diese Form der Simulation gibt die Möglichkeit,
-beliebig viele mögliche Kursentwicklungen zu berechnen und statistisch
-auszuwerten.\footcite[Vgl.][]{appendix:mcpreis}\footcite[Vgl.][]{appendix:mcszenarien} Dabei entstehen mehrere
-Szenarien, die verschiedene Reaktionen des Managements implizieren. Die Ausgangswerte für eine solche Analyse
-werden durch das Data Warehouse bereitgestellt. Die Ergebnisse
-werden wiederum in das Data Warehouse eingetragen und sind somit auch für andere Analyseverfahren zugänglich. Wie allerdings bereits
-in Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} festgestellt, haben beispielsweise Social Media Plattformen einen
-großen Einfluss auf die Entwicklung des Bitcoin Kurses. Solche Entwicklungen können nicht direkt mit stochastischen Modellen dargestellt
-werden. Hierbei ist wieder die Echtzeitverarbeitung der Daten wichtig, damit die bereits beschriebenen Stakeholder direkt reagieren können.
-Zusätzlich zu der Entwicklung des Bitcoin Kurses ist es durch eine Monte-Carlo Simulation möglich, die Entwicklung der gesamten
-Netzwerkhashrate des Bitcoin Netzwerks zu simulieren.\footcite[Vgl.][]{appendix:mchashrate}
+For the analysis of the data, which is now available in a data warehouse, the analysis procedures are used, which are described in
+chapter \ref{toc:analyseverfahrenbi}. In the Google Cloud, there are several possible products for the realization of these procedures.\footcite[Cf.][]{googlecloud2021dw}
+These include the products "Looker", which is a \ac{OLAP} platform for \ac{BI},
+the "Dataflow" service, which analyzes datasets in real time as well as in batches, and "Dataproc", which has the ability
+among other things, to run Apache Spark.\footcite[Cf.][]{googlecloud2021dw} All of these tools are sufficient to complete the analysis phase
+of a \ac{BI} process. 
 
-Es ist feststellbar, dass durch den Wechsel von stengen Vorhersagemodellen auf eine gröbere Szenarienbildung
-der vorhersagende Aspekt von \ac{BI} umgesetzt werden kann. Auch für die Teilhypothesen eins und drei ist prädiktive bzw.
-präskriptive \ac{BI} möglich. Die betriebliche Umsetzbarkeit ist gegeben.
+The result from chapter \ref{toc:zusammenfassendebetrachtung} was that the implementation of a \ac{BI} process is possible, but there are
+difficulties in predicting the Bitcoin exchange rate. This problem is not directly limited to Bitcoin
+itself, but is the case for predicting any exchange rate. 
+One way to work with predictive models is not to predict a concrete
+price, but to build different scenarios that include possible reactions and decisions of the management.\footcite[Cf.][]{appendix:mcpreis}
+An appropriate way to do this is to use stochastic models, especially Monte Carlo simulations.\footcite[Cf.][p. 28]{cocco2016modeling}
+These are already used for scenario building in the Genesis Group. The Monte Carlo simulation at hand was
+made on 06.11.2020.\footcite[Cf.][]{appendix:mcpreis} When comparing to real data from this time, it is noticeable that this form of simulation is suitable
+for predictive models for the near future (< 1 month).\footcite[Cf.][]{appendix:btcusd} The further events were largely determined by social media
+and therefore could not be mapped within the scope of this simulation.
+This form of simulation gives the possibility
+to calculate and statistically evaluate any number of possible price developments.
+evaluation.\footcite[Cf.][]{appendix:mcpreis}\footcite[Cf.][]{appendix:mcszenarien} This results in multiple
+scenarios that imply different management responses. The initial values for such an analysis
+are provided by the data warehouse. The results
+are in turn entered into the data warehouse and are thus accessible to other analysis procedures. However, as already
+in chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}, social media platforms, for example, have a major influence on the
+development of the Bitcoin price. Such developments cannot be represented directly with stochastic models.
+Here again, real-time processing of the data is important so that the stakeholders already described can react directly.
+In addition to the development of the Bitcoin price, it is possible through a Monte-Carlo simulation to show the development of the entire
+network hashrate of the Bitcoin network.\footcite[Cf.][]{appendix:mchashrate}
 
-\subsubsection{Präsentation der Daten} \label{toc:datenpraesentation}
+It can be seen that by switching from strict predictive models to coarser scenario building,
+the predictive aspect of \ac{BI} can be implemented. Also, for sub-hypotheses one and three, predictive and
+prescriptive \ac{BI} is possible. Operational feasibility is given.
 
-Dieser Teil beschäftigt sich mit dem Vorgang, wie nun das Wissen, das durch die passende Analyse der Daten generiert worden ist, den
-relevanten Stakeholdern in der korrekten Art und Weise zugänglich gemacht wird und dadurch das Ziel der Entscheidungsunterstützung
-erreicht wird. Dafür werden im Folgenden die Stakeholder aus Kapitel \ref{toc:stakeholderanalyse} betrachtet. Es existieren mehrere
-Möglichkeiten, wie das Wissen diesen Personen und Gruppen zugänglich gemacht werden kann:\footcite[Vgl.][Kap. 19]{loshin2012business}
+\subsubsection{Data presentation} \label{toc:datenpraesentation}
+
+This part deals with the process of how the knowledge generated by the appropriate analysis of the data is now made available to the
+relevant stakeholders in the correct manner, thereby achieving the goal of decision support.
+For this purpose, the stakeholders from chapter \ref{toc:stakeholderanalyse} are considered in the following. There are several
+ways in which knowledge can be made available to these individuals and groups:\footcite[Cf.][Chap. 19]{loshin2012business}
 \begin{itemize}
-    \item \textbf{Berichtswesen: }Dies ist die einfachste Form der Präsentation. Dabei werden
-    statische Berichtsvorlagen konfiguriert, aus denen regelmäßig Berichte automatisiert erstellt werden und den Stakeholdern zur Verfügung
-    gestellt werden.\footcite[Vgl.][S. 305]{loshin2012business} Beispiele für solche Berichte in dem Kontext dieser Arbeit sind Berichte über die Ausfallszeiten der Mining
-    Hardware oder monatliche Zusammenfassungen der finanziellen Situation der Rechenzentren. Die Erstellung solcher Berichte kann in
-    der Google Cloud über den "`Cloud Scheduler"' realisiert werden.\footcite[Vgl.][]{googlecloud2021scheduler} Den relevanten Stakeholdern können die Berichte dementsprechend
-    aktiv (beispielsweise über E-Mail) oder passiv über Downloads zur Verfügung gestellt werden.
-    \item \textbf{\ac{OLAP} und Ad-Hoc Suchen: }Bei dieser Form der Präsentation werden über ein \ac{OLAP} System eigene Suchanfragen erstellt
-    und damit zugeschnittenes Wissen erzeugt.\footcite[Vgl.][S. 308f]{loshin2012business}
-    Diese Suchanfragen können spontan (Ad-Hoc) über das \ac{OLAP} System erstellt werden
-    und werden direkt dem Stakeholder zur Verfügung gestellt. Beispiele hierfür sind Anfragen, die den Neu- oder
-    Ausbau von Mining Rechenzentren betreffen. Ein Beispiel für ein solches System ist der "`Looker"' Dienst der
-    Google Cloud.\footcite[Vgl.][]{googlecloud2021dw}
-    \item \textbf{Dashboards: }Eine weitere Methode, um das Wissen der Analyse Stakeholdern
-    zur Verfügung zu stellen ist die Verwendung von Dashboards. Diese Dashboards
-    können online aufgerufen werden und präsentieren Daten, die durch die unterliegende Software bezogen werden.\footcite[Vgl.][S. 314f]{loshin2012business} Gerade bei
-    technischen \acp{KPI}, wie beispielsweise der Darstellung von Hashrates oder Stromverbrauch der Hardware, findet diese
-    Form der Visualisierung Anwendung. Desweiteren sind die Stakeholder in der Lage, ihre eigenen Dashboards zu erstellen.\footcite[Vgl.][S. 314f]{loshin2012business}
-    Eine gängige Anwendung zur Erstellung von Dashboards ist "`Grafana"'.\footnote{https://grafana.com}
-    \item \textbf{Alarmierung: }Diese Methode sendet proaktiv Benachrichtigungen und Alarme an
-    relevante Stakeholder.\footcite[Vgl.][S. 311f]{loshin2012business} Damit sind diese in der Lage, mit nur geringem Zeitversatz auf veränderte Umstände zu reagieren. Beispielsweise
-    fällt der komplette Ausfall eines Rechenzentrums oder Abweichungen der Realität zu den Vorhersagemodellen unter die Fälle, in denen
-    eine Alarmierung Sinn machen kann. Solche Alarme können dann über Mail oder Instant Messenger den betreffenden Stakeholdern zugestellt
-    werden.\footcite[Vgl.][S. 311f]{loshin2012business} Ein Dienst, der die Erstellung solcher Alarme zulässt, ist der "`Pub/Sub"' Dienst.\footcite[Vgl.][]{googlecloud2021dw} Für das Senden von Alarmen
-    können Überwachungssysteme, wie "`Prometheus"', zum Einsatz kommen.\footnote{https://prometheus.io}
+    \item \textbf{Reporting: }This is the simplest form of presentation. In this case
+    static report templates are configured, from which regular reports are automatically generated and made available to the stakeholders.\footcite[Cf.][p. 305]{loshin2012business}
+    Examples of such reports in the context of this work include reports on mining downtime
+    or monthly summaries of the financial situation of data centers. The generation of such reports can be done in
+    Google Cloud via the "Cloud Scheduler".\footcite[Cf.][]{googlecloud2021scheduler} The relevant stakeholders can be provided with the reports accordingly.
+    \item \textbf{\ac{OLAP} and Ad-Hoc Searches: }In this form of presentation, a \ac{OLAP} system is used to create one's own search queries
+    and thus generate tailored knowledge.\footcite[Cf.][pp. 308]{loshin2012business}
+    These search queries can be created spontaneously (ad-hoc) through the \ac{OLAP} system
+    and results are provided directly to the stakeholder. Examples include queries that concern the new construction or
+    expansion of mining data centers. An example of such a system is the "Looker" service of the
+    Google Cloud.\footcite[Cf.][]{googlecloud2021dw}
+    \item \textbf{Dashboards: }Another method of making analytics knowledge available to stakeholders
+    is the use of dashboards. These dashboards
+    can be accessed online and present data obtained through the underlying software.\footcite[Cf.][pp. 314]{loshin2012business} Especially for
+    technical \acp{KPI}, such as the display of hashrates or power consumption of the hardware, this form of
+    visualization is used. Furthermore, stakeholders are able to create their own dashboards.\footcite[Cf.][pp. 314]{loshin2012business}
+    A common application for creating dashboards is "Grafana".\footnote{https://grafana.com}
+    \item \textbf{Alerting: }This method proactively sends notifications and alerts to
+    relevant stakeholders.\footcite[Cf.][pp. 311]{loshin2012business} This enables them to respond to changing circumstances with only a small time lag. For example,
+    the complete failure of a data center or deviations of reality from the forecast models are cases in which an alert can make sense.
+    Such alerts can then be delivered to the relevant stakeholders via mail or instant messenger.\footcite[Cf.][pp. 311]{loshin2012business}
+    A service that allows the creation of such alerts is the "Pub/Sub" service.\footcite[Cf.][]{googlecloud2021dw} For the sending of alerts
+    monitoring systems, such as "Prometheus", can be used.\footnote{https://prometheus.io}
 \end{itemize}
 
-Alle diese Formen der Präsentation sind ohne Weiteres innerbetrieblich durchführbar. Daher exisitieren für diesen Schritt keine innerbetrieblichen
-Hindernisse für die Implementierung eines \ac{BI} Prozesses.
+All these forms of presentation can easily be carried out in-house. Therefore, there are no internal obstacles
+to the implementation of an \ac{BI} process.
 
-\subsection{Abschließende Bewertung} \label{toc:abschliessendebewertung}
+\subsection{Final evaluation} \label{toc:abschliessendebewertung}
 
-In Kapitel \ref{toc:planungdesbiprozesses} wurde im Zuge einer kleinen Fallstudie besprochen, ob es möglich ist, einen \ac{BI} Prozess,
-wie er in Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} aufgezeigt worden ist, innerbetrieblich realisieren zu können.
-Um dies zu erreichen wurden die drei Hauptschritte eines \ac{BI} Prozesses, die Datenbeschaffung, -analyse und -präsentation, einzeln
-besprochen und mögliche technische Lösungsansätze anhand des Beispiels der Google Cloud aufgezeigt.
+In chapter \ref{toc:planungdesbiprozesses}, a small case study discussed whether it is possible to implement a \ac{BI} Process,
+as it was shown in chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}.
+In order to achieve this, the three main steps of an \ac{BI} process, data acquisition, analysis and presentation, were discussed individually
+and possible technical solutions were demonstrated using the Google Cloud as an example.
 
-Zusammenfassend kann festgestellt werden, dass keine Hindernisse vorliegen, die einer Einführung eines \ac{BI} Prozesses widersprechen.
-Zusätzlich zur Argumenation aus Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence} ist es möglich, dass der \ac{BI} Prozess
-bis hin zum präskriptiven Paradigma durchführbar ist (Vgl. Tabelle \ref{tbl:hypothesenanalyse2}). Daher ist es ohne Einschränkung möglich, dass alle Teilhypothesen in einem
-solchen Prozess abgebildet werden können. Dadurch ist im Rückschluss möglich zu sagen, dass die Haupthypothese dieser Arbeit bestätigt werden
-kann. Mittels \ac{BI} ist es möglich, dass Kryptomining Rechenzentren finanziell optimiert werden können.
+In summary, it can be stated that there are no obstacles that contradict the introduction of an \ac{BI} process.
+In addition to the argumentation from chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}, it is possible that the \ac{BI} Process
+is feasible up to the prescriptive paradigm (Cf. Table \ref{tbl:hypothesenanalyse2}). Therefore, it is possible without restriction that all sub-hypotheses
+can be mapped in such a process. Thus, in conclusion it is possible to say that the main hypothesis of this work can be confirmed.
+By means of \ac{BI} it is possible that cryptomining data centers can be optimized financially.
 
 \begin{table}[H]
-    \caption{Ergebnis der Durchführbarkeit eines Business Intelligence Prozesses}
+    \caption{Result of the feasibility of a business intelligence process}
     \label{tbl:hypothesenanalyse2}
     \begin{tabularx}{\textwidth}[ht]{X||c|c|c|c}
          & \ac{HT0.1} & \ac{HT0.2} & \ac{HT0.3} & \ac{HT0.4}  \\
         \hline\hline
-        Deskriptive Analyse & \checkmark & \checkmark & \checkmark & \checkmark \\
+        Descriptive analysis & \checkmark & \checkmark & \checkmark & \checkmark \\
         \hline
-        Vorhersagende Analyse & \checkmark & \checkmark & \checkmark & \checkmark \\
+        Predictive analysis & \checkmark & \checkmark & \checkmark & \checkmark \\
         \hline
-        Präskriptive Analyse & \checkmark & \checkmark & \checkmark & \checkmark \\
+        Prescriptive analysis & \checkmark & \checkmark & \checkmark & \checkmark \\
     \end{tabularx}
 \end{table}
 
-Ein exemplarischer \ac{BI} Prozess für das Beispiel der Genesis Group kann wie in Abbildung \ref{figure:internalbiprocess} abgebildet aussehen.
+An example \ac{BI} Process for the Genesis Group example may look like the one shown in Figure \ref{figure:internalbiprocess}.
 
 \begin{figure}[H]
-    \caption{Konzeption eines BI Prozesses innerhalb der Genesis Group}
+    \caption{Design of a BI process within the Genesis Group}
     \includegraphics[width=\textwidth]{internalbiprocess}
     \label{figure:internalbiprocess}
 \end{figure}
 
-Diese Abbildung basiert prinzipiell auf dem Prozessaufbau, der in Kapitel \ref{toc:prozess} aufgezeigt ist, und teilt sich in die folgenden
-Schritte auf:
+This figure is basically based on the process structure shown in chapter \ref{toc:prozess}, and is divided into the following
+steps:
 \begin{itemize}
-    \item \textbf{Datenquellen: }Als Datenquellen werden die Dienste, die in Kapitel \ref{toc:internedatenquellen} und \ref{toc:externedatenquellen}
-    beschrieben werden, verwendet. Alle diese Quellen reichen zusammen aus, um genügend Daten bereitzustellen, damit die vier Teilhypothesen und
-    dadurch die Haupthypothese bewiesen werden können.
-    \item \textbf{Datenbeschaffung: }Bei der Beschaffung der Daten werden \ac{ETL} Pipelines eingesetzt, die die Daten an den Schnittstellen
-    zu den Quellen abfragen, diese in das gewünschte Format transformieren und letztendlich in einem Data Warehouse ablegen. Wie
-    in der Klassifizierung der Datenquellen aus Tabelle \ref{tbl:klassifizierunginternedaten} und \ref{tbl:klassifizierungexternedaten},
-    sowie Kapitel \ref{toc:datenhaltung} ersichtlich ist, können die \ac{ETL} Pipelines ohne Hindernisse aufgebaut und realisiert werden.
-    \item \textbf{Speicherung der Daten / Datenhaltung: }Im dritten Schritt werden die extrahierten und strukturierten Daten in ein Data Warehouse
-    geladen. Dieses beinhaltet alle Daten, die weiterhin für den \ac{BI} Prozess wichtig sind, um Ergebnisse den Stakeholder präsentieren zu können.
-    Dieser Teil ist, wie in Kapitel \ref{toc:datenhaltung} gezeigt, realisierbar.
-    \item \textbf{Datenanalyse: }Die gespeicherten Daten werden folgend für die Analyse verwendet, um neues Wissen generieren zu können.
-    Dabei gibt es eine Vielzahl verschiedener Ansätze für die Analyse von Daten, die vertieft in Kapitel \ref{toc:analyseverfahrenbi}
-    besprochen worden sind. Diese werden verwendet, um das Optimierungspotential eines Kryptomining Rechenzentrums herauszufinden und
-    mögliche Ansätze zur Umsetzung zu identifizieren. Alle diese Formen der Analyse können innerbetrieblich
-    ohne Weiteres umgesetzt werden. Die genaue Ausgestaltung der Analysealgorithmen ist jedoch ein langwieriger und komplexer Prozess
-    und wird nicht im Zuge dieser Arbeit besprochen, da in dieser Arbeit die grundsätzliche Möglichkeit der Implementierung besprochen wird.
-    \item \textbf{Kommunikation / Präsentation: }Im letzten Schritt werden die Daten in einer Art und Weise präsentiert, 
-    durch die die Stakeholder des \ac{BI} Prozesses Zugang zum Wissen erlangen und dieses weiterverwenden können.
-    Relevante Formen der Präsentation sind in
-    Kapitel \ref{toc:datenpraesentation} besprochen worden und reichen aus, damit die Stakeholder in optimaler Art und Weise durch den
-    \ac{BI} Prozess unterstützt werden. Die Umsetzung dieser Ebene ist ohne Weiteres möglich.
+    \item \textbf{Data sources: }The data sources are the services described in chapters \ref{toc:internedatenquellen} and \ref{toc:externedatenquellen}.
+    All of these sources together are sufficient to provide enough data to prove the four sub-hypotheses and
+    thereby the main hypothesis.
+    \item \textbf{Data acquisition: }Data sourcing involves \ac{ETL} pipelines that interrogate data at the interfaces
+    to the sources, transform them into the desired format, and ultimately store them in a data warehouse. As
+    in the classification of data sources from table \ref{tbl:klassifizierunginternedaten} and \ref{tbl:klassifizierungexternedaten},
+    as well as chapter \ref{toc:datenhaltung}, the \ac{ETL} pipelines can be built and realized without any obstacles.
+    \item \textbf{Storage of data / data management: }In the third step, the extracted and structured data are loaded into a data warehouse.
+    This contains all data that is still important for the \ac{BI} process to be able to present results to the stakeholders.
+    This part can be implemented as shown in chapter \ref{toc:datenhaltung}.
+    \item \textbf{Data analysis: }The stored data is subsequently used for analysis in order to be able to generate new knowledge.
+    There are many different approaches for the analysis of data, which have been discussed in detail in chapter \ref{toc:analyseverfahrenbi}.
+    These are used to find out the optimization potential of a cryptomining data center and to identify
+    possible approaches for implementation. All of these forms of analysis can be implemented in-house
+    without further ado. However, the exact design of the analysis algorithms is a lengthy and complex process
+    and will not be discussed in the course of this thesis, since the basic possibility of implementation is discussed in this work.
+    \item \textbf{Communication / Presentation: }The final step is to present the data in a manner, 
+    through which the stakeholders of the \ac{BI} process can access and further use the knowledge.
+    Relevant forms of presentation are described in
+    chapter \ref{toc:datenpraesentation} and are sufficient to ensure that stakeholders can be guided in an optimal way through the
+    \ac{BI} Process. Implementation of this level is straightforward.
 \end{itemize}
 
-Im folgenden Kapitel wird das Fazit aus diesem und dem letzten Kapitel einer kritischen Bewertung unterzogen, um
-letztendlich die Antwort auf die Haupthypothese in den richtigen Kontext setzen zu können.
+In the following chapter, the conclusion from this and the last chapter is subjected to a critical evaluation in order to
+finally be able to put the answer to the main hypothesis into the right context.
