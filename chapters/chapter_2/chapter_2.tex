@@ -3,41 +3,40 @@
 
 \acused{SHA}
 
-In diesem Kapitel werden die Grundlagen für das Verständnis des "`Kryptominings"' gelegt. Der Leser soll nach diesem Teil
-ein Bild davon haben, was Mining ist und warum im Bereich Blockchain das Mining ein elementarer Prozess ist. Ferner soll
-er in der Lage sein, den Grundaufbau eines unternehmensgeführten Rechenzentrums, das ausschließlich Mining betreibt, zu
-verstehen. Um dies zu erreichen, wird im ersten Schritt in Kapitel \ref{toc:kryptowaehrungenundblockchain} eine kurze
-Einführung zum Thema Blockchain gegeben und deren Grundaufbau beschrieben. Dort wird festgestellt, warum das Prinzip des
-Minings eingeführt wurde und wofür es dient. Im Kapitel \ref{toc:miningundkonsensalgorithmen} wird vertieft auf den Prozess
-des Minings eingegangen. Es wird die grundsätzliche Funktionsweise und die Notwendigkeit des Minings aufgezeigt. Nachdem
-diese Grundlagen gelegt sind, wird die Funktionsweise eines Mining Rechenzentrums beschrieben. Das Verständnis von
-Rechenzentren, die auf das Mining spezialisiert sind, ist wichtig für den Rest der Arbeit, da diese aus finanzieller
-Sicht optimiert werden sollen. Dazu wird der Grundaufbau eines solchen Rechenzentrums der Genesis Group exemplarisch
-beschrieben. Es wird gezeigt, welche \acp{KPI} dieser Rechenzentren wichtig sind. Diese werden verwendet, um die
-Rechenzentren finanziell optimieren zu können. All das wird in Kapitel \ref{toc:miningrechenzentren} besprochen. Darauf
-folgend wird dieses Wissen verwendet, um mögliche Ansatzpunkte für ein Business Intelligence System zu identifizieren
-und am Ende der Arbeit einen beispielhaften Prozess zu modellieren.
+This chapter lays the foundations for understanding the term "cryptomining". After this part, the reader should
+have a picture of what mining is and why, in the blockchain domain, mining is a fundamental process. Furthermore
+he should be able to understand the basic structure of an enterprise data center that is exclusively mining.
+To achieve this, the first step in chapter \ref{toc:kryptowaehrungenundblockchain} is to give a brief
+introduction to the blockchain and its basic structure. There, it is established why the principle of
+mining was introduced and what it is used for. In the chapter \ref{toc:miningundkonsensalgorithmen}, the process of
+of the mining is dealt with. The basic functioning and necessity of mining is shown. After
+these basics are laid, the operation of a mining data center is described. The understanding of
+data centers that specialize in mining is important for the rest of the paper, as they are to be optimized from a financial perspective.
+For this purpose, the basic structure of such a data center of the Genesis Group is exemplarily
+described. It is shown which \acp{KPI} of these data centers are important. These are used to optimize the
+data centers to be able to optimize them financially. All this is discussed in chapter \ref{toc:miningrechenzentren}. Following
+this knowledge is then used to identify possible starting points for a business intelligence system
+and to model an exemplary process at the end of the thesis.
 
 \subsection{Basic technologies} \label{toc:technologie}
 
-Das Konzept der Blockchain wurde erstmals im Jahr 2008 in einem Whitepaper anhand des Beispiels von Bitcoin beschrieben,
-welches durch das Pseudonym Satoshi Nakamoto veröffentlicht worden ist.\footcite[Cf.][]{nakamoto2008bitcoin} Es
-beschäftigen sich inzwischen viele Unternehmen und Start-Ups in den verschiedensten Branchen mit Blockchain basierten
-Systemen, wie beispielsweise in der Finanzbranche, im Informationssektor, aber auch im Gesundheits- und
-Verkehrssektor.\footcite[Cf.][Chap. 4.1]{friedlmaier2018disrupting} Ein anderer Zweig, der durch die Einführung von
-Kryptowährungen entstanden ist, sind Unternehmen, die sich auf das Mining von Kryptowährungen spezialisiert haben. Um die
-technischen Grundlagen für diesen Business Case zu verstehen, wird in den folgenden beiden Unterkapiteln beschrieben, was
-eine Blockchain ist und welche Eigenschaften das Mining nötig macht. Wie Mining technologisch realisiert wird und warum
-es eine Möglichkeit bietet, Geld zu verdienen, wird in Kapitel \ref{toc:miningundkonsensalgorithmen} beschrieben.
+The concept of blockchain was first described in 2008 in a whitepaper using the example of Bitcoin,
+published by the pseudonym Satoshi Nakamoto.\footcite[Cf.][]{nakamoto2008bitcoin} Many companies and start-ups in
+a wide variety of industries are looking at blockchain-based
+systems, such as in the financial industry, in the information sector, but also in the health care and
+transport sectors.\footcite[Cf.][Chap. 4.1]{friedlmaier2018disrupting} Another branch that has emerged through the introduction of
+cryptocurrencies are companies that specialize in mining cryptocurrencies. To understand the
+technical basis for this business case, the following two subsections describe what
+a blockchain is and what characteristics make mining necessary. How mining is technologically implemented and why
+it provides a way to make money is described in chapter \ref{toc:miningundkonsensalgorithmen}.
 
 \subsubsection{Definition of Blockchain} \label{toc:kryptowaehrungenundblockchain}
 
-Eine Blockchain ist, wie der Name übersetzt bedeutet, eine Kette aus Blöcken. Durch die Anwendung kryptographischer
-Verfahren werden Daten auf einer Blockchain nachträglich unveränderlich gespeichert, was diese Technologie für viele
-Anwendungen attraktiv machen kann.\footcite[Cf.][p. 1]{friedlmaier2018disrupting} Die atomare Einheit einer Blockchain
-ist ein einzelner Block. Dieser besteht im Fall von Bitcoin aus zwei verschiedenen Teilen: aus einer Liste von Transaktionen
-sowie dem sogenannten "`Blockheader"', der die wichtigsten Metainformationen und Eigenschaften des Blocks
-enthält.\footcite[Cf.][p. 48]{bhaskar2015bitcoin}\footcite[Cf.][p. 4]{nakamoto2008bitcoin}
+A blockchain, as the name translates, is a chain of blocks. Through the use of cryptographic
+processes, data on a blockchain is subsequently stored immutably, which can make this technology attractive for many
+applications.\footcite[Cf.][p. 1]{friedlmaier2018disrupting} The atomic unit of a blockchain
+is a single block. In the case of Bitcoin, this consists of two different parts: a list of transactions
+and the so-called "block header", which contains the most important meta-information and properties of the block.\footcite[Cf.][p. 48]{bhaskar2015bitcoin}\footcite[Cf.][p. 4]{nakamoto2008bitcoin}
 
 \begin{figure}[H]
     \caption{Structure of a single block}
@@ -47,30 +46,30 @@ enthält.\footcite[Cf.][p. 48]{bhaskar2015bitcoin}\footcite[Cf.][p. 4]{nakamoto2
     \cite[Source: Based on][p. 4]{nakamoto2008bitcoin}
 \end{figure}
 
-Im Folgenden sind die für das Verständnis elementaren Parameter aufgelistet, die in einem Blockheader zu finden
-sind (Vgl. Abb. \ref{figure:blockstructure}):
+The following is a list of the elementary parameters that can be found in a block header
+(Cf. Fig. \ref{figure:blockstructure}):
+
 \begin{itemize}
-    \item \textbf{Previous block hash: }Da die Blöcke zu einer logischen Kette arrangiert werden, muss es eine
-    Möglichkeit geben, die Reihenfolge der geschriebenen Blöcke zu identifizieren. Dies wird ähnlich zu einer
-    verketteten Liste dadurch erreicht, dass aus dem Blockheader des vorhergehenden Blocks durch die Anwendung der \ac{SHA}256
-    Hashfunktion ein Hash errechnet wird und dieser in das Feld "`Previous block hash"' eingetragen
-    wird.\footcite[Cf.][p. 4]{nakamoto2008bitcoin} Dadurch wird erreicht,
-    dass die Reihenfolge der Blocks in der Blockchain wohldefiniert zurück bis zum ersten Block
-    ("`Genesis Block"')\footcite[Cf.][Fig. 3.2]{bhaskar2015bitcoin} nachvollziehbar ist (Vgl. Abb. \ref{figure:blockchainstructure}).
-    Eine nachträgliche     Änderung eines Blocks wird die Kette brechen lassen, da sich dadurch der Hashwert des
-    verfälschten Blocks ändern wird.
-    \item \textbf{Merkle Root: }In dieses Feld wird das Ergebnis des Merkle Baums eingetragen, der aus allen Transaktionen
-    errechnet wird.\footcite[Cf.][p. 4]{nakamoto2008bitcoin} Auch dies ist ein Hashwert. Dazu wird ein Hashwert aus
-    jeder einzelnen Transaktion gebildet und über einen Binärbaum zu einem Hashwert zusammengeführt. Dieser Wert nennt
-    sich "`Merkle Root"' (Vgl. Abb. \ref{figure:blockstructure}). Dadurch lässt sich die Integrität jeder Transaktion,
-    die sich in diesem Block befindet, überprüfen. Eine nachträgliche Änderung ist nicht mehr möglich, da in diesem
-    Fall sich der Hashwert der Merkle Root im Blockheader und damit der resultierende Hash des Blockheaders ändern würde.
-    Folglich bräche die Kette in diesem Fall und die Blockchain wäre zerstört.
-    \item \textbf{Nonce: }Dies ist eine zufällige Nummer, die dafür verwendet wird, einen Hash des Blockheaders zu erzeugen,
-    der bestimmten Rahmenbedingungen unterliegt.\footcite[Cf.][p. 745]{mukhopadhyay2016brief}\footcite[Cf.][p. 136]{courtois2014optimizing}
-    Diesen Wert zu erraten und zu verifizieren wird Mining genannt.\footcite[Cf.][pp. 50]{bhaskar2015bitcoin}\footcite[Cf.][p. 24]{han2019demystifying}
-    Wie dieser Wert gefunden wird und welchen Regeln er zu gehorchen hat, wird in Kapitel \ref{toc:miningundkonsensalgorithmen}
-    beschrieben.
+    \item \textbf{Previous block hash: }Because the blocks are arranged into a logical chain, there must be some way
+    to identify the order in which the blocks are written. This is achieved similar to a
+    chained list by calculating a hash from the block header of the previous block by applying the \ac{SHA}256
+    hash function and entering it into the field "Previous block hash".\footcite[Cf.][p. 4]{nakamoto2008bitcoin} This achieves,
+    that the sequence of blocks in the blockchain is well-defined back to the first block ("Genesis Block")\footcite[Cf.][Fig. 3.2]{bhaskar2015bitcoin}
+    and is traceable (Cf. Fig. \ref{figure:blockchainstructure}).
+    Subsequent modification of a block will cause the chain to break, as this will change the hash value of the
+    tampered block.
+    \item \textbf{Merkle Root: }This field is used to enter the result of the Merkle tree, which is calculated from all transactions.\footcite[Cf.][p. 4]{nakamoto2008bitcoin}
+    This is also a hash value. A hash value is formed from
+    each individual transaction and merged into a hash value via a binary tree. This value is called
+    "Merkle Root" (cf. \ref{figure:blockstructure}). This allows the integrity of each transaction
+    which is located in this block. A subsequent change is no longer possible, because in this case,
+    the hash value of the Merkle root in the block header and thus the resulting hash of the block header would change.
+    Consequently, the chain would break in this case and the blockchain would be destroyed.
+    \item \textbf{Nonce: }This is a random number used to generate a hash of the block header,
+    which is subject to certain constraints.\footcite[Cf.][p. 745]{mukhopadhyay2016brief}\footcite[Cf.][p. 136]{courtois2014optimizing}
+    Guessing and verifying this value is called mining.\footcite[Cf.][pp. 50]{bhaskar2015bitcoin}\footcite[Cf.][p. 24]{han2019demystifying}
+    How this value is found and what rules it must obey is described in chapter \ref{toc:miningundkonsensalgorithmen}
+    described.
 \end{itemize}
 
 \begin{figure}[H]
@@ -81,94 +80,88 @@ sind (Vgl. Abb. \ref{figure:blockstructure}):
     \cite[Source: Based on][p. 5]{nakamoto2008bitcoin}
 \end{figure}
 
-Der Rest des Blocks, der im Falle von Bitcoin auf die Größe von 1MB beschränkt ist, wird mit den dementsprechenden
-Transaktionen gefüllt, die für die Errechnung der Merkle Root verwendet worden sind.\footcite[Cf.][p. 746]{mukhopadhyay2016brief}
-Generell können beliebige Daten auf einer Blockchain gespeichert werden. Dabei gibt es keine Beschränkungen, dass
-es sich um Transaktionsdaten eine Währung handeln muss.
+The rest of the block, which in the case of Bitcoin is limited to the size of 1MB, is filled with the corresponding
+transactions that have been used to calculate the Merkle root.\footcite[Cf.][p. 746]{mukhopadhyay2016brief}
+In general, any data can be stored on a blockchain. There are no restrictions that
+it must be transaction data of a currency.
 
-Nun exisitieren noch zwei Möglichkeiten, die Daten auf einer Blockchain zu verändern bzw. zu löschen. Der eine Fall
-ist die manuelle Löschung der Blockchain. Um dies zu verhindern, ist eine Blockchain dezentral auf vielen Geräten
-gespeichert.\footcite[Cf.][p. 46]{bhaskar2015bitcoin} Jedes dieser Geräte beinhaltet eine aktuelle und korrekte Kopie
-der Blockchain mit all ihren Daten. Ein solches Gerät wird "`Node"' genannt. Jede Person weltweit kann im Falle von
-Bitcoin einen Node betreiben, da die Daten der Bitcoin Blockchain öffentlich einsehbar sind und es daher eine
-sogenannte "`permissionless Blockchain"' ist.\footcite[Cf.][p. 132]{courtois2014optimizing} Falls nun ein Teilnehmer
-seinen Node löscht oder dieser einfach nur ausfällt, ist durch die dezentrale Replizierung die Blockchain weiterhin
-verfügbar und nicht gelöscht.
+Now there are still two ways to change or delete the data on a blockchain. One case
+is the manual deletion of the blockchain. To prevent this, a blockchain is stored in a decentralized manner on many
+devices.\footcite[Cf.][p. 46]{bhaskar2015bitcoin} Each of these devices contains a current and correct copy
+of the blockchain with all of its data. Such a device is called a "node". Any person in the world can inpect the blockchain, in the case of
+Bitcoin, because the data of the Bitcoin Blockchain is publicly available and therefore it is a so-called "permissionless blockchain".\footcite[Cf.][p. 132]{courtois2014optimizing}
+If a participant deletes his node or the node is simply
+deletes its node or it simply fails, the blockchain is still available and not deleted due to the decentralized replication.
 
-Der andere Fall ist die Änderung eines Blocks und eine darauffolgende komplette Neuerrechnung aller Hashwerte dieser
-Blockchain, womit wieder eine neue korrekte Blockchain daraus resultieren würde. Diese würde allerdings gefälschte Daten
-beinhalten. Um dies zu verhindern, ist das Mining eingeführt worden, das nichts anderes als ein Ratespiel ist, um den
-richtigen Wert der obig beschriebenen "`Nonce"' zu finden. Dieses Prinzip nennt sich \ac{PoW} und wird im nächsten Kapitel
-genau beschrieben.\footcite[Cf.][p. 3]{nakamoto2008bitcoin}
+The other case is the modification of a block and a subsequent complete recalculation of all hash values of this blockchain,
+which would again result in a new correct blockchain. However, this would contain falsified data.
+To prevent this, mining has been introduced, which is nothing more than a guessing game to find the
+correct value of the "nonce" described above. This principle is called \ac{PoW} and will be described in detail in the next chapter.\footcite[Cf.][p. 3]{nakamoto2008bitcoin}
 
-Zusammenfassend ist feststellbar, dass eine Blockchain aufgrund ihrer starken Anwendung kryptographischer Verfahren und
-ihrer Dezentralität ausgesprochen sicher gegenüber der Fälschung und Löschung von Daten ist. Der erste naheliegende
-Use-Case war dementsprechend die Anwendung der Blockchain, um eine digitale und dezentrale Währung einzuführen, wie es
-Satoshi Nakamoto auch in seinem Whitepaper vorgeschlagen hat.\footcite[Cf.][]{nakamoto2008bitcoin}
+In summary, it can be stated that a blockchain is extremely secure against falsification and deletion of data due to its
+strong use of cryptographic processes and its decentralization.
+The first obvious use case was the application of the blockchain to introduce a digital and decentralized currency, as Satoshi
+Satoshi Nakamoto also proposed in his white paper.\footcite[Cf.][]{nakamoto2008bitcoin}
 
 \subsubsection{Definition of mining} \label{toc:miningundkonsensalgorithmen}
 
-In diesem Kapitel wird sich aufbauend auf dem letzten Kapitel mit der Funktionsweise des Minings und der unterliegenden
-Konsensalgorithmen beschäftigt. Dies ist für die weitere Arbeit wichtig, da das den prinzipiellen Aufbau von Mining
-Rechenzentren begründet und auch während des Minings wichtige Parameter, wie die "`Difficulty"' eine Rolle spielen, die
-für eine finanzielle Gesamteinschätzung eines Rechenzentrums einen Beitrag leisten.
+Building on the last chapter, this chapter deals with the functioning of mining and the underlying consensus algorithms.
+This is important for the remainder of the thesis, since it explains the basic structure of mining
+and also during the mining process, important parameters such as the "difficulty" play a role in the overall financial assessment of a mining project,
+which contribute to an overall financial assessment of a data center.
 
-Ausgehend von der Problematik, dass die Bitcoin Blockchain aus einem dezentralen peer-to-peer Netzwerk besteht, muss
-sich die Frage gestellt werden, wie ein Konsens zwischen den Teilnehmern erzeugt wird und wie sichergestellt wird,
-dass betrügerische Absichten unterbunden werden. Es wird die Frage gestellt, wie alle Teilnehmer zusammen einen gültigen
-Konsens erreichen und damit die Blockchain vertrauenswürdig wird.\footcite[Cf.][Fig. 3]{derks2018chaining}
-Um diese Fragestellungen zu beantworten, wird sich mit möglichen Konsensalgorithmen beschäftigt und das Prinzip
-des Minings anhand des \ac{PoW} Konsenses erläutert.
+Based on the problem that the Bitcoin blockchain consists of a decentralized peer-to-peer network, it is necessary to
+be asked how a consensus is generated between the participants and how it is ensured
+that fraudulent intentions are prevented. The question becomes how all participants together can reach a valid
+consensus and thus make the blockchain trustworthy.\footcite[Cf.][Fig. 3]{derks2018chaining}
+To answer these questions, we will look at possible consensus algorithms and explore the principle of
+of mining is explained on the basis of the \ac{PoW} consensus.
 
-Der erste Konsensalgorithmus wurde im Bitcoin Whitepaper von Satoshi Nakamoto beschrieben und nennt sich
-"`Proof-of-Work"'.\footcite[Cf.][p. 3]{nakamoto2008bitcoin} Da dieser in Hinsicht auf den Energieverbrauch nicht
-optimal ist, sind für andere Währungen andere Algorithmen, die deutlich energieeffizienter sind, erarbeitet
-worden.\footcite[Cf.][]{dwcom2021bitcoin} Das bekannteste Beispiel ist \ac{PoS} oder auch die Verwendung der
-"`byzantinischen Fehlertoleranz"', das auch als das "`Problem der byzantinischen Generäle"' über die Blockchain
-Branche hinweg bekannt ist.\footcite[Cf.][p. 2]{friedlmaier2018disrupting}\footcite[Cf.][p. 746]{mukhopadhyay2016brief}
-Da allerdings nur für Proof-of-Work große Rechenleistungen benötigt werden, wird sich im Folgenden auf diesen Algorithmus
-anhand des Beispiels von Bitcoin beschränkt.
+The first consensus algorithm was described in Satoshi Nakamoto's Bitcoin whitepaper and is called
+"Proof-of-Work".\footcite[Cf.][p. 3]{nakamoto2008bitcoin} Since it is not optimal in terms of energy consumption, other algorithms have been developed,
+that are much more energy efficient.\footcite[Cf.][]{dwcom2021bitcoin} The best known example is \ac{PoS} or also the use of the
+"byzantine fault tolerance", which is also known as the "problem of the Byzantine generals" across the blockchain
+industry.\footcite[Cf.][p. 2]{friedlmaier2018disrupting}\footcite[Cf.][p. 746]{mukhopadhyay2016brief}
+However, since large computational resources are required only for proof-of-work, the following discussion will focus on this algorithm
+using the example of Bitcoin.
 
-Der Vorgang des Minings durch Proof-of-Work lässt sich in die folgenden Schritte
-unterteilen:\footcite[Cf.][p. 3]{nakamoto2008bitcoin}\footcite[Cf.][p. 51]{li2019blockchain}
+The process of mining through proof-of-work can be divided into the following steps:\footcite[Cf.][p. 3]{nakamoto2008bitcoin}\footcite[Cf.][p. 51]{li2019blockchain}
 
 \begin{enumerate}
-    \item Neue Transaktionen werden zu allen Nodes im Netzwerk gesendet. Diese werden im sogenannten "`Mempool"',
-    einem Zwischenspeicher für noch nicht bestätigte Transaktionen abgelegt und für den Miningprozess vorgehalten.
-    \item Transaktionen werden durch die Nodes in einen Block verpackt. Die Transaktionen mit den höchsten Gebühren,
-    die vom Auftraggeber frei gewählt werden können, werden bevorzugt aus dem Mempool zu einem Block
-    zusammengeführt.\footcite[Cf.][p. 53]{bhaskar2015bitcoin} Die Summe der Transaktionskosten des Blocks wird dem Miner
-    zugeschrieben, sobald dieser einen gültigen Block findet.\footcite[Cf.][p. 4]{nakamoto2008bitcoin}
-    \item Die Mining Hardware errechnet einen gültigen Proof-of-Work für diesen Block, den die Nodes der Hardware zur
-    Verfügung stellen. Dies ist der eigentlich rechenintensive Prozess. Grundlegend ist dieser Vorgang nichts
-    anderes als ein Brute-Forcing von Hashwerten.\footcite[Cf.][p. 747]{mukhopadhyay2016brief} Nur auf diesem Weg ist
-    es möglich, einen korrekten Zielhashwert zu errechnen, da Hashfunktionen surjektiv sind. Durch die sogenannte
-    "`Difficulty"' wird festgelegt, mit wie vielen Nullen der resultierende Hash beginnen
-    soll.\footcite[Cf.][p. 57]{bhaskar2015bitcoin} Um einen passenden Hash zu finden, wird die Nonce variiert und
-    für jeden Wert der Nonce der Hashwert des Blocks berechnet und verifziert, ob dieser den Anforderungen, die
-    durch die Difficulty vorgegeben ist, genügt. Im Durchschnitt sollte dieser Vorgang circa zehn Minuten in Anspruch
-    nehmen.\footcite[Cf.][p. 748]{mukhopadhyay2016brief} Die relevante Leistungmetrik der Mining Hardware wird daher
-    Hashrate genannt.\footcite[Cf.][p. 49]{bhaskar2015bitcoin} Diese beschreibt, wie viele Hashwerte ein Gerät innerhalb
-    einer Sekunde errechnen kann. Falls die gesamte Hashrate im Bitcoin Netzwerk steigt, steigt auch die
-    Wahrscheinlichkeit, dass ein gültiger Proof-of-Work in kürzer als zehn Minuten gefunden werden kann. Daher wird die
-    Difficulty alle 2.016 Blocks angepasst, sodass es bei einer höheren Gesamthashrate des Netzwerks durch die Variation
-    der beginnenden Nullen leichter oder schwieriger wird, einen gültigen Proof-of-Work zu finden (Vgl.
-    Abb. \ref{figure:evolutiondifficulty}).\footcite[Cf.][p. 57]{bhaskar2015bitcoin} Da die Erstellung der Blöcke
-    viel rechnerische Arbeit kostet, haben nun einzelne Betrüger keine Mögtlichkeit, die Blockchain zu manipulieren,
-    solange die Mehrheit der Teilnehmer am Mining ehrlich ist. 
-    \item Wenn ein Proof-of-Work gefunden ist, wird dieser an alle Nodes im Bitcoin Netzwerk
-    gesendet.\footcite[Cf.][pp. 3]{nakamoto2008bitcoin} Dazu formt der zur Mining Hardware verbundene Node aus der
-    gültigen gefundenen Nonce und allen weiteren Informationen einen gültigen neuen Block und sendet diesen an alle
-    Nodes im Bitcoin Netzwerk.
-    \item Dieser wird nun von den verbleibenden Nodes überprüft. Die Verifizierung ist erfolgreich, sobald die Mehrzahl
-    an Nodes den Block akzeptiert und mit dem Bau eines neuen Blocks begonnen wird, wobei der Hashwert des gefundenen
-    Blocks als Previous Hash für den neuen Block verwendet wird.\footcite[Cf.][pp. 3]{nakamoto2008bitcoin}
-    Der Betreiber der Mining Hardware erhält als Belohnung die Summe aller Transaktionengebühren des Blocks und
-    zusätzlich einen Festbetrag, der momentan bei 6,25 \ac{BTC} pro Block
-    liegt.\footcite[Cf.][p. 4]{nakamoto2008bitcoin}\footcite[Cf.][]{btcecho2021halving}\footcite[Cf.][p. 59]{taylor2017evolution}
-    Die 6,25 \ac{BTC} nennen sich "`Block Reward"'. Dieser betrug anfangs 50 \ac{BTC} und wird alle 210.000 Blöcke um
-    die Hälfte reduziert.\footcite[Cf.][p. 58]{taylor2017evolution} Dadurch wird das Bitcoin Netzwerk mit neuer und
-    frischer Währung versorgt. Folgend beginnt der Prozess des Minings wieder von vorne.
+    \item New transactions are sent to all nodes in the network. These are stored in the so-called "mempool",
+    a cache of transactions that have not yet been confirmed, and held for the mining process.
+    \item Transactions are packaged into a block by the nodes. The transactions with the highest fees,
+    which can be freely chosen by the client, are preferentially merged from the mempool into a block.\footcite[Cf.][p. 53]{bhaskar2015bitcoin}
+    The sum of the transaction fees of the block is attributed to the miner
+    once he finds a valid block.\footcite[Cf.][p. 4]{nakamoto2008bitcoin}
+    \item The mining hardware computes a valid proof-of-work for that block, which the nodes provide to the network.
+    This is the actual computationally intensive process. Basically, this process is nothing more
+    other than a brute-forcing of hash values.\footcite[Cf.][p. 747]{mukhopadhyay2016brief} Only in this way
+    it is possible to compute a correct target hash value, since hash functions are surjective. The so called
+    "difficulty" is used to determine how many zeros the resulting hash should start with.\footcite[Cf.][p. 57]{bhaskar2015bitcoin}
+    In order to find a suitable hash, the nonce is varied and
+    for each value of the nonce, the hash value of the block is computed and verified. If it meets the requirements, which are
+    specified by the difficulty, a valid \ac{PoW} has been found. On average, this process should take about ten minutes.\footcite[Cf.][p. 748]{mukhopadhyay2016brief}
+    Therefore, the relevant performance metric of the mining hardware is called the
+    hashrate.\footcite[Cf.][p. 49]{bhaskar2015bitcoin} This describes how many hash values a device can compute in one second.
+    If the overall hashrate in the Bitcoin network increases, so does the
+    probability that a valid proof-of-work can be found in less than ten minutes. Therefore, the
+    Difficulty is adjusted every 2,016 blocks, so that if the overall hashrate of the network is higher, the variation
+    of the starting zeros makes it easier or more difficult to find a valid proof-of-work (Cf.
+    Fig. \ref{figure:evolutiondifficulty}).\footcite[Cf.][p. 57]{bhaskar2015bitcoin} Since the creation of the blocks
+    takes a lot of computational work, individual fraudsters now have no ability to manipulate the blockchain,
+    as long as the majority of participants in mining are honest. 
+    \item When a proof-of-work is found, it is sent to all nodes in the Bitcoin network.\footcite[Cf.][pp. 3]{nakamoto2008bitcoin}
+    For this purpose, the node connected to the mining hardware forms a
+    valid nonce with all the other information and sends it to all nodes in the Bitcoin network.
+    \item This block is now verified by the remaining nodes. The verification is successful as soon as the majority of
+    nodes accept the block and the construction of a new block is started, using the hash value of the found block as the
+    block is used as the previous hash for the new block.\footcite[Cf.][pp. 3]{nakamoto2008bitcoin}
+    The operator of the mining hardware receives as a reward the sum of all transaction fees of the block and
+    a fixed amount, which is currently 6.25 \ac{BTC} per block.\footcite[Cf.][p. 4]{nakamoto2008bitcoin}\footcite[Cf.][]{btcecho2021halving}\footcite[Cf.][p. 59]{taylor2017evolution}
+    The 6.25 \ac{BTC} is called a "block reward." This was initially 50 \ac{BTC} and is reduced by half every 210,000 blocks.\footcite[Cf.][p. 58]{taylor2017evolution}
+    This will provide the Bitcoin network with new and
+    fresh currency. Subsequently, the process of mining starts all over again.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -179,95 +172,95 @@ unterteilen:\footcite[Cf.][p. 3]{nakamoto2008bitcoin}\footcite[Cf.][p. 51]{li201
     \cite[Source: ][Fig. 1b]{taylor2017evolution}
 \end{figure}
 
-Prinzipiell ist die Wahrscheinlichkeit, einen Block als Erster erfolgreich zu finden umso höher, je höher der eigene
-Anteil an der gesamten Hashrate des Netzwerks ist. Aus diesem Grund versuchen Betreiber von Mining Hardware so viel
-Leistung wie möglich dem Netzwerk zur Verfügung zu stellen, um möglichst hohe Auszahlungen zu erhalten. Der Betrieb
-findet in Abhängigkeit zu den Kosten für eine solche Infrastruktur statt, was in Kapitel
-\ref{toc:kennzahlenundeinflussfaktoren} näher erörtert wird.
+In principle, the higher your own share of the total hashrate of the network, the higher the probability of successfully finding a block first.
+For this reason, operators of mining hardware try to give as much
+performance as possible to the network in order to obtain the highest possible payouts. The operation
+takes place in relation to the cost of such infrastructure, which is discussed in chap.
+\ref{toc:kennzahlenundeinflussfaktoren} in more detail.
 
-Grundsätzlich kann jeder am Mining teilnehmen. Es gibt momentan drei Modelle, wie Mining betrieben werden
-kann:\footcite[Cf.][p. 53, pp. 57]{bhaskar2015bitcoin}
+Basically, anyone can participate in mining. There are currently three models of how mining can be
+done:\footcite[Cf.][p. 53, pp. 57]{bhaskar2015bitcoin}
+
 \begin{itemize}
-    \item \textbf{Solo Mining: }Dies beschreibt die klassische Methode, in welcher Teilnehmer ihre eigene Hardware
-    verwenden und Mining betreiben. Diese bekommen nach einem erfolgreichen Proof-of-Work den gesamten Ertrag eines Blocks.
-    \item \textbf{Mining Pools: }Bei Mining Pools wird die Hashrate vieler Miner zusammengeführt. Durch die Bündelung
-    der Hashrate wird die Wahrscheinlichkeit, einen gültigen Block zu finden, gesteigert. Die Auszahlung ist in diesem
-    Verfahren nicht der Gesamtertrag des Blocks, sondern der prozentuale Anteil der Leistung, die dem Mining Pool zur
-    Verfügung gestellt wird. Durch die Beteiligung werden die einzelnen Erträge zwar geringer jedoch gleichmäßiger
-    ausfallen. Dadurch wird dem Risiko entgangen, als Solo Miner lange keinen gültigen Proof-of-Work zu finden
-    (s. Abb. \ref{figure:valuechaindatacenter}).\footcite[Cf.][pp. 58]{bhaskar2015bitcoin}\footcite[Cf.][p. 327]{derks2018chaining}
-    \item \textbf{Mining Contracts: }Die dritte Möglichkeit ist die Miete von Mining Hardware oder der Kauf von
-    Hashrate. \footcite[Cf.][pp. 58]{bhaskar2015bitcoin} Der Erlös aus dem Mining wird der Person nach Abzug der
-    Vertragsgebühren überwiesen. Folglich muss die Person keine eigene Hardware betreiben und kann dies professionellen
-    Unternehmen überlassen, die dies deutlich effizienter als Privatpersonen durchführen können. Solch ein Produkt bietet die
-    Genesis Group an.
+    \item \textbf{Solo Mining: }This describes the classic method in which participants use their own hardware
+    and perform mining. They receive the entire proceeds of a block after a successful proof-of-work.
+    \item \textbf{Mining Pools: }In mining pools, the hashrate of many miners is pooled. By pooling the hashrate,
+    the probability of finding a valid block is increased. The payout in this
+    not the total yield of the block, but rather the percentage of the output that is made available to the mining pool.
+    Due to the participation, the individual yields will be lower but more evenly
+    turn out. This avoids the risk of not finding a valid proof-of-work for a long time as a solo miner.
+    (see Fig. \ref{figure:valuechaindatacenter}).\footcite[Cf.][pp. 58]{bhaskar2015bitcoin}\footcite[Cf.][p. 327]{derks2018chaining}
+    \textbf{Mining Contracts: }The third option is to rent mining hardware or purchase a
+    hashrate. \footcite[Cf.][pp. 58]{bhaskar2015bitcoin}The proceeds from mining are transferred to the person after deducting the
+    contract fees. Consequently, the person does not need to operate his own hardware and can leave this to professional
+    companies that can do this much more efficiently than private individuals. Such a product is offered by the
+    Genesis Group.
 \end{itemize}
 
 \subsection{Mining data centers} \label{toc:miningrechenzentren}
 
-Das Mining von Bitcoins hat sich seit der Einführung 2009 stark verändert. Damals wurde begonnen, Hashes auf
-normalen \acp{CPU} zu berechnen.\footcite[Cf.][pp. 97]{xie2018extreme}\footcite[Cf.][p. 62]{taylor2017evolution}
-Wie bereits in Kapitel \ref{toc:miningundkonsensalgorithmen} erklärt, steigt die Wahrscheinlichkeit, einen Block
-erfolgreich mittels Proof-of-Work zu finden, mit der anteiligen Hashrate an der gesamten Netzwerkhashrate.
-Dementsprechend wollen die Betreiber von Mining Hardware die Effizienz durch die Reduzierung der Kosten pro
-errechnetem Hash steigern. Durch dieses Bestreben ist die zweite Generation der Mining Hardware auf Basis von
-\acp{GPU} entwickelt worden.\footcite[Cf.][p. 98]{xie2018extreme}\footcite[Cf.][p. 62]{taylor2017evolution}
-Durch die Entwicklung der Netzwerkhashrate von Bitcoin ist folgend die Hardware der dritten Generation auf der
-Grundlage von \acp{FPGA} entwickelt worden.\footcite[Cf.][p. 98]{xie2018extreme}\footcite[Cf.][pp. 62]{taylor2017evolution}
-Der Hardwaretyp der vierten Generation ist bis heute im Einsatz und basiert auf
-\acp{ASIC}.\footcite[Cf.][pp. 98]{xie2018extreme}\footcite[Cf.][p. 15]{gai2020blockchain} Diese Geräte sind
-durch das Hardwarelayout darauf spezialisiert, hocheffizient Hashes zu berechnen.\footcite[Cf.][p. 15]{gai2020blockchain}
-Auf der anderen Seite sind diese Chips nicht in der Lage, andere Dinge effizient zu berechnen und sind daher nur für diesen
-spezifischen Zweck entwickelt worden. Allerdings gab es nicht nur das Bestreben nach höherer Effizienz, sondern auch
-nach einer Skalierung der Mining Hardware. Um die Erträge aus dem Mining zu maximieren, wurden diese beiden Treiber
-kombiniert. Dies führte zum Bau von hochspezialisierten, ASIC basierten Rechenzentren, die alleinig dem Bitcoin Mining
-gewidmet sind.\footcite[Cf.][p. 97]{xie2018extreme} Mehrere solche Rechenzentren betreibt die Genesis Group. Diese werden
-im Folgenden exemplarisch beschrieben und deren Kosten- und Wertstruktur analysiert.
+Mining Bitcoins has changed a lot since its introduction in 2009. At that time, hashes were started to be calculated on
+normal \acp{CPU}.\footcite[Cf.][pp. 97]{xie2018extreme}\footcite[Cf.][p. 62]{taylor2017evolution}
+As explained in chapter \ref{toc:miningundkonsensalgorithmen}, the likelihood of finding a block successfully using proof-of-work
+increases with the proportional hashrate to the total network hashrate.
+Accordingly, mining hardware operators aim to increase efficiency by reducing the cost per
+computed hash. Due to this endeavor, the second generation of mining hardware based on
+\acp{GPU} has been developed.\footcite[Cf.][p. 98]{xie2018extreme}\footcite[Cf.][p. 62]{taylor2017evolution}
+Due to the evolution of Bitcoin's network hashrate, third-generation hardware based on the
+\acp{FPGA} basis.\footcite[Cf.][p. 98]{xie2018extreme}\footcite[Cf.][pp. 62]{taylor2017evolution}
+The fourth-generation hardware type is still in use today and is based on
+\acp{ASIC}.\footcite[Cf.][pp. 98]{xie2018extreme}\footcite[Cf.][p. 15]{gai2020blockchain} These devices are
+specialized by hardware layout to compute hashes highly efficient.{gai2020blockchain}
+On the other hand, these chips are not able to compute other things efficiently and thus are only designed for this
+specific purpose they were developed. However, there has been a drive not only for higher efficiency, but also
+for scaling the mining hardware. In order to maximize the returns from mining, these two drivers have been
+combined. This led to the construction of highly specialized ASIC-based data centers dedicated solely to bitcoin mining.\footcite[Cf.][p. 97]{xie2018extreme}
+Several such data centers are operated by Genesis Group. These are
+described below as examples and their cost and value structure analyzed.
 
 \subsubsection{Structure and operation} \label{toc:aufbauundfunktionsweise}
 
-In diesem Kapitel wird beschrieben, wie ein Rechenzentrum, das auf Bitcoin Mining spezialisiert ist, aufgebaut ist
-und wie dieses Mining betreibt.
+This chapter describes how a data center that specializes in bitcoin mining is structured
+and how it performs mining.
 
-Zentraler Bestandteil eines Mining Rechenzentrums ist die Mining Hardware.\footcite[Cf.][p. 327]{derks2018chaining}
-Die Anzahl der Geräte, die in einem solchen Rechenzentrum betrieben werden, ist grundsätzlich nur durch äußere Faktoren
-wie Platzangebot und Stromversorgung limitiert. In dem Paper "`Extreme Datacenter Specialization for Planet-Scale
-Computing: ASIC Clouds"' wird beschrieben, dass die Geräte meist in Serverschränken untergebracht
-werden.\footcite[Cf.][Fig. 5]{xie2018extreme} Dies bei Mining Rechenzentren in der Regel nicht der Fall,
-da der Großteil der Hardware nicht im 19 Zoll Formfaktor gebaut wird. Stattdessen werden passende Schwerlastregale
-verwendet, die in Reihe aufgestellt werden. Viele solcher Reihen bilden das Rechenzentrum an
-sich.\footcite[Cf.][]{appendix:layoutkardok}
+The central component of a mining data center is the mining hardware.\footcite[Cf.][p. 327]{derks2018chaining}
+The number of devices operated in such a data center is basically limited only by external factors
+such as available space and power supply. In the paper "`Extreme Datacenter Specialization for Planet-Scale.
+Computing: ASIC Clouds"', it is described that the devices are usually housed in server racks.\footcite[Cf.][Fig. 5]{xie2018extreme}
+This is usually not the case for mining data centers,
+as most of the hardware is not built in a 19-inch form factor. Instead, matching heavy-duty racks are
+are used, which are placed in rows. Many such rows make up the data center in
+itself.\footcite[Cf.][]{appendix:layoutkardok}
 
-Da die Mining Hardware viel Strom verbraucht, muss besonderer Wert auf die Stromversorgung gelegt
-werden.\footcite[Cf.][p. 327]{derks2018chaining} Der nötige Strom wird von externen Energieunternehmen bezogen. Die
-Umspannwerke und nötigen Transformatoranlagen sind auf dem Außengelände des Rechenzentrums bzw. sehr nah gelegen
-aufgebaut und stellen eine stabile Stromversorgung sicher. Innerhalb des Rechenzentrums sind Starkstromunterverteiler
-errichtet, die letztendlich für die Versorgung der einzelnen Geräte benötigt werden. Eines der aktuellen Modelle,
-der S19 Pro Miner von Bitmain, verbraucht pro Gerät im Durchschnitt 3,25kW.\footcite[Cf.][]{s19pro2021consumption}
-Ausgehend von der Annahme, dass in einem Rechenzentrum circa 12.000 Geräte aufgestellt sind, ergibt sich ein gesamter
-Stromverbrauch von 39,0MW für die Mining Hardware.
+As the mining hardware consumes a lot of power, special attention must be paid to the power supply.\footcite[Cf.][p. 327]{derks2018chaining}
+The necessary electricity is purchased from external energy companies. The
+substations and necessary transformer facilities are located on the outside of the data center or very close by
+and ensure a stable power supply. Within the data center, high-voltage sub-distribution boards are
+required to supply the individual devices. One of the current models,
+the S19 Pro Miner from Bitmain, consumes an average of 3.25kW per device.\footcite[Cf.][]{s19pro2021consumption}
+Assuming that there are approximately 12,000 devices in a data center, this results in total
+power consumption of 39.0MW for the mining hardware.
 
-Damit die Miner stabil betrieben werden können, muss die Abwärme der Geräte effizient abtransportiert werden. Dazu
-wird ein grundlegender Aufbau identisch zu einem gewöhnlichen Rechenzentrum bestehend aus Heiß- und Kaltgang verwendet.
-Durch Lüfter wird kalte Luft von außen in das Rechenzentrum transportiert. Diese erwärmt sich, während sie durch die
-Mining Hardware fließt, und wird durch den Heißgang abtransportiert.\footcite[Cf.][]{appendix:layoutkardok} Die
-Stromkosten für die Kühlung machen einen erheblichen Anteil der Stromkosten eines Mining Rechenzentrums aus.
+In order for the miners to operate stably, the waste heat from the devices must be efficiently removed. For this purpose
+a basic structure identical to an ordinary data center consisting of hot and cold aisles is used.
+Fans transport cold air into the data center from outside. This warms up as it flows through the
+mining hardware, and is carried away through the hot aisle.\footcite[Cf.][]{appendix:layoutkardok} The
+electricity costs for cooling make up a significant portion of a mining data center's electricity costs.
 
-Damit die Mining Hardware mit den Blockchain Nodes kommunizieren kann, ist neben der Stromversorgung auch eine
-Netzwerkinfrastruktur notwendig. Diese ist so konzipiert, dass jedes Geräte mit dem Internet und damit auch den Nodes
-kommunizieren kann. Aufgrund der Anforderungen an die Bandbreite des internen Netzwerkes sind die zentralen
-Komponenten mit einem Durchsatz von 10$\frac{Gbit}{s}$ dimensioniert. Für die Peripherie genügt eine Datenmenge
-von 1$\frac{Gbit}{s}$.\footcite[Cf.][]{appendix:networktopology} Um die Bandbreite in das Internet möglichst
-gering zu halten, wird die Mining Hardware mit einem Mining Proxy verbunden, der auf einem internen Server
-installiert ist und die Verbindung zum Bitcoin Netzwerk und dem verwendeten Mining Pool
-herstellt.\footcite[Cf.][]{appendix:miningproxy} Der Vorteil liegt darin, dass zu einem externen Mining Pool
-nur noch eine Verbindung benötigt wird.
+In order for the mining hardware to communicate with the blockchain nodes, a network infrastructure is required in addition to the power supply.
+This is designed in such a way that each device can communicate with the Internet and thus also with the nodes.
+Due to the bandwidth requirements of the internal network, the central
+components are dimensioned with a throughput of 10$\frac{Gbit}{s}$. For the peripherals, a data volume of
+of 1$\frac{Gbit}{s}$.\footcite[Cf.][]{appendix:networktopology} In order to keep the bandwidth into the internet as small as possible
+the mining hardware is connected to a mining proxy, which is installed on an internal server and
+and connects to the Bitcoin network and the mining pool used.\footcite[Cf.][]{appendix:miningproxy}
+The advantage is that only one connection is needed to an external mining pool.
 
-Schlussendlich ist auf weiteren internen Servern eine Steuerungs- und Überwachungssoftware für die Mining Hardware
-installiert. Durch diese Software wird eine große Anzahl von Mining Geräten gesteuert und
-überwacht.\footnote{https://www.genesis-mining.com/hexa} Die gewonnenen Daten aus der Überwachung können sehr
-interessant für die Verwendung innerhalb von Business Intelligence Prozessen sein. Diese Evaluation geschieht
-in Kapitel \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}.
+Finally, control and monitoring software for the mining hardware is installed on additional internal servers.
+This software controls and monitors a large number of mining devices.\footnote{https://www.genesis-mining.com/hexa}
+The data obtained from the monitoring can be very
+interesting for use within business intelligence processes. This evaluation is done
+in chapter \ref{toc:ansatzmoeglichkeitenfuerbusinessintelligence}.
 
 \subsubsection{Financial considerations} \label{toc:kennzahlenundeinflussfaktoren}
 
@@ -280,12 +273,20 @@ gelistet, die nicht-finanzieller oder nicht-technischer Natur sind und momentan 
 Detaillierungsgrad in Betracht gezogen werden können. Sprungfixe Kosten werden in diesem Teil nicht verwendet, da die
 zugrundeliegenden Berechnungen und Abschätzungen diese auch nicht als Kostensorte berücksichtigen.
 
+In this section, we will now describe the financial and non-financial factors that influence a data center that specializes in mining.
+The financial aspects are based on internal documentation.
+These are additionally categorized as to whether they are \ac{CapEx} or \ac{OpEx} items and
+whether they are variable or fixed costs. Furthermore, factors are explained that can optimize data center revenues
+and how profitability can be measured (\acp{KPI}). Towards the end, influencing factors are
+listed that are non-financial or non-technical in nature and are therefore currently only considered in a low level of detail.
+Leap-fixed costs are not used in this part, since the
+underlying calculations and estimates do not take them into account as cost items.
 
-Die Kosten eines Rechenzentrums werden im ersten Schritt grundlegend in \ac{CapEx} und \ac{OpEx}
-unterteilt.\footcite[Cf.][]{appendix:capex}\footcite[Cf.][]{appendix:opex} \ac{CapEx} beschreibt dabei die initialen
-Ausgaben, die für den Aufbau eines Datencenters getätigt werden müssen. \ac{OpEx} beschreibt die Sorte von Kosten, die permanent
-während des Betriebs entstehen. Beide Posten werden zusätzlich in fixe oder variable Kosten unterteilt, die abhängig
-von der Zahl der Miner sind, die vor Ort installiert wird.
+In the first step, the costs of a data center are fundamentally divided into \ac{CapEx} and \ac{OpEx}\footcite[Cf.][]{appendix:capex}\footcite[Cf.][]{appendix:opex} \ac{CapEx}
+describes the initial
+expenditures that must be made to build a data center. \ac{OpEx} describes the kind of costs, which are permanently
+during the operation. Both items are additionally subdivided into fixed or variable costs, which depend on the number of miners
+that are installed on site.
 
 \begin{figure}[H]
     \caption{Cost structure of a mining data center}
@@ -293,87 +294,87 @@ von der Zahl der Miner sind, die vor Ort installiert wird.
     \label{figure:valuestructurenordics}
 \end{figure}
 
-Diese Aufteilung ist in Abb. \ref{figure:valuestructurenordics} zu finden. Die folgenden Posten sind für den Aufbau
-eines Rechenzentrums relevant:\footcite[Cf.][]{appendix:capex}
+This division can be found in Fig. \ref{figure:valuestructurenordics}. The following items are relevant to the structure
+a data center:\footcite[Cf.][]{appendix:capex}
 \begin{itemize}
-    \item \textbf{Mining Hardware: }Mit diesem Posten ist die eigentliche spezielle Hardware gemeint, die für das
-    Bitcoin Mining benötigt wird (s. Ziffer 2 in Abb. \ref{figure:valuechaindatacenter}). Der \ac{KPI}, der die
-    Effektivität des Geräts misst, ist die Höhe der durchschnittlichen Auszahlungen durch das Mining. Diese bewegt
-    sich bei aktuellen Modellen, wie dem Antminer S19Pro, im ungünstigsten Fall bei $0,06\ USD / \frac{TH}{s} / day$, d.h.
-    \ac{USD} pro Hashrate pro Tag.\footcite[Cf.][]{appendix:worstcasescenario} Im wahrscheinlichsten Szenario liegt
-    es bei $0,09\ USD / \frac{TH}{s} / day$\footcite[Cf.][]{appendix:mostprobablescenario} und im optimalen Szenario
-    bei $0,27\ USD / \frac{TH}{s} / day$.\footcite[Cf.][]{appendix:optimalscenario} Die Identifikation des korrekten
-    Szenarios ist anhand der Difficulty des Bitcoin Minings, der gesamten Netzwerk Hashrate und anhand des Marktwerts
-    eines Bitcoin möglich, was weitere \acp{KPI} beim Betrieb eines Rechenzentrums sind. Da der Marktwert ausgesprochen
-    volatil ist, ist es schwer eine genaue Vorhersage zu treffen.\footcite[Cf.][p. 325]{badertscher2017bitcoin} Zusätzlich
-    sind in diesem Teil die Ausfalldauer und die Gebühren für den Mining Pool pauschal mit
-    einberechnet.\footcite[Cf.][]{appendix:s19proassumptions} Die Effektivität der Mining Hardware wird folgendermaßen
-    berechnet:
+    \item \textbf{Mining Hardware: }This item refers to the actual special hardware that is needed for the
+    Bitcoin mining (see item 2 in Fig. \ref{figure:valuechaindatacenter}). The \ac{KPI}, which measures the
+    effectiveness of the device is the amount of average payouts from mining. This ranges
+    for current models, such as the Antminer S19Pro, at about $0.06\ USD / \frac{TH}{s} / day$ in the worst case, means
+    \ac{USD} per hashrate per day.\footcite[Cf.][]{appendix:worstcasescenario} In the most likely scenario,
+    it is $0.09\ USD / \frac{TH}{s} / day$\footcite[Cf.][]{appendix:mostprobablescenario} and in the optimal scenario
+    at $0.27\ USD / \frac{TH}{s} / day$.\footcite[Cf.][]{appendix:optimalscenario} The identification of the correct
+    scenario is based on the Difficulty of Bitcoin mining, the total network Hashrate and the market value
+    of a Bitcoin, which are additional \acp{KPI} when operating a data center. Since the market value is extremely
+    volatile, it is difficult to make an accurate prediction.\footcite[Cf.][p. 325]{badertscher2017bitcoin} In addition
+    this part includes the downtime and the fees for the mining pool in a lump sum
+    factored in.\footcite[Cf.][]{appendix:s19proassumptions} The effectiveness of the mining hardware is
+    calculated by the following equation:
     \begin{equation}
         \RM = \frac{\DP}{\THr}\cdot(1-\PF)\cdot\UT\cdot\ER
     \end{equation}
-    In dieser Formel werden die täglich erwarteten Auszahlungen (\DP) pro Hashrate (\THr) berechnet. Das Resultat wird
-    dabei durch Uptime der Mining Hardware (\UT), Gebühren (\PF) und dem Tauschkurs von \ac{USD} und \ac{BTC} korrigiert.
+    In this formula, the daily expected payouts (\DP) per hashrate (\THr) are calculated. The result is
+    corrected by uptime of the mining hardware (\UT), fees (\PF) and the exchange rate of \ac{USD} and \ac{BTC}.
 
-    Bei dieser Rechnung ist nicht der Strompreis direkt aufgeführt. Diese Größe wird über den Stromverbrauch der Geräte
-    errechnet. Verbesserungen in der Firmware dieser Geräte können mit einem \ac{KPI} visualisiert werden, der sich
-    "`Reference power effiency"' nennt. Dieser hat die Einheit $\frac{J}{TH}$ (Joule pro Terahash) und ist stark
-    temperaturabhängig.\footcite[Cf.][]{s19pro2021consumption}
+    In this calculation, the electricity price is not listed directly. This value is calculated by the power consumption of the
+    devices. Improvements in the firmware of these devices can be visualized with a \ac{KPI} called
+    "`Reference power effiency'". This has the unit $\frac{J}{TH}$ (joules per terahash) and is strongly
+    temperature dependent.\footcite[Cf.][]{s19pro2021consumption}
 
-    Der Posten der Mining Hardware ist variabel, da sich dieser proportional zur Anzahl der Miner verhält. Bei einem
-    10MW Rechenzentrum wären dies circa 2.987 S19 Pro Miner\footcite[Cf.][]{appendix:s19proassumptions} bei einem Gesamtpreis
-    von circa 8.068.708 USD.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Netzwerk Hardware: }Damit die Mining Hardware mit der Blockchain kommunizieren kann, wird die Netzwerk
-    Hardware benötigt. Unter diesen Posten fallen Switches, Router und Netzwerkkabel. Es wird dabei auf standartisierte
-    Netzwerk Hardware zurückgegriffen, die günstig und in großen Stückzahlen verfügbar ist. Dieser Posten ist ebenfalls
-    variabel, da sich mit steigender Anzahl von Mining Hardware auch die Anzahl und Länge der Netzwerkverkabelung und die Anzahl
-    der Switches erhöht.\footcite[Cf.][]{appendix:capex} Die Zahl der Router bleibt zwar konstant, stellt aber nur einen so
-    geringen Anteil an diesem Posten dar, sodass dieser als variabel angesehen werden kann. Bei einem 10MW Rechenzentrum
-    liegen die Kosten für diesen Posten bei circa 69.060 USD.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Infrastruktur Elektrizität: }Für den Betrieb der Mining Hardware ist ein Posten bei der Errichtung
-    eines Mining Rechenzentrums die Energieversorgung. Bei diesem Posten ist vor allem die Verkabelung innerhalb des
-    Rechenzentrums gemeint. Die Netzanbindung und die Starkstromtransformatoren werden in anderen Posten in die Rechnung
-    mit einbezogen. Da  die Anzahl der Kabel und Verteiler innerhalb eines Rechenzentrums mit steigender Anzahl von Mining
-    Geräten zunimmt, ist dies ein variabler Posten bei der Errichtung.\footcite[Cf.][]{appendix:capex} Die Kosten belaufen
-    sich auf circa 423.900 USD für ein Rechenzentrum mit einem Mining Stromverbrauch von 10MW.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Hardware Kühlung: }Wie in allen anderen Rechenzentren muss auch eine Kühlung vor Ort errichtet werden.
-    Dabei handelt es sich hauptsächlich um Lüfter und Filter, die installiert werden müssen.
-    Da die Anzahl der Kühlungsgeräte mit der Anzahl von installierten Mining Geräten skaliert, ist dies ein variabler Posten.
-    Bei der Energieversorgung stellt die Kühlung einen konstanten prozentualen Anteil an dem Gesamtverbrauch dar.
-    Dieser Wert ist primär vom Klima (Temperatur) vor Ort anhängig, welches daher einen \ac{KPI} darstellt. Dieser Posten
-    hat circa die Höhe von 908.350 USD für ein 10MW Mining Rechenzentrum.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Aufbauten: }Dabei handelt es sich primär um Schwerlastregale, die für die Aufstellung der Miner verwendet
-    werden. Auch sind dort weitere Posten enthalten, die den Aufbau und die Anpassung des Mining Rechenzentrums betreffen. Da sich
-    diese Anpassungen und die Anzahl der Schwerlastregale mit steigender Anzahl der Mining Hardware erhöhen, wird dieser
-    Teil als ein variabler Posten betrachtet. Bei einem 10MW Rechenzentrum beläuft sich dieser Teil auf circa 284.850
+    The mining hardware item is variable as it is proportional to the number of miners. For a
+    10MW data center, this would be approximately S19 2,987 per miner\footcite[Cf.][]{appendix:s19proassumptions} for a total price of
+    of about 8,068,708 USD.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Network Hardware: }In order for the mining hardware to communicate with the blockchain, network
+    Hardware is required. Switches, routers and network cables fall under this item. Standardized network hardware is used
+    that is cheap and available in large quantities. This item is also
+    variable, as the number and length of network cabling and the number of switches increases with the number of mining hardware.
+    of switches increases.\footcite[Cf.][]{appendix:capex} While the number of routers remains constant, it represents such a
+    small proportion of this item that it can be considered variable. For a 10MW data center
+    the cost of this item is approximately 69,060 USD.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{infrastructure electricity: }For the operation of the mining hardware, one item when setting up a
+    of a mining data center is the power supply. This item mainly refers to the cabling within the data center.
+    The grid connection and the heavy current transformers are included in other items in the invoice.
+    Since the number of cables and distributors within a data center increases as the number of mining
+    equipment increases, this is a variable item in the construction.\footcite[Cf.][]{appendix:capex} The cost is
+    is approximately 423,900 USD for a data center with a mining power consumption of 10MW.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Hardware Cooling: }As in all other data centers, cooling must be constructed on site.
+    This mainly involves fans and filters that need to be installed.
+    Since the number of cooling devices scales with the number of mining devices installed, this is a variable item.
+    In terms of energy supply, cooling represents a constant percentage of total consumption.
+    This value is primarily dependent on the climate (temperature) on site, which therefore represents a \ac{KPI}. This item
+    has approximately the amount of 908,350 USD for a 10MW mining data center.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Bodies: }These are primarily heavy-duty racks that are used to set up the miners.
+    Also included there are other items that relate to the construction and customization of the mining data center. Since
+    and the number of heavy-duty racks increase with the number of mining hardware, this part is considered a variable item.
+    portion is considered a variable item. For a 10MW data center, this portion is approximately 284,850
     USD.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Personal (Aufbau): }Für den Aufbau eines Rechenzentrums wird initial Personal benötigt. Dabei handelt es
-    sich vor allem um Fachpersonal im Bereich IT und Elektrik, das für den Aufbau angestellt wird. Dieser Teil wird mit circa
-    297.321 \ac{USD} in die Berechnung der \ac{CapEx} mit einbezogen.\footcite[Cf.][]{appendix:capex} Es ist ein variabler
-    Posten, denn je größer ein Rechenzentrum wird desto mehr Personal wird für einen Aufbau benötigt.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Land: }In diesem Punkt wird das Land und die Immobilie für ein Mining Rechenzentrum mit einbezogen. Die
-    benötigten finanziellen Mittel sind stark von dem Ort abhängig, an dem ein Rechenzentrum errichtet werden soll. In der
-    Beispielrechnung für das 10MW Rechenzentrum, das auch bei den letzten Punkten verwendet wurde, war die Höhe der Kosten
-    für diesen Posten bei circa 1.223.691 \ac{USD}.\footcite[Cf.][]{appendix:capex} In diesem Fall wird dieser Posten nicht
-    als variable Kosten benannt, obwohl dies naheliegend sein könnte. Aus diesem Grund handelt es sich um einen fixen Posten,
-    da ein Grundstück im Verkauf eine festgelegte Größe hat. Es ist nicht möglich, je nach Bedarf ein Grundstück zu verkleinern
-    oder zu vergrößern. Deshalb zählt dies zu den fixen Posten.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Gesetzliche Anforderungen: }Je nach Land, in dem Mining Rechenzentren errichtet werden sollen, sind
-    verschiedene gesetzliche Anforderungen zu berücksichtigen. Dabei handelt es sich vor allem um Voraussetzungen, die den
-    Betrieb eines solchen Rechenzentrums und die Beschäftigung von Personal möglich machen. Das lokale Steuerrecht ist im
-    Besonderen zu berücksichtigen. Diese Ausgaben, die zu großen Teilen aus Anwaltskosten bestehen, sind bereits vor der
-    Errichtung eines Rechenzentrums zu beachten und treten einmalig auf. Sie belaufen sich auf 1.735.295 \ac{USD}, wenn
-    das Beispiel des 10MW Rechenzentrums zu Grunde gelegt wird.\footcite[Cf.][]{appendix:capex}
-    \item \textbf{Management (Planung): }Letztendlich werden unter \ac{CapEx} das initiale Management und die Kosten für
-    das Projektmanagement kalkuliert. Das sind die Kosten für das Personal, die zentral solche Rechenzentren und die
-    dazugehörigen Projekte planen. Für das beispielhafte Rechenzentrum beläuft sich dieser Posten auf circa
+    \item \textbf{Personnel (setup): }Initial personnel are required to set up a data center. These are
+    mainly IT and electrical specialists who are hired for the construction. This part is valued at approx.
+    297,321 \ac{USD} in the calculation of the \ac{CapEx}.\footcite[Cf.][]{appendix:capex} It is a variable
+    item, because the larger a data center becomes the more staff is needed for a setup.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Land: }This item includes the land and real estate for a mining data center. The
+    financial resources required are highly dependent on the location where a data center is to be built. In the
+    example calculation for the 10MW data center, which was also used in the last points, the amount of costs for this item was
+    for this item was approximately 1,223,691 \ac{USD}.\footcite[Cf.][]{appendix:capex} In this case, this item is not
+    designated as a variable cost, although this might seem obvious. For this reason, it is a fixed item,
+    since a plot of land has a fixed size when sold. It is not possible to reduce or increase the size of a plot of land as needed.
+    or increase the size of a plot of land. Therefore, this counts as a fixed item.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Legal Requirements: }Depending on the country in which mining data centers are to be established, there are
+    various legal requirements must be taken into account. These are primarily requirements that govern the
+    operation of such a data center and the employment of personnel. Local tax law must be
+    particular to be taken into account. These expenses, which largely consist of legal fees, must be taken into account even before the
+    construction of a data center and occur on a one-time basis. They amount to 1,735,295 \ac{USD} if
+    the example of the 10MW data center is taken as a basis.\footcite[Cf.][]{appendix:capex}
+    \item \textbf{Management (planning): }Finally, \ac{CapEx} is used to calculate the initial management and cost of
+    project management are calculated. These are the costs for the personnel who centrally plan such data centers and the
+    associated projects. For the exemplary data center, this item amounts to approx.
     631.880 USD.\footcite[Cf.][]{appendix:capex}
 \end{itemize}
 
-Durch die Summation aller Werte der vorherigen Punkte ist feststellbar, dass ein Rechenzentrum, das eine Mining Kapazität
-von 10MW aufweisen soll, circa 13.665.996 USD kostet.\footcite[Cf.][]{appendix:summaryofinvestment} Die Verteilung der
-beschriebenen einzelnen Posten ist in Abbildung \ref{figure:capexdistribution10mw} relativ zueinander anhand der Zahlen für
-ein 10MW Rechenzentrum abgebildet.
+By summing all the values of the previous points, it can be determined that a data center that is supposed to have a mining capacity of
+of 10MW costs about 13,665,996 USD.\footcite[Cf.][]{appendix:summaryofinvestment} The distribution of the individual items
+described is shown in Figure \ref{figure:capexdistribution10mw} relative to each other using the figures for a
+a 10MW data center.
 
 \begin{figure}[H]
     \caption{CapEx distribution for a 10MW data center}
@@ -381,35 +382,35 @@ ein 10MW Rechenzentrum abgebildet.
     \label{figure:capexdistribution10mw}
 \end{figure}
 
-Neben den Ausgaben, die initial bei einem Rechenzentrum beachtet werden müssen, sind auch die folgenden Kosten (\ac{OpEx}),
-die während dem Betrieb entstehen, zu beachten:\footcite[Cf.][]{appendix:opex}
+In addition to the expenses that must be considered initially for a data center, the following costs (\ac{OpEx}),
+which arise during operation, have to be considered:\footcite[Cf.][]{appendix:opex}
 \begin{itemize}
-    \item \textbf{Elektrizität: }Dieser Teil beschreibt die Kosten, die durch den Verbrauch von Elektrizität erzeugt werden.
-    Dieser Parameter ist ein zentraler Bestandteil bei der Betrachtung von \acp{KPI} eines Kryptomining Rechenzentrums
-    (s. Abb. \ref{figure:valuechaindatacenter}).\footcite[Cf.][p. 327]{derks2018chaining} Da ein Mining Rechenzentrum
-    Großabnehmer bei Energieversorgern ist, unterliegen die Preise einer Schwankung, die von dem Anbieter vorgegeben
-    ist.\footcite[Cf.][]{appendix:opex} Dieser Posten gehört zu den variablen Kosten, da mit ansteigender Zahl von Geräten
-    für Mining und Kühlung der Stromverbrauch steigt. Die jährlichen Kosten für ein 10MW Rechenzentrum betragen bei einem
-    Grundpreis von $0.0357 \frac{USD}{kWh}$ circa 3.038.313 USD.\footcite[Cf.][]{appendix:opex}
-    \item \textbf{Leihgebühren Hardware: }Hierbei werden Geräte geführt, die geliehen sind und daher in regelmäßigen
-    Zeitabständen bezahlt werden müssen. Im Falle der Genesis Group sind dies die Hauptverteiler und Transformatoren
-    eines Rechenzentrums, die eine Kapazität größer 1MW haben. Da diese Geräte im Kauf sehr teuer sind, werden sie von
-    den Energieversorgern geliehen. Die jährlichen Kosten für einen solchen Leih sind bei 10MW circa 170.280 USD
-    und sind variabler Natur.\footcite[Cf.][]{appendix:opex}
-    \item \textbf{Ersatzteile: }Um Defekte jeglicher Hardware vor Ort reparieren zu können, findet sich der Posten der
-    Ersatzteile in der Berechnung für den \ac{OpEx}.\footcite[Cf.][p. 327]{derks2018chaining} Für diesen Teil stehen
-    keine beispielhaften Zahlen zur Verfügung.
-    \item \textbf{Personal: }Damit die Hardware repariert werden kann und der Betrieb des Rechenzentrums aufrecht erhalten
-    werden kann, wird Personal permanent vor Ort benötigt. Dieser Posten beläuft sich in dem Beispiel auf circa
-    31.282 USD pro Monat, kann sich aber von Land zu Land durchaus drastisch unterscheiden.\footcite[Cf.][]{appendix:opex}
-    Dieser Betrag ist unter den Fixkosten aufgeführt, da durch die anfängliche Größe des Rechenzentrums auch die Personalplanung
-    klar ist. Es wird auch bei kleinen Erweiterungen kein weiteres Personal angestellt.\footcite[Cf.][]{appendix:opex}
-    \item \textbf{Management (Betrieb): }Für die Verwaltung des Rechenzentrums und das zentrale Projektmanagement wird
-    außerdem eine weitere Pauschale von 6.289 USD pro Monat aufgerufen.\footcite[Cf.][]{appendix:opex} Diese beschreibt
-    die Verwaltungskosten von zentraler Seite aus.
-    \item \textbf{\ac{OBE}: }In diesem Bereich sind die Bürokosten, Kosten für das Internet, Wasser und Bürostrom verzeichnet.
-    Diese belaufen sich bei einem 10MW Rechenzentrum auf circa 3.593 USD pro Monat und stellen fixe Kosten dar, da bei all diesen
-    Punkten sich nichts ändern wird, sobald die Zahl der Miner verändert wird.\footcite[Cf.][]{appendix:opex}
+    \item \textbf{Electricity: }This part describes the costs generated by the consumption of electricity.
+    This parameter is a key component when considering \acp{KPI} of a cryptomining data center.
+    (see Figure \ref{figure:valuechaindatacenter}).\footcite[Cf.][p. 327]{derks2018chaining} Since a mining data center
+    is a bulk buyer from electricity, prices are subject to fluctuation, which is dictated by the provider\footcite[Cf.][]{appendix:opex}
+    This item is one of the variable costs, since as the number of devices for mining and cooling increases.
+    The annual cost for a 10MW data center at a base price of
+    base price of $0.0357 \frac{USD}{kWh}$ circa 3,038,313 USD.\footcite[Cf.][]{appendix:opex}
+    \item \textbf{Loan hardware charges: }This item carries equipment that is on loan and therefore must be paid for at regular
+    periodic intervals. In the case of Genesis Group, this is the main distribution boards and transformers
+    of a data center, which have a capacity greater than 1MW. Since this equipment is very expensive to purchase, it is borrowed from
+    the energy suppliers. The annual cost of such a loan is about 170,280 USD for 10MW
+    and are variable in nature.\footcite[Cf.][]{appendix:opex}
+    \item \textbf{Spares: }In order to be able to repair defects of any hardware on site, the item of the
+    spare parts is placed in the calculation for the \ac{OpEx}.\footcite[Cf.][p. 327]{derks2018chaining} For this part, there are
+    no exemplary figures available.
+    \item \textbf{Personnel: }To ensure that hardware can be repaired and data center operations
+    can be maintained, personnel is required permanently on site. In the example, this item amounts to approx.
+    31,282 USD per month, but can vary drastically from country to country.\footcite[Cf.][]{appendix:opex}
+    This amount is listed under fixed costs because the initial size of the data center means that staffing plans are also
+    is clear. No additional staff is hired even for small expansions.\footcite[Cf.][]{appendix:opex}
+    \item \textbf{Management (Operations): }For the management of the data center and central project management, a
+    flat rate of 6,289 USD per month is taken into place.\footcite[Cf.][]{appendix:opex} This describes
+    the administrative costs from a central management point of view.
+    \item \textbf{\ac{OBE}: }This area records the office costs, costs for the Internet, water and office electricity.
+    These amount to approximately 3,593 USD per month for a 10MW data center and are fixed costs, as none of these items
+    will change once the data center is up and running.\footcite[Cf.][]{appendix:opex}
 \end{itemize}
 
 \begin{figure}[H]
@@ -418,10 +419,10 @@ die während dem Betrieb entstehen, zu beachten:\footcite[Cf.][]{appendix:opex}
     \label{figure:opexdistribution10mw}
 \end{figure}
 
-Zusammenfassend kann festgestellt werden, dass die \ac{OpEx} sich bei einer Mining Kapazität von 10MW auf circa 317.897 USD
-belaufen.\footcite[Cf.][]{appendix:opex} Nun müssen durch das Mining Einnahmen generiert werden, die diese Ausgaben über
-die Zeit hinweg amortisieren, damit das Unternehmen in der Lage ist, Gewinn zu erzielen. Die Verteilung der einzelnen Kosten
-ist in Abbildung \ref{figure:opexdistribution10mw} relativ auf jährlicher Basis abgebildet.
+In summary, for a mining capacity of 10MW, the \ac{OpEx} is approximately 317,897 USD.\footcite[Cf.][]{appendix:opex}
+Now the mining has to generate revenues that amortize these expenses over time
+so the company is able to make a profit. The distribution of the individual costs
+is shown in Figure \ref{figure:opexdistribution10mw} relative on an annual basis.
 
 Wie bereits in der Auszählung für \ac{CapEx} beschrieben, wird die finanzielle Effektivität eines Mining Gerätes durch
 die Größe \RM betrachtet. Allerdings kann diese sehr stark fluktuieren, da dabei Faktoren, wie der Tauschkurs von Bitcoin
@@ -429,6 +430,12 @@ in USD (s. Ziffer "`Exchanges"' in Abb. \ref{figure:valuechaindatacenter}) und a
 Parametern, wie Difficulty und Netzwerk Hashrate, entwickeln. Eine genaue Vorhersage ist daher nicht möglich, weshalb dort
 mit verschiedenen Szenarien gerechnet wird.\footcite[Cf.][]{appendix:s19proassumptions} Aus diesen wird dann letztendlich ein
 gewichteter Durchschnitt gebildet, welcher für die Kalkulation verwendet wird.\footcite[Cf.][]{appendix:s19proassumptions}
+
+As already described in the count for \ac{CapEx}, the financial effectiveness of a mining device is
+is considered by the size \RM. However, this can fluctuate greatly due to factors such as the exchange rate of Bitcoin
+into USD (see figure "`Exchanges"' in Fig. \ref{figure:valuechaindatacenter}) and also \DP, vary depending on the mining
+parameters, such as Difficulty and Network Hashrate. An exact prediction is therefore not possible, which is why
+different scenarios are calculated.\footcite[Cf.][]{appendix:s19proassumptions} From these, a weighted average is finally formed.\footcite[Cf.][]{appendix:s19proassumptions}
 
 \begin{figure}[H]
     \caption{Cost and value flows for a mining data center}
@@ -438,7 +445,7 @@ gewichteter Durchschnitt gebildet, welcher für die Kalkulation verwendet wird.\
     \cite[Source: Based on][Fig. 3]{derks2018chaining}
 \end{figure}
 
-Bei dem vorliegenden Beispiel des Mining Datencenters wurden die folgenden Szenarien mit Eintrittswahrscheinlichkeiten gebildet:
+In the present example of the mining data center, the following scenarios were formed with probabilities of occurrence:
 
 \begin{table}[H]
     \caption{Mining Effectiveness Scenarios}
@@ -455,15 +462,15 @@ Bei dem vorliegenden Beispiel des Mining Datencenters wurden die folgenden Szena
     \cite[Source: Based on][]{appendix:s19proassumptions}
 \end{table}
 
-Wie anhand von Tabelle \ref{tbl:miningrewardscenario} erkennbar ist, fluktuieren die Einnahmen zwischen 10 und über
-30 Millionen \ac{USD}, was eine beträchtliche Unschärfe darstellt. Daher ist bei diesen Werten eine Optimierung anzustreben.
-Ob dies möglich ist, wird in den folgenden Kapiteln evaluiert. Weiterhin werden in diesen Berechnungen keine weiteren
-Risiken benannt und daher in der Kalkulation ignoriert. Dies stellt auch eine Möglichkeit der Verbesserung dar,
-da mit einer zusätzlichen Risikoanalyse die Eintrittswahrscheinlichkeiten besser abgeschätzt werden können.
+As can be seen from table \ref{tbl:miningrewardscenario}, revenues fluctuate between 10 and over
+30 million \ac{USD}, which is a considerable fuzziness. Therefore, optimization should be sought for these values.
+Whether this is possible is evaluated in the following chapters. Furthermore, these calculations do not include any further
+risks and will be ignored therefore. This also represents an opportunity for improvement,
+since with an additional risk analysis the probabilities of occurrence can be better estimated.
 
-Basierend auf allen finanziellen Daten sind der Cashflow und der Break-Even Punkt berechenbar. Das Ergebnis einer
-solchen Berechnung findet sich in Abbildung \ref{figure:datacentercashflow}. In der Abbildung sind die jeweiligen Größen
-auf einer jährlichen Basis angetragen und zeigen die Entwicklung von \ac{CapEx} und \ac{OpEx} über die Jahre hinweg.
+Based on all financial data, cash flow and break-even point are calculable. The result of
+such a calculation can be found in figure \ref{figure:datacentercashflow}. In the figure the respective values are
+on an annual basis and show the development of \ac{CapEx} and \ac{OpEx} over the years.
 
 \begin{figure}[H]
     \caption{Cash flow and break-even of a mining data center}
@@ -473,14 +480,14 @@ auf einer jährlichen Basis angetragen und zeigen die Entwicklung von \ac{CapEx}
     \cite[Source: ][]{appendix:summaryofinvestment}
 \end{figure}
 
-Letztendlich gibt es weitere Faktoren, die auf die Effektivität eines Datencenters und damit auf der Seite der
-Einnahmen Einfluss nehmen:
+Ultimately, there are other factors that influence the effectiveness of a data center and thus on the side of the
+revenue side:
 \begin{itemize}
-    \item \textbf{Klima: }Das Klima wirkt sich auf die Effektivität der Miner aus und bestimmt auch maßgeblich
-    die Dimensionierung der Kühlung. Dementsprechend ist es das Ziel bei der Ortswahl eine optimale Kombination aus
-    Strompreis, der die \ac{OpEx} maßgeblich bestimmt, und den \ac{CapEx} für die Kühlung, die einen
-    großen Anteil ausmacht, zu erreichen. Das genaue Klima wird allerdings nicht in Betrachtungen einbezogen.
-    \item \textbf{Versorgungssicherheit: }Dieser Faktor beschreibt die Sicherheit der nötigen externen Infrastruktur,
-    wie Internet und Elektrizität. Da jeder Ausfall zwangsläufig in einen effektiven Komplettausfall des Rechenzentrums
-    mündet, muss dies in die Betrachtung einbezogen werden.
+    \item \textbf{Climate: }The climate affects the effectiveness of the miners and also significantly determines
+    the dimensioning of the cooling. Accordingly, the goal in site selection is to find an optimal combination of
+    electricity price, which largely determines the \ac{OpEx}, and the \ac{CapEx} for cooling, which accounts for a
+    large share. However, the exact climate is not included in considerations.
+    \item \textbf{Supply security: }This factor describes the security of the necessary external infrastructure,
+    such as Internet and electricity. Since every failure inevitably leads to an effective complete breakdown of the data center,
+    this must be included in the consideration.
 \end{itemize}
