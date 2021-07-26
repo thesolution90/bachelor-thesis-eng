@@ -1,31 +1,31 @@
 \newpage
 \section{Applicability of business intelligence to cryptomining data centers} \label{toc:ansatzmoeglichkeitenfuerbusinessintelligence}
 
-In diesem Kapitel wird die Anwendbarkeit der Prinzipien von \ac{BI} Prozessen auf Kryptomining Rechenzentren geprüft, um eine
-finanzielle Optimierung der Rechenzentren zu erreichen. Ziel dieses Teils ist die Prüfung der in Kapitel
-\ref{toc:hypothesenundabgrenzungderarbeit} formulierten Teilhypothesen. Damit ist es möglich, letztendlich eine Aussage über
-die Haupthypothese treffen zu können. Um in der Lage zu sein, Aussagen am Schluss formulieren zu können, wird als Methodik die
-argumentative-deduktive Analyse verwendet. Diese Methodik ist qualitativer Natur und gehört zu den konstruktionswissenschaftlichen
-Methoden.\footcite[Cf.][pp. 283]{wilde2007forschungsmethoden} Es werden aus vorhergehenden Schlussfolgerungen deduktiv weitere
-Aussagen abgeleitet, die am Ende zur Beantwortung der Haupthypothese dieser Arbeit
-führen.\footcite[Cf.][p. 7]{wilde2006methodenspektrum} Als Basis für die Deduktion werden die erarbeiteten Grundlagen aus
-Kapitel \ref{toc:grundlagenbusinessintelligence} und Kapitel \ref{toc:grundlagenkryptomining} verwendet. Im ersten Teil
-dieses Kapitels werden  vertieft die \acp{KPI} aus Kapitel \ref{toc:grundlagenkryptomining} verwendet und deren Ursprung
-betrachtet. Diese grundlegenden Daten werden nach verschiedenen Gesichtspunkten, wie Verfügbarkeit, Echtzeitcharakter,
-Qualität, Datenänderungsrate und Quantität klassifiziert und damit deren Eignung für \ac{BI} Prozesse betrachtet. Die Daten
-werden folgend nach internen und externen Quellen unterteilt. Schlussendlich ist der Leser in der Lage zu verstehen, welche
-Daten zur Verfügung stehen und wie diese sich für \ac{BI} eignen. In Kapitel \ref{toc:pruefungderteilhypothesen} wird
-die eigentliche Prüfung der vier Teilhypothesen durchgeführt. Dabei werden im ersten Schritt die relevanten \acp{KPI}
-identifiziert, die für die eigentliche erfolgreiche Prüfung der Teilhypothesen benötigt werden. Im zweiten Schritt werden
-die Analyseverfahren dahingehend betrachtet, ob aus den grundlegenden Daten jeder der relevanten \acp{KPI} errechnet werden kann.
-Schlussendlich ist es damit möglich, die Teilhypothesen zu verifizieren und eine Aussage in Kapitel 
-\ref{toc:zusammenfassendebetrachtung} auf der Ebene der Haupthypothese treffen zu können.
+In this chapter, the applicability of the principles of \ac{BI} processes to cryptomining data centers in order to achieve financial
+optimization of the data centers will be evaluated. The goal of this part is to test the hypotheses presented in chapter
+\ref{toc:hypothesenundabgrenzungderarbeit}. Thus, it is possible to finally make a statement about
+the main hypothesis. In order to be able to formulate statements at the end, the methodology used is the
+argumentative-deductive analysis. This methodology is qualitative in nature and belongs to the constructional science
+methods.\footcite[Cf.][pp. 283]{wilde2007forschungsmethoden} Further statements are deductively derived from previous conclusions,
+which in the end lead to the answer of the main hypothesis of this thesis.\footcite[Cf.][p. 7]{wilde2006methodenspektrum}
+As a basis for the deduction, the elaborated foundations from
+chapter \ref{toc:grundlagenbusinessintelligence} and chapter \ref{toc:grundlagenkryptomining} are used. In the first part
+of this chapter, the \acp{KPI} from chapter \ref{toc:grundlagenkryptomining} are used in more detail and their origin is
+considered. This fundamental data is analyzed according to various aspects, such as availability, real-time character,
+quality, data change rate, and quantity, and thus their suitability for the \ac{BI} Processes is considered. The data
+are subsequently subdivided according to internal and external sources. Finally, the reader will be able to understand which data is
+available and how they are suitable for \ac{BI}. In chapter \ref{toc:pruefungderteilhypothesen} the actual testing of the
+four sub-hypotheses is carried out. In the first step, the relevant \acp{KPI}
+are identified, which are needed for the actual successful testing of the partial hypotheses. In the second step
+the analysis procedures are examined to determine whether each of the relevant \acp{KPI} can be calculated from the basic data.
+Finally, it is thus possible to verify the partial hypotheses and make a statement in chapter 
+\ref{toc:zusammenfassendebetrachtung} at the level of the main hypothesis.
 
 \subsection{Classification of available data} \label{toc:klassifizierungderdaten}
 
-Wie in der Einleitung des Hauptkapitels beschrieben, werden in diesem Teil die verfügbaren Datenquellen identifiziert und
-kategorisiert. Mit Hilfe dieser Einteilung wird die Eignung der Daten für \ac{BI} bestimmt. Die zusammenfassenden Ergebnisse
-dieses Kapitels finden sich in Tabelle \ref{tbl:klassifizierunginternedaten} und Tabelle \ref{tbl:klassifizierungexternedaten}.
+As described in the introduction to the main chapter, this part identifies and
+categorized the available data sources. This categorization is used to determine the suitability of the data for \ac{BI}. The summary results
+of this chapter can be found in table \ref{tbl:klassifizierunginternedaten} and table \ref{tbl:klassifizierungexternedaten}.
 
 \begin{figure}[H]
     \caption{Classification of data sources}
@@ -35,88 +35,86 @@ dieses Kapitels finden sich in Tabelle \ref{tbl:klassifizierunginternedaten} und
     \cite[Source: Based on][Fig. 1]{hartmann2016capturing}
 \end{figure}
 
-Auf Basis von Abbildung \ref{figure:datasources} ist in der ersten Ebene eine Einteilung der Daten in interne und externe
-Datenquellen möglich. Diese Unterteilung beschreibt die Herkunft der Daten.\footcite[Cf.][Fig. 1]{hartmann2016capturing}
-Interne Datenquellen stellen Daten zur Verfügung, die ausschließlich innerhalb einer Organisation zugänglich sind. Zu diesen
-Datenquellen zählen folgend Daten der Mining Hardware, von \ac{ERP} Systemen und der Personalplanung. Bei den externen
-Datenquellen gibt es eine dreiteilige Unterscheidung in gekaufte Daten, Daten, die durch einen Kunden bereitgestellt werden,
-und öffentlich verfügbare Daten. Bei dieser Unterscheidung werden in Kapitel \ref{toc:externedatenquellen} primär die
-öffentlichen Datenquellen betrachtet, da im Betrieb von Kryptomining Rechenzentren der Kundenfaktor erstmal ignoriert werden
-kann. Zu diesen Datenquellen zählen öffentliche Blockexplorer, Mining Pools, Tauschbörsen, Wetter- und Klimadaten sowie
-Daten aus Social Media Plattformen. Die Daten werden nach den folgenden Eigenschaften hin analysiert:
+Based on Figure \ref{figure:datasources}, it is possible to divide the data into internal and external data sources at the first level.
+This subdivision describes the origin of the data.\footcite[Cf.][Fig. 1]{hartmann2016capturing}
+Internal data sources provide data that can only be accessed within an organization. These
+data sources following include data from mining hardware, \ac{ERP} systems, and workforce planning. For the external
+data sources, there is a three-part distinction between purchased data, data provided by a customer
+and publicly available data. With this distinction, chapter \ref{toc:externedatenquellen} will primarily consider the
+public data sources, since in the operation of cryptomining data centers the customer factor can be ignored for the time being.
+These data sources include public block explorers, mining pools, exchanges, weather and climate data, as well as
+data from social media platforms. The data is analyzed according to the following characteristics:
 \begin{itemize}
-    \item \textbf{Datenstruktur: }Daten können in strukturierte und unstrukturierte Daten unterteilt werden. Beispiele für
-    strukturierte Daten sind Finanzdaten oder Sensordaten.\footcite[Cf.][p. 27]{kimble2015big} Unstrukturierte Daten
-    können Bilder, Texte oder Daten aus Social Media Plattformen sein.\footcite[Cf.][p. 27]{kimble2015big}Diese Unterteilung
-    hat Einfluss auf den \ac{ETL} Prozess, da Data Warehouses ausschließlich strukturierte Daten abspeichern
-    können.\footcite[Cf.][p. 21]{niu2009cognition} Im Falle der Verwendung von unstrukturierten Daten müssen diese so angepasst
-    werden, dass sie strukturiert werden.
-    \item \textbf{Verfügbarkeit: }Mit diesem Parameter wird die Dauer von der Erhebung eines Datenpunktes bis hin zur
-    Verfügbarkeit für Nutzer der Software gemessen. Gerade auf die Analyseprozesse kann dieser Parameter Auswirkungen
-    haben, da dieser entscheidet, ob ein System benötigt wird, dass Echtzeitdaten verarbeiten muss oder beispielsweise nur
-    Stapelverarbeitung betreibt. Die Ergebnisse aus dieser Kategorie werden in der Einschätzung der in Frage kommenden
-    Analyseprozesse in Kapitel \ref{toc:analyseverfahrenbi} verwendet.
-    \item \textbf{Konsistenz: }Diese Metrik sagt aus, ob die Daten, die durch die Quellsysteme zur Verfügung gestellt werden,
-    frei von Widersprüchen sind. Falls Daten nicht widerspruchsfrei sind, kann dies zu Fehlern in den Analyseprozessen führen,
-    die daher genau beobachtet werden müssen.\footcite[Cf.][p. 561]{huh1990data} Da das Auswirkungen auf die Gestaltung
-    der Analyseprozesse hat, muss diese Tatsache mit in Betracht gezogen werden.
+    \item \textbf{Data structure: }Data can be divided into structured and unstructured data. Examples for
+    structured data are financial data or sensor data.\footcite[Cf.][p. 27]{kimble2015big} Unstructured data
+    can be images, text, or data from social media platforms.\footcite[Cf.][p. 27]{kimble2015big}This subdivision
+    has an impact on the \ac{ETL} process, as data warehouses can only store structured data.\footcite[Cf.][p. 21]{niu2009cognition}
+    In case of using unstructured data, it has to be adapted to become structured.
+    \item \textbf{Availability: }This parameter measures the duration from the collection of a data point to its
+    availability for users of the software. Especially for the analysis processes this parameter can have
+    a big influence, as it determines whether a system is required that must process real-time data or, for example, only performs
+    batch processing. The results from this category are used in the assessment of the eligible
+    analysis processes in chapter \ref{toc:analyseverfahrenbi}.
+    \item \textbf{Consistency: }This metric tells whether the data provided by the source systems,
+    are free of inconsistencies. If data is not free of contradictions, this can lead to errors in the analysis processes and therefore
+    must be observed closely.\footcite[Cf.][p. 561]{huh1990data} Since this has implications for the design of the analysis
+    of the analysis processes, this fact must be taken into account.
 \end{itemize}
 
 \subsubsection{Internal data sources} \label{toc:internedatenquellen}
 
-In diesem Teil werden die internen Datenquellen und deren Daten klassifiziert, die für die Konzeption eines \ac{BI} Prozesses
-in Betracht gezogen werden können.
+This part classifies the internal data sources and their data that can be considered for the design of a \ac{BI} process:
 
 \begin{itemize}
-    \item \textbf{Mining Hardware / Überwachungssoftware: }
-    Die technischen Parameter während des Betriebes werden durch die Mining Hardware generiert. Diese Parameter lassen
-    Rückschlüsse auf die Effektivität der Hardware während des Mining Prozesses zu. Dazu zählen Daten, wie Hashrate, Temperatur,
-    Hardwaredefekte und Stromverbrauch.\footcite[Cf.][p. 12]{antminer2021manual} Diese Metriken sind über \acp{API} oder
-    durch die \ac{SSH} Schnittstelle abfragbar.\footcite[Cf.][]{awesomeminer2021api} Da die Konfiguration und Überwachung
-    vieler einzelner Geräte einen zu hohen Aufwand und Zeitverbrauch für das Personal darstellt, wird Software eingesetzt,
-    die in der Lage ist, eine große Anzahl von Mining Geräten zu überwachen und zu konfigurieren. Um dies zu erreichen, wird
-    die \ac{API} oder \ac{SSH} Schnittstelle der Mining Hardware verwendet. Durch den Einsatz der Software können auch die
-    Ausfallszeiten der Mining Hardware und der Stromverbrauch der Kühlung eines Rechenzentrums gemessen werden. Zusätzlich
-    wird diese Software durch das Wartungspersonal verwendet, um defekte Geräte ausfindig zu machen und diese zu reparieren.
-    Die Informationen zur Reparatur werden durch das Personal in das System eingetragen.
+
+    \item \textbf{Mining hardware / Monitoring software: }
+    The technical parameters during operation are generated by the mining hardware. These parameters allow
+    conclusions about the effectiveness of the hardware during the mining process. This includes data such as hashrate, temperature,
+    hardware defects and power consumption.\footcite[Cf.][p. 12]{antminer2021manual} These metrics are available through \acp{API} or
+    through the \ac{SSH} interface.\footcite[Cf.][]{awesomeminer2021api} As the configuration and monitoring of many individual
+    devices represents too much effort and time consumption for personnel, software is used
+    capable of monitoring and configuring a large number of mining devices. To achieve this,
+    the \ac{API} or \ac{SSH} interface of the mining hardware is used. The use of the software can also reduce the
+    mining hardware downtime and data center cooling power consumption can be measured. In addition
+    this software is used by maintenance personnel to locate faulty equipment and repair it.
+    The repair information is entered into the system by the personnel.
     \begin{itemize}
-        \item Datenstruktur: Da es sich bei den Daten, welche die Mining Hardware generieren und die in der Überwachungssoftware
-        gesammelt werden, letztendlich ausschließlich um Sensordaten handelt, sind die Daten aus dieser Quelle
-        strukturiert.\footcite[Cf.][p. 27]{kimble2015big}
-        \item Verfügbarkeit: Die Verfügbarkeit der Daten in der Überwachungssoftware liegt bei circa fünf bis zehn Minuten,
-        da diese Daten über regelmäßige Stapelverarbeitungsprozesse abgefragt werden.
-        \item Konsistenz: Die Konsistenz ist gegeben. Alle diese Daten werden in relationalen Zeitreihen gespeichert. 
+        \item Data structure: Since the data generated by the mining hardware and collected in the monitoring software is ultimately
+        all sensor data, the data from this source is structured.\footcite[Cf.][p. 27]{kimble2015big}
+        \item Availability: the availability of the data in the monitoring software is approximately five to ten minutes,
+        as this data is retrieved via regular batch processes.
+        \item Consistency: The consistency is given. All these data are stored in relational time series. 
     \end{itemize}
-    \item \textbf{ERP System: }Finanzielle \acp{KPI} werden meist in \ac{ERP} Systemen
-    gespeichert.\footcite[Cf.][Tabelle 3]{spathis2003usefulness} Diese Systeme werden dafür benutzt, die finanziellen \acp{KPI}
-    eines Rechenzentrums zu erhalten. Diese Daten sind beispielsweise Anschaffungskosten, Kosten des Managements,
-    Elektrizitätskosten und Personalkosten. Eine ausführliche Auflistung findet sich in
-    Kapitel \ref{toc:kennzahlenundeinflussfaktoren}. In den folgenden Betrachtungen werden diese Daten in die Kategorien
-    \ac{CapEx} und \ac{OpEx} aufgeteilt, da dies für die Prüfung der Hypothesen ausreichend ist. Durch die Schnittstellen
-    der ERP Systeme sind diese Daten einheitlich abfragbar.
+
+    \item \textbf{ERP System: }Financial \acp{KPI} are mostly stored in \ac{ERP} systems.\footcite[Cf.][Table 3]{spathis2003usefulness}
+    These systems are used to maintain the financial \acp{KPI}
+    of a data center. These data include acquisition costs, management costs,
+    electricity costs and personnel costs. A detailed listing can be found in
+    chapter \ref{toc:kennzahlenundeinflussfaktoren}. In the following considerations, these data are categorized as
+    \ac{CapEx} and \ac{OpEx}, as this is sufficient for testing the hypotheses. Due to the interfaces
+    of the ERP systems, this data can be queried uniformly.
     \begin{itemize}
-        \item Datenstruktur: Da es sich bei diesen Daten vorrangig um Finanzdaten handelt und diese durch die Schnittstelle
-        des ERP Systems abgefragt werden, handelt es sich um strukturierte Daten.\footcite[Cf.][p. 27]{kimble2015big}
-        \item Verfügbarkeit: Sobald diese Daten in einem \ac{ERP} System eingetragen sind, sind diese auch direkt abfragbar.
-        Daher bietet ein \ac{ERP} System Echtzeitdaten an.
-        \item Konsistenz: Ausgehend von der Annahme, dass die eingehenden Daten korrekt sind, sind die Informationen aus
-        einem \ac{ERP} System widerspruchsfrei und damit konsistent.
+        \item Data structure: since this data is primarily financial data and is queried through the interface
+        of the ERP system, it is structured data.\footcite[Cf.][p. 27]{kimble2015big}
+        \item Availability: once this data is entered into an \ac{ERP} system, it is also directly queryable.
+        Therefore, an \ac{ERP} system provides real-time data.
+        \item Consistency: Assuming that the incoming data is correct, the information from
+        an \ac{ERP} system is free of contradictions and thus consistent.
     \end{itemize}
-    \item \textbf{Personalplanung: }Letztendlich sind die Planungssysteme für das Personal intern verfügbar. Diese
-    beinhalten die Zahl der Angestellten, deren Gehälter und deren Arbeitszeiten. Zusätzlich zu den Arbeitszeiten sind die
-    Schichtpläne der Rechenzentren in diesen Systemen verfügbar, worüber Schlussfolgerungen über die Personalbeschaffenheit
-    vor Ort gemacht werden können. Diese Daten sind über standardisierte Schnittstellen abfragbar.
+    \item \textbf{Staff planning: }Finally, workforce planning systems are available internally. These
+    include the number of employees, their salaries and their working hours. In addition to the working hours, the
+    shift schedules of the data centers are available in these systems, which can be used to draw conclusions about the staffing
+    on site can be made. This data can be queried via standardized interfaces.
     \begin{itemize}
-        \item Datenstruktur: Die Daten, die das Personalsystem zur Verfügung stellt, sind strukturiert und relational.
-        \item Verfügbarkeit: Die Verfügbarkeit solcher Daten ist direkt und ohne Zeitverzögerung abfragbar, sobald diese in
-        das System eingetragen sind.
-        \item Konsistenz: Unter der Voraussetzung, dass alle eingegebenen Daten korrekt sind, sind alle Daten eines
-        Personalmanagementsystems widerspruchsfrei.
+        \item Data structure: The data provided by the personnel system is structured and relational.
+        \item Availability: The availability of such data can be queried directly and without delay as soon as it is entered in the system.
+        entered into the system.
+        \item Consistency: Assuming that all data entered is correct, all data in a
+        personnel management system are free of contradictions.
     \end{itemize}
 \end{itemize}
 
-In der folgenden Tabelle sind die Klassifizierungen der einzelnen Datentypen gelistet, die sich aus den oben genannten Datenquellen
-ergeben.
+The following table lists the classifications of the individual data types that result from the above-mentioned data sources.
 
 \begin{table}[H]
     \caption{Classification of internal data sources}
@@ -134,85 +132,85 @@ ergeben.
 
 \subsubsection{External data sources} \label{toc:externedatenquellen}
 
-Analog zur Klassifizierung der internen Daten in Kapitel \ref{toc:internedatenquellen}, werden im Folgenden die externen
-Datenquellen klassifiziert. Die folgenden relevanten externen Datenquellen sind identifizierbar:
+Analogous to the classification of internal data in chapter \ref{toc:internedatenquellen}, the external data sources are classified in the following.
+The following relevant external data sources are identifiable:
 
 \begin{itemize}
-    \item \textbf{Öffentliche Blockexplorer: }Blockexplorer sind Webseiten, die die Daten der Blockchain über Schnittstellen
-    abrufbar machen. Beispiele für Daten, die direkt auf der Blockchain liegen, sind die Difficulty oder auch die Höhe der
-    Transaktionsgebühren der noch nicht bestätigten
-    Transaktionen.\footcite[Cf.][]{bitcoin2021getdifficulty}\footcite[Cf.][]{bitcoin2021getrawmempool} Zusätzlich werden
-    Metriken angeboten, die auf Basis der Daten auf der Blockchain berechnet oder abgeschätzt werden können. Dazu gehören
-    Daten wie beispielsweise die Schätzung der Netzwerkhashrate des Bitcoin
-    Netzwerks.\footcite[Cf.][]{blockchain2021total}\footcite[Cf.][]{blockchain2021api} Zusätzlich können über solche
-    Blockexplorer auch jegliche blockchainbezogenen Daten in ihrer vollen Historie bezogen werden. Eine andere Möglichkeit,
-    die Daten der Blockchain zu erhalten, wäre der Betrieb einer eigenen Bitcoin Node. Da der Betrieb und die Wartung davon
-    viel Fachwissen verlangt, ist die Abfrage der Daten durch einen öffentlichen Blockexplorer zu bevorzugen.
+    \item \textbf{Public blockexplorers: }Blockexplorers are websites that make the blockchain data accessible via interfaces.
+    Examples of data that are directly on the blockchain are the Difficulty or even the amount of the
+    transaction fees of the not yet confirmed
+    transactions.\footcite[Cf.][]{bitcoin2021getdifficulty}\footcite[Cf.][]{bitcoin2021getrawmempool} In addition, there are
+    metrics offered that can be calculated or estimated based on the data on the blockchain. These include
+    data such as estimating the network hashrate of the Bitcoin
+    network.\footcite[Cf.][]{blockchain2021total}\footcite[Cf.][]{blockchain2021api} Additionally, via such
+    blockexplorer, any blockchain-related data can also be obtained in its full history. Another option,
+    to obtain the blockchain data would be to operate your own Bitcoin node. Since the operation and maintenance of this
+    requires a lot of expertise, querying the data through a public block explorer is preferable.
     \begin{itemize}
-        \item Datenstruktur: Die Beschaffenheit der Daten, die von einem Blockexplorer geliefert werden, sind strukturiert.
-        Dies liegt vor allem an der strikten Strukturiertheit der Blockchain.
-        \item Verfügbarkeit: Die Verfügbarkeit unterscheidet sich je nach abgefragten Parametern. Daten, die direkt auf
-        der Blockchain gespeichert sind, sind in Echtzeit abfragbar. Beispiele dafür ist die Difficulty oder Informationen
-        über Transaktionen.
+        \item Data structure: the nature of the data provided by a block explorer is structured.
+        This is mainly due to the strict structured nature of the blockchain.
+        \item Availability: Availability differs depending on the parameters queried. Data that is stored directly on
+        the blockchain can be queried in real time. Examples include difficulty or information
+        about transactions.
         
-        Alle weiteren Daten, die auf Basis der Blockchaindaten errechnet werden, aber nicht direkt von dieser stammen, werden
-        meist nur einmal am Tag veröffentlicht. Ein Beispiel ist die hochgerechnete Gesamthashrate des Bitcoin Netzwerks.
-        \item Konsistenz: Da die Widerspruchsfreiheit der Daten einer der Gründe für die Einführung von Blockchains waren,
-        können folglich die Daten eines Blockexplorers auch als widerspruchsfrei und damit konsistent angesehen werden. 
+        All other data that is calculated on the basis of the blockchain data, but does not originate directly from it, is
+        usually published only once a day. An example is the extrapolated total hashrate of the Bitcoin network.
+        \item Consistency: Since the consistency of the data was one of the reasons for the introduction of blockchains,
+        consequently, the data of a block explorer can also be considered to be free of contradictions and thus consistent. 
     \end{itemize}
-    \item \textbf{Mining Pools: }Wie in Kapitel \ref{toc:miningundkonsensalgorithmen} bereits gezeigt, gibt es die
-    Möglichkeit, durch Mining Pools am Mining teilzunehmen. Ein Mining Pool bietet die Möglichkeit der Risikoreduzierung
-    während des Mining Prozesses. Dafür verlangt dieser Nutzungsgebühren, die unterschiedlich bemessen sein
-    können.\footcite[Cf.][pp. 59]{bhaskar2015bitcoin} Diese Gebühren können direkt von einem Mining Pool abgefragt werden
-    und damit in die finanzielle Gesamteinschätzung Einzug halten. Da der Besitzer der Mining Hardware anteilig
-    zu der zur Verfügung gestellten Hashrate am Ertrag des Pools beteiligt wird, ist bei einem Mining Pool die ankommende
-    Hashrate nachvollziehbar. Diese kann mit der Hashrate der Mining Hardware verglichen werden, um Aussagen über die
-    Netzwerkverbindungen treffen zu können. Alle diese Daten sind standardisiert über eine \ac{API} erhältlich.
+
+    \item \textbf{Mining pools: }As already shown in chapter \ref{toc:miningundkonsensalgorithmen}, there is the
+    possibility of participating in mining through mining pools. A mining pool offers the possibility of risk reduction
+    during the mining process. In return, the mining pool charges user fees, which can be of different amounts.\footcite[Cf.][pp. 59]{bhaskar2015bitcoin}
+    These fees can be directly collected from a mining pool
+    and thus enter into the overall financial assessment. Since the owner of the mining hardware will be rewarded proportionately
+    to the hashrate provided to the owner of the mining hardware, the incoming hashrate of a mining pool is traceable.
+    This can be compared with the hashrate of the mining hardware to be able to make statements about the
+    network connections. All this data is available in a standardized way via an \ac{API}.
     \begin{itemize}
-        \item Datenstruktur: Die Daten über die Hashrates sind vergleichbar zu Sensordaten. Aus diesem Grund liefert ein
-        Mining Pool strukturierte Daten aus.\footcite[Cf.][p. 27]{kimble2015big}
-        \item Verfügbarkeit: Die Daten sind mit einer Verzögerung von 15-30 Minuten abfragbar.
-        \item Konsistenz: Die Daten sind konsistent, da diese auf der Basis von Zeitreihen erhoben werden. Es können
-        Unterschiede zur Hashrate der Mining Hardware gemessen werden. Diese sind allerdings keine Inkonsistenz, sondern
-        geben Rückschlüsse auf die Verbindungsqualität zwischen Rechenzentrum und Mining Pool.
+        \item Data structure: Hashrate data is comparable to sensor data. For this reason, a
+        mining pool outputs structured data.\footcite[Cf.][p. 27]{kimble2015big}
+        \item Availability: Data is queryable with a delay of 15-30 minutes.
+        \item Consistency: Data are consistent because they are collected on a time series basis. There may be
+        differences to the hashrate of the mining hardware can be measured. However, these are not inconsistencies, but
+        give conclusions about the connection quality between the data center and the mining pool.
     \end{itemize}
-    \item \textbf{Tauschbörsen: }Die Tauschbörsen werden verwendet, um die durch den Mining Prozess verdienten Bitcoins in
-    Fiat Währungen umtauschen zu können. Dabei sind zwei Hauptfaktoren zu beachten. Das ist zum einen der momentane Tauschkurs
-    zwischen \ac{BTC} und \ac{USD}. Zum anderen müssen die Handelsgebühren einer Tauschbörse noch zusätzlich in Betracht
-    gezogen werden. Alle diese Werte unterscheiden sich von Börse zu Börse. Tauschbörsen haben umfangreiche und
-    performante \acp{API}, um mit diesen sehr schnell handeln zu können.
+    \item \textbf{Exchanges: }Exchanges are used to exchange bitcoins earned through the mining process into
+    fiat currencies. There are two main factors to consider here. One is the current exchange rate
+    between \ac{BTC} and \ac{USD}. Secondly, the trading fees of an exchange must also be taken into account.
+    All these values differ from exchange to exchange. Exchanges have extensive and
+    performant \acp{API} to be able to trade with them very fast.
     \begin{itemize}
-        \item Datenstruktur: Tauschbörsen bieten strukturierte Daten an. Nur diese Form der Daten lässt eine sehr schnelle
-        Bearbeitung und Analyse zu.\footcite[Cf.][p. 27]{kimble2015big}
-        \item Verfügbarkeit: Die Schnittstellen der Börse stellen Daten in Echtzeit bereit.
-        \item Konsistenz: Die Daten der Tauschbörsen müssen konsistent sein, da sonst Probleme im Handel auftreten können.
+        \item Data structure: Exchanges offer structured data. Only this form of data allows very fast
+        processing and analysis.\footcite[Cf.][p. 27]{kimble2015big}
+        \item Availability: The exchange's interfaces provide data in real time.
+        \item Consistency: Exchange data must be consistent or trading problems may occur.
     \end{itemize}
-    \item \textbf{Wetter- und Klimadaten: }Betreiber von Kryptomining Rechenzentren sind durch die dynamische Anpassung der
-    Kühlungsanlagen an die Außentemperatur in der Lage, Energiekosten einzusparen. Um dieses Einsparungspotential nutzen zu
-    können, werden Schnittstellen benötigt, an denen aktuelle und historische Wetterdaten abfragbar sind. Ein Beispiel für
-    eine umfassende Schnittstelle ist World Weather Online.\footcite[Cf.][]{wwo2021api} Diese Schnittstelle verlangt ein Entgelt
-    für die Nutzung, da die Bereitstellung von weltweiten Wetterdaten komplex ist.\footcite[Cf.][]{wwo2021pricing} Gerade bei
-    einem Neubau eines Rechenzentrums macht die Einbeziehung von Klimadaten Sinn, um den Stromverbrauch und die Dimensionierung
-    der Kühlungsanlagen abschätzen zu können.
+
+    \item \textbf{Weather and climate data: }Operators of cryptomining data centers are able to save energy costs by dynamically adjusting the
+    cooling systems to the outside temperature. In order to take advantage of this savings potential
+    interfaces are needed where current and historical weather data can be queried. One example of
+    comprehensive interface is World Weather Online.\footcite[Cf.][]{wwo2021api} This interface requires a charge
+    for use, as the provision of global weather data is complex.\footcite[Cf.][]{wwo2021pricing} Particularly in the case of a
+    data center, the inclusion of climate data makes sense in order to estimate the power consumption and the dimensioning of the cooling systems.
     \begin{itemize}
-        \item Datenstruktur: Wetter- und Klimadaten werden strukturiert zur Verfügung gestellt, um eine gute Analyse ermöglichen
-        zu können.
-        \item Verfügbarkeit: Die Daten werden laut World Weather Online in Echtzeit zur Verfügung
+        \item Data structure: Weather and climate data are provided in a structured way to enable a good analysis.
+        \item Availability: According to World Weather Online, the data is provided in real time.
         gestellt.\footcite[Cf.][]{wwo2021api}
-        \item Konsistenz: Die Konsistenz der Daten ist wichtig und innerhalb einer Plattform auch gegeben. Bei der Abfrage
-        mehrerer Quellen für Wetterdaten kann es zu Inkonsistenzen kommen.
+        \item Consistency: Consistency of data is important and within a platform it is. When querying
+        multiple sources for weather data, inconsistencies may occur.
     \end{itemize}
-    \item \textbf{Social Media: }Anfang des Jahres 2021 war beobachtbar, dass durch Social Media Plattformen der Bitcoin
-    Wechselkurs stark beeinflusst wurde
-    (Cf. Fig. \ref{figure:btctweets}).\footcite[Cf.][]{forbes2021musk}\footcite[Cf.][pp. 1]{ante2021elon} Daher darf in
-    einer Einschätzung der Wechselkurse der Einfluss von Social Media inzwischen nicht mehr ignoriert werden. In Social Media
-    ist es durch die Analyse von beispielsweise Hashtags möglich, ein Stimmungsbild zu ermitteln. Auch können Äußerungen von
-    reichweitenstarken Personen oder Gruppen, die kursbeeinflussend sind, schnell analysiert werden.
+    \item \textbf{Social Media: }In early 2021, it was observable that through social media platforms, the Bitcoin
+    exchange rate was strongly influenced
+    (Cf. Fig. \ref{figure:btctweets}).\footcite[Cf.][]{forbes2021musk}\footcite[Cf.][pp. 1]{ante2021elon} Therefore, in
+    an assessment of exchange rates, the influence of social media can now no longer be ignored. In social media
+    it is possible to determine a sentiment picture by analyzing hashtags, for example. Statements made by
+    high-reach individuals or groups that influence exchange rates can be quickly analyzed.
     \begin{itemize}
-        \item Datenstruktur: Die Daten von Social Media Plattformen sind unstrukturiert.\footcite[Cf.][p. 27]{kimble2015big}
-        \item Verfügbarkeit: Die Verfügbarkeit von Daten über Web Scraping oder \acp{API} ist in Echtzeit gegeben.
-        \item Konsistenz: Da an Social Media Plattformen grundsätzlich jeder Mensch teilnehmen kann, sind die Daten, die
-        analysiert werden können, inkonsistent.
+        \item Data structure: Data from social media platforms is unstructured.\footcite[Cf.][p. 27]{kimble2015big}
+        \item Availability: The availability of data via web scraping or \acp{API} is real-time.
+        \item Consistency: Since social media platforms can basically be participated in by anyone, the data that can be
+        can be analyzed is inconsistent.
     \end{itemize}
 \end{itemize}
 
@@ -224,7 +222,7 @@ Datenquellen klassifiziert. Die folgenden relevanten externen Datenquellen sind 
     \cite[Source: Cf.][]{bitinfocharts2021bitcointweets}
 \end{figure}
 
-Zusammenfassend sind die erarbeiteten Klassifizierungen in Tabelle \ref{tbl:klassifizierungexternedaten} aufgelistet.
+In summary, the elaborated classifications are listed in table \ref{tbl:klassifizierungexternedaten}.
 
 \begin{table}[H]
     \caption{Classification of external data sources}
@@ -248,54 +246,52 @@ Zusammenfassend sind die erarbeiteten Klassifizierungen in Tabelle \ref{tbl:klas
 
 \subsection{Testing of the sub-hypotheses} \label{toc:pruefungderteilhypothesen}
 
-Basierend auf der Klassifizierung der möglichen Datenquellen und deren verfügbaren Informationen wird in diesem Teil die Prüfung
-der Teilhypothesen vorgenommen. Dazu wird für jede einzelne Teilhypothese definiert, welche \acp{KPI} relevant sind, um diese
-zu evaluieren und final zu verifizieren. Dafür werden die \acp{KPI} aus den Kapiteln \ref{toc:technologie} und
-\ref{toc:miningrechenzentren} verwendet. Zusätzlich werden die Ergebnisse über die verfügbaren Datenquellen aus Kapitel
-\ref{toc:klassifizierungderdaten} mit einbezogen, um Datenflüsse für eine \ac{BI} Implementierung zu identifizieren. Diese
-werden für die Beantwortung der Hypothese verwendet. Abbildung \ref{figure:ht01dataflow} bis \ref{figure:ht04dataflow} machen
-es möglich zu prüfen, welche Daten benötigt werden, ob diese für \ac{BI} verwendbar sind und ob diese zur Verfügung stehen.
-In Kapitel \ref{toc:analyseverfahrenbi} wird besprochen, welche Analyseverfahren für die Daten benötigt werden, um letztendlich
-die Teilhypothesen evaluieren und prüfen zu können. Dabei wird auch auf die verschiedenen Arten von \ac{BI} - deskriptive
-(descriptive), vorhersagende (predictive) und präskriptive (prescriptive) Business Intelligence - und deren mögliche
-Limitationen im Bereich Kryptomining eingegangen.\footcite[Cf.][p. 96]{bihani2014comparative}
+Based on the classification of the possible data sources and their available information, the testing of the partial hypotheses is carried out in this part.
+For this purpose, it is defined for each individual sub-hypothesis which \acp{KPI} are relevant in order to evaluate and finally verify them.
+For this purpose, the \acp{KPI} from the chapters \ref{toc:technologie} and
+\ref{toc:miningrechenzentren} are used. In addition, the results will be compared across the available data sources from chap.
+\ref{toc:klassifizierungderdaten} are included to identify data flows for a \ac{BI} implementation. These
+will be used to answer the hypothesis. Figure \ref{figure:ht01dataflow} through \ref{figure:ht04dataflow} make it
+it possible to check which data are needed, if they are usable for \ac{BI} and if they are available.
+Chapter \ref{toc:analyseverfahrenbi} discusses which analysis procedures are needed for the data to ultimately
+evaluate and test the sub-hypotheses. This will include a discussion of the different types of \ac{BI} - descriptive,
+predictive, and prescriptive business intelligence - and their possible
+limitations in the field of cryptomining.\footcite[Cf.][p. 96]{bihani2014comparative}
 
 \subsubsection{Identification of the key performance indicators of the hypotheses} \label{toc:identifikationkpi}
 
-Wie in der Einleitung zu diesem Kapitel bereits geschrieben, werden in diesem Teil die Datenquellen und die logischen Datenflüsse
-identifiziert. Dazu werden alle vier Teilhypothesen getrennt betrachtet und jeweils ein zugeschnittener Abhängigkeitsbaum der
-Informationen und \acp{KPI} definiert. Diese finden sich zusammengefasst in den jeweiligen Abbildungen, die zu den Teilhypothesen
-gehören. Generell wird zwischen finanziellen, technischen und personellen \acp{KPI} unterschieden. Dahinter werden die
-dementsprechenden Datenquellen aus Kapitel \ref{toc:klassifizierungderdaten} genannt, die von Relevanz sind. In der letzten Ebene
-werden die einzelnen Datentypen, die benötigt werden, benannt. Im Folgenden wird diese Analyse für alle vier Teilhypothesen
-durchgeführt:
+As already written in the introduction to this chapter, this part identifies the data sources and the logical data flows.
+For this purpose, all four sub-hypotheses are considered separately and a tailored dependency tree is defined for each of the
+information and \acp{KPI} are defined. These are summarized in the respective figures that belong to the sub-hypotheses.
+belong. In general, a distinction is made between financial, technical and personnel \acp{KPI}. Behind them are the
+corresponding data sources from chapter \ref{toc:klassifizierungderdaten} are mentioned, which are of relevance. In the last level
+the individual data types that are required are named. In the following, this analysis is performed for all four sub-hypotheses
+carried out:
 
 \begin{itemize}
-    \item \textbf{\ac{HT0.1}: }Diese Teilhypothese prüft einen möglichen Einfluss von \ac{BI} auf Entscheidungsprozesses des
-    Managements in Bezug auf den Neu- und Ausbau von Kryptomining Rechenzentren. Eine solche Entscheidungsunterstützung benötigt
-    eine Vielzahl an Daten, da ein Neu- oder Ausbau eine komplexe strategische Entscheidung darstellt. Aus diesem Grund werden alle
-    drei Formen von \acp{KPI} - personelle, technische und finanzielle - benötigt.
+    \item \textbf{\ac{HT0.1}: }This sub-hypothesis tests a possible influence of \ac{BI} on decision-making processes of the
+    management regarding the construction or expansion of cryptomining data centers. Such decision support requires
+    a large amount of data, as new construction or expansion is a complex strategic decision. For this reason, all
+    three forms of \acp{KPI} - human, technical and financial - are needed.
     
-    Diese strategische Entscheidung basiert auf Faktoren hinsichtlich des Ortes, der Auswahl der Hardware und der
-    Tauschgeschäfte von Bitcoin in Fiat Währungen, um die Rechenzentren zu finanzieren. Die Auswahl des Ortes beeinflusst
-    jegliche Formen der bereits beschriebenen \acp{KPI} und beruht damit auf Daten, wie Personalgehälter, \ac{CapEx}, \ac{OpEx}
-    und Energieverbrauch der Mining Hardware. Die Auswahl der Hardware wiederum wird durch Faktoren, wie Hashrate, Ausfallszeiten
-    (Stabilität der Hardware) und dem Energieverbrauch, bestimmt. Die Tauschgeschäfte werden durch die Daten, die Tauschbörsen
-    anbieten, maßgeblich bestimmt.
+    This strategic decision is based on factors regarding location, hardware selection, and the
+    exchanges of bitcoin into fiat currencies to fund the data centers. The choice of location influences
+    any forms of the \acp{KPI} already described, and thus is based on data such as staff salaries, \ac{CapEx}, \ac{OpEx}
+    and energy consumption of mining hardware. The selection of hardware is in turn determined by factors such as hashrate, downtime
+    (stability of the hardware), and energy consumption. The exchanges are significantly determined by the data that exchanges
+    offer, to a large extent.
     
-    Nach Tabelle \ref{tbl:klassifizierunginternedaten} und \ref{tbl:klassifizierungexternedaten} sind alle diese Daten
-    strukturiert und konsistent. Daher eignen sich diese Datenquellen ohne weiteres für die Verwendung in \ac{BI} Prozessen.
-    Der \ac{ETL} Vorgang für die einzelnen Datenquellen lässt sich durch die genannten Grundeigenschaften der Daten problemlos
-    aufbauen, damit die Daten durch ein Data Warehouse für die weiteren Teilprozesse verfügbar gemacht werden. Die Verfügbarkeit
-    der verwendeten Daten unterscheidet sich je nach Datentyp. Bei Tauschbörsen sind die Daten direkt in Echtzeit abfragbar.
-    Im Gegensatz dazu gibt es bei den technischen \acp{KPI} eine Verzögerung von circa fünf bis zehn Minuten.  Systeme wie
-    \ac{ERP} und Personalerfassung liefern Daten in Echtzeit, sobald diese dem System vorliegen. Da strategische Entscheidungen,
-    wie der Neu- oder Ausbau von Mining Rechenzentren, allerdings langwierige Entscheidung sind, limitiert die Verfügbarkeit
-    die Hypothese nicht.
+    According to table \ref{tbl:klassifizierunginternedaten} and \ref{tbl:klassifizierungexternedaten}, all these data are
+    structured and consistent. Therefore, these data sources are readily suitable for use in \ac{BI} Processes.
+    The \ac{ETL} process for each data source can be easily set up using the basic properties of the data mentioned above
+    so that the data is made available by a data warehouse for the further sub-processes. The availability
+    of the used data differs depending on the data type. In the case of exchanges, the data can be queried directly in real time.
+    In contrast, technical \acp{KPI} have a delay of about five to ten minutes.  Systems like
+    \ac{ERP} and personnel recording provide data in real time as soon as it is available to the system. Since strategic decisions,
+    such as the construction or expansion of mining data centers are lengthy decisions, availability does not limit the hypothesis.
 
-    Anhand der nun verfügbaren Daten wird im folgenden Kapitel evaluiert, ob es möglich ist, diese Daten in einer Art und Weise zu
-    analysieren, sodass am Ende daraus zusätzliches Wissen generiert werden kann und damit diese Daten zur Entscheidungsunterstützung
-    verwendet werden können.
+    Based on the data now available, the following chapter evaluates whether it is possible to analyze this data
+    in such a way that in the end additional knowledge can be generated from it and thus these data can be used for decision support.
 
     \begin{figure}[H]
         \caption{Relevant KPIs, data sources and data types for sub-hypothesis 1}
@@ -303,18 +299,18 @@ durchgeführt:
         \label{figure:ht01dataflow}
     \end{figure}
 
-    \item \textbf{\ac{HT0.2}: }Diese Teilhypothese beschäftigt sich mit dem Einfluss von \ac{BI} auf die Effektivität der
-    Mining Hardware. Da diese Hypothese ausschließlich technischer Natur ist, werden dafür nur technische \acp{KPI}, wie
-    Stromverbrauch, Hashrate, Ausfallszeiten und Hardwaredefekte, benötigt. Diese Daten stammen ausschließlich aus dem
-    Überwachungssystem der Mining Hardware. Nach Tabelle \ref{tbl:klassifizierunginternedaten} sind diese Daten sowohl
-    konsistent als auch strukturiert, wodurch sich diese Daten für ein \ac{BI} Konzept eignen. Die \ac{ETL} Pipelines sind
-    für diese Art von Daten einfach zu errichten. Die verzögerte Verfügbarkeit der Daten (fünf bis zehn Minuten) stellt keine
-    Probleme für die Hypothese dar, da diese nicht zwingend auf Echtzeitdaten angewiesen ist. Gerade bei der Messung von
-    Effektivitäten im Mining Prozess braucht man längere Zeitfenster von mehreren Tagen, um belastbare Aussagen zu erhalten.
-    Anhand der Datenquellen können Faktoren berechnet werden, die Einfluss auf die Effektivität des Mining Prozesses haben.
-    Dazu gehören die Hashrate der eigenen Mining Hardware, deren Energieeffizienz ("`Reference power effiency"',
-    $\frac{J}{TH}$) und die Messung der Uptime und der Gerätedefekte, die beispielsweise durch bessere Firmwares optimiert
-    werden können.
+    \item \textbf{\ac{HT0.2}: }This sub-hypothesis deals with the influence of \ac{BI} on the effectiveness of the
+    mining hardware. Since this hypothesis is exclusively technical in nature, only technical \acp{KPI}, such as
+    power consumption, hashrate, downtime and hardware defects, are needed. This data comes exclusively from the
+    monitoring system of the mining hardware. According to table \ref{tbl:klassifizierunginternedaten}, this data is both
+    consistent and structured, making this data suitable for an \ac{BI} concept. The \ac{ETL} pipelines are
+    easy to set up for this type of data. The delayed availability of the data (five to ten minutes) poses no
+    problems for the hypothesis, since it does not necessarily rely on real-time data. Especially when measuring
+    efficiencies in the mining process, one needs longer time windows of several days to obtain robust statements.
+    Based on the data sources, factors can be calculated that have an influence on the effectiveness of the mining process.
+    These include the hashrate of one's mining hardware, its energy efficiency ("Reference power effiency"
+    $\frac{J}{TH}$) and the measurement of uptime and device defects, which for example can be optimized by better firmwares
+    can be optimized.
 
     \begin{figure}[H]
         \caption{Relevant KPIs, data sources and data types for sub-hypothesis 2}
@@ -322,23 +318,23 @@ durchgeführt:
         \label{figure:ht02dataflow}
     \end{figure}
 
-    \item \textbf{\ac{HT0.3}: }Die dritte Teilhypothese beschreibt die Verbesserung des Cashflows eines Kryptomining
-    Rechenzentrums durch die Anwendung von \ac{BI}. Um die Hypothese zu prüfen, werden technische und finanzielle \acp{KPI}
-    benötigt. Unter den technischen \acp{KPI} finden sich Parameter, wie Hashrate und Informationen aus öffentlichen
-    Blockexplorern, wie beispielsweise die Difficulty und die Hochrechnung der Netzwerkhashrate. Durch diese Informationen ist
-    der theoretische Mining Ertrag durch die Hardware prognostizierbar. Die finanziellen \acp{KPI} teilen sich in Tauschbörsen,
-    \ac{ERP} Systeme und Mining Pools auf. Die Tauschbörsen liefern Daten zu ihren Handelsgebühren und den Tauschkursen von
-    \ac{BTC}. Diese werden benötigt, um die erhaltenen Bitcoins unter möglichst guten Bedingungen in Fiat Währungen tauschen
-    zu können. Eine weitere finanzielle Datenquelle sind \ac{ERP} Systeme, die einen vollständigen finanziellen Überblick
-    aller \ac{CapEx} und \ac{OpEx} Posten bieten. Letztendlich werden noch Informationen des Mining Pools verwendet (Gebühren
-    und Ertrag), um einen Pool mit möglichst hoher Auszahlung zu identifizieren und zu verwenden. Anhand von Tabelle
-    \ref{tbl:klassifizierunginternedaten} und \ref{tbl:klassifizierungexternedaten} stellen alle Quellsysteme bei richtiger
-    Verwendung strukturierte und in sich konsistente Daten bereit. Wie bereits in den Punkten \ac{HT0.1} und \ac{HT0.2}
-    festgestellt, ist daher eine Integration in einen \ac{BI} Prozess möglich. Nicht alle benötigten Daten werden in Echtzeit
-    bereitstellt. Dazu zählen \acp{KPI}, wie Mining Pool Gebühren und Erträge (15-30 Minuten), Netzwerkhashrate (24 Stunden)
-    und Hashrate der Mining Hardware (fünf bis zehn Minuten). Da der Cashflow eine finanzielle Größe ist, die nur auf großen
-    Zeitspannen (> 1 Tag) sinnvoll errechnet werden kann, stellt diese Verzögerung kein Problem für die Verwendung der Daten
-    innerhalb eines \ac{BI} Prozesses dar.
+    \item \textbf{\ac{HT0.3}: }The third sub-hypothesis describes the improvement of the cash flow of a cryptomining
+    data Center through the application of \ac{BI}. To test the hypothesis, technical and financial \acp{KPI}
+    is needed. Among the technical \acp{KPI} are parameters, such as hashrate and information from public
+    Blockexplorers, such as Difficulty and network hashrate projection. Through this information
+    the theoretical mining yield can be predicted. The financial \acp{KPI} share in exchanges,
+    \ac{ERP} systems, and mining pools. The exchanges provide data on their trading fees and exchange rates of
+    \ac{BTC}. These are needed to exchange the received bitcoins into fiat currencies under the best possible conditions.
+    to be able to do so. Another financial data source is \ac{ERP} systems, which provide a complete financial overview
+    of all \ac{CapEx} and \ac{OpEx} items. Finally, mining pool information is still used (fees
+    and revenue) to identify and use a pool with the highest possible payout. Using table
+    \ref{tbl:klassifizierunginternedaten} and \ref{tbl:klassifizierungexternedaten}, all source systems, when properly
+    use, all source systems provide structured and consistent data. As already noted in \ac{HT0.1} and \ac{HT0.2}
+    noted, integration into a \ac{BI} Process is possible. Not all required data is provided in real time.
+    provided. These include \acp{KPI}, such as mining pool fees and yields (15-30 minutes), network hashrate (24 hours)
+    and mining hardware hashrate (five to ten minutes). Since cash flow is a financial measure that can only be calculated on large
+    time spans (> 1 day), this delay does not pose a problem for the use of the data
+    within an \ac{BI} process.
 
     \begin{figure}[H]
         \caption{Relevant KPIs, data sources and data types for sub-hypothesis 3}
@@ -346,18 +342,17 @@ durchgeführt:
         \label{figure:ht03dataflow}
     \end{figure}
 
-    \item \textbf{\ac{HT0.4}: }Die letzte Teilhypothese ist im Bereich der Personalplanung anzusiedeln und sagt aus, dass
-    diese durch die Anwendung eines \ac{BI} Prozesses optimiert werden kann. Zur Beantwortung dieser Hypothese sind sowohl
-    die technischen \acp{KPI} als auch die personellen \acp{KPI} von Bedeutung. Zu den technischen Indikatoren zählen Daten,
-    wie die Ausfallzeiten und Informationen über die Art des Hardwaredefekts. Zu den personellen \acp{KPI} zählen wiederum Daten,
-    wie Schichtpläne und Ausbildungen des Personals. Durch die Bereitstellung dieser Datenquellen ist es möglich, die
-    durchschnittliche Dauer eines Reparaturvorgangs zu errechnen und anhand dessen die Personaldecke vor Ort realistisch
-    einschätzen zu können. Nach Tabelle \ref{tbl:klassifizierunginternedaten} sind alle Daten konsistent und strukturiert,
-    wodurch eine Verwendung dieser Daten in einem \ac{BI} möglich ist. Die \ac{ETL} Pipelines sind ohne weiteres realisierbar.
-    Die technischen \acp{KPI} sind allerdings nur mit einer Verzögerung von fünf bis zehn Minuten zugänglich. Dies stellt jedoch
-    für die Realisierbarkeit dieser Hypothese kein Problem dar, da andere Daten, wie beispielsweise neue Schichtpläne, nur einmal
-    pro Monat aktualisiert werden und daher die Errechnung relevanter Ergebnisse nicht durch diese Verzögerung signifikant
-    beeinflusst wird.
+    \item \textbf{\ac{HT0.4}: }The last sub-hypothesis is in the area of human resource planning and states that this
+    can be optimized by the application of a \ac{BI} process. To answer this hypothesis, both
+    the technical \acp{KPI} as well as the human resource \acp{KPI} are relevant. Technical indicators include data,
+    such as downtime and information about the nature of the hardware defect. Personnel \acp{KPI}, in turn, include data,
+    such as shift schedules and staff training. By making these data sources available, it is possible to determine the
+    average duration of a repair process and, on the basis of this, to make a realistic assessment of the on-site
+    estimate the staffing levels on site. According to table \ref{tbl:klassifizierunginternedaten} all data are consistent and structured,
+    which makes it possible to use this data in a \ac{BI}. The \ac{ETL} pipelines are readily feasible.
+    However, the technical \acp{KPI} are only accessible with a delay of five to ten minutes. However, this represents
+    for the feasibility of this hypothesis, because other data, such as new shift schedules, are updated only once a month and therefore the
+    once a month and therefore the calculation of relevant results is not significantly affected by this delay.
 
     \begin{figure}[H]
         \caption{Relevant KPIs, data sources and data types for sub-hypothesis 4}
@@ -368,110 +363,105 @@ durchgeführt:
 
 \subsubsection{Required analysis procedures within the business intelligence process} \label{toc:analyseverfahrenbi}
 
-Um nun die Hypothesen final prüfen zu können, wird in diesem Kapitel geklärt, ob bereits etablierte Analyseprozesse dazu
-ausreichen, die relevanten Daten für eine Hypothese so nutzbar zu machen, dass daraus Wissen generiert werden kann. Um dies
-zu erreichen, werden die vorhandenen Analyseverfahren aus der Veröffentlichung von Bihani und Patil dem deskriptiven,
-vorhersagenden oder präskriptiven Paradigma von \ac{BI} zugeordnet und analysiert, ob damit die einzelnen Teilhypothesen
-beantwortet werden können:\footcite[Cf.][pp. 97]{bihani2014comparative}\footcite[Cf.][Fig. 2]{bihani2014comparative}
+In order to be able to finally test the hypotheses, this chapter clarifies whether already established analysis processes are sufficient
+to make the relevant data for a hypothesis usable in such a way that knowledge can be generated from it. In order to archieve this,
+the existing analysis processes from the publication by Bihani and Patil are subjected to descriptive, predictive or prescriptive
+paradigm of \ac{BI} and analyzed, whether the individual partial hypotheses can be
+can be answered:\footcite[Cf.][pp. 97]{bihani2014comparative}\footcite[Cf.][Fig. 2]{bihani2014comparative}
 
 \begin{itemize}
-    \item \textbf{Deskriptive Analyse: }Diese Punkt beschreibt die Analyse der vergangenen und bereits erhobenen
-    Daten. Die folgenden Analyseverfahren können für den deskriptiven Ansatz verwendet
-    werden:\footcite[Cf.][pp. 97]{bihani2014comparative}
+    \item \textbf{Descriptive analysis: }This item describes the analysis of past and already collected
+    data. The following analytical procedures can be used for the descriptive approach\footcite[Cf.][pp. 97]{bihani2014comparative}
     \begin{itemize}
-        \item \textbf{Faktorenanalyse: }Durch diese Form der Analyse werden unterliegende Strukturen in den Daten
-        herausgefunden.\footcite[Cf.][pp. 97]{bihani2014comparative} Dazu werden große multidimensionale Datensätze verwendet
-        und diese zu kleineren Datensätze reduziert, die eine Aussagekraft haben. Diese Datensätze beinhalten dadurch
-        grundlegende Faktoren, die die gemessenen großen Datensätze erklären
-        können.\footcite[Cf.][pp. 97]{bihani2014comparative} Solche Analysen sind unter anderem mittels \ac{OLAP} Systemen
-        realisierbar. Für die Beantwortung der Teilhypothesen kann diese Form der Analyse verwendet werden. Es existieren
-        in einem Data Warehouse, das die in Kapitel \ref{toc:klassifizierungderdaten} aufgeführten Daten beinhaltet, große
-        Datensätze, wie beispielsweise die Hashrate der Mining Hardware oder auch Tauschkurse von \ac{BTC} in \ac{USD}. Auch
-        ein Vergleich dieser Größen ist sinnvoll, wie beispielsweise von \ac{OpEx} und der Gesamthashrate eines Rechenzentrums.
-        Aus diesen Gründen können die Faktorenanalyse und \ac{OLAP} Systeme für alle Teilhypothesen Sinn machen.
-        \item \textbf{Clusteranalyse: }Dies ist ein Algorithmus der Ähnlichkeiten in Datensätzen identifizieren
-        kann.\footcite[Cf.][p. 98]{bihani2014comparative} Dadurch können Teilmengen der Datensätze als zusammenhängend
-        klassifiziert werden. Unter den Überbegriff Clusteranalyse fallen viele Algorithmen, die aus dem Bereich "`Data Mining"'
-        bekannt sind. Dazu zählt der "`K-Means-Algorithmus"' oder "`Nearest Neighbor"'.\footcite[Cf.][p. 98]{bihani2014comparative}
-        Das Ziel, große Datensätze durch Clustering Algorithmen zu unterteilen, bietet auch die Möglichkeit, die Strukturierung
-        der Daten weiter erforschen zu können. Gerade bei den technischen \acp{KPI} ist daher diese Form der Analyse passend.
-        Damit ist die Clusteranalyse für alle Teilhypothesen relevant und kann bei der Analyse von Hilfe sein. 
-        \item \textbf{Diskriminanzfunktionsanalyse: }Die Analyse kann die Abweichung zweier gemessener Gruppen von Werten
-        messen und dadurch bestimmen, ob eine Trennung existiert und wie stark diese
-        ist.\footcite[Cf.][p. 98]{bihani2014comparative} Die Anwendung dieser Analyse liegt klassischerweise im Verständnis
-        von demographischen Faktoren beim Kauf von Produkten.\footcite[Cf.][p. 98]{bihani2014comparative} Interessant ist diese
-        Form der Analyse für die Interpretation der identischen \acp{KPI} aus verschiedenen Rechenzentren. Gerade die Analyse von
-        Unterschieden von Daten zwischen Rechenzentren ermöglicht die Generierung von neuem Wissen und ist somit im Bereich
-        \ac{BI} von unmittelbarer Relevanz. Die Anwendung der Diskriminanzfunktionsanalyse ist daher für alle Teilhypothesen
-        sinnvoll, sobald mehr als ein Rechenzentrum betrachtet wird.
-        \item \textbf{Strukturgleichungsmodell: }Dabei werden Abhängigkeiten zwischen Variablen gebildet und mittels linearen
-        Gleichungssystemen geprüft, ob diese Beziehung tatsächlich existiert.\footcite[Cf.][pp. 98]{bihani2014comparative} Als
-        Ergebnis wird die Abhängigkeit bzw. Unabhängigkeit von dem vorgegebenen Modell
-        festgestellt.\footcite[Cf.][pp. 98]{bihani2014comparative}
-        Gerade um mögliche Abhängigkeiten zwischen den einzelnen \acp{KPI} festzustellen, kann diese Form der Analyse verwendet
-        werden. Ein einfaches Beispiel ist die Abhängigkeit von der Hashrate zum Ertrag durch den Mining Pool. Aufgrund dessen
-        findet das Strukturgleichungsmodell auch bei den vorliegenden Teilhypothesen sinnvolle Anwendung.
+        \item \textbf{Factor analysis:}Through this form of analysis, underlying structures in the data are
+        found out.\footcite[Cf.][pp. 97]{bihani2014comparative} To do this, large multidimensional data sets are
+        reduced to smaller data sets that have explanatory power. These data sets thereby include
+        fundamental factors, that can explain the measured large data sets.\footcite[Cf.][pp. 97]{bihani2014comparative}
+        Such analyses are, among others, by means of \ac{OLAP} systems
+        realizable. For answering the partial hypotheses, this form of analysis can be used. There exist
+        in a data warehouse, which contains the data listed in chapter \ref{toc:klassifizierungderdaten}, large
+        datasets, such as the hashrate of the mining hardware or exchange rates of \ac{BTC} to \ac{USD}. Also
+        a comparison of these quantities is useful, such as of \ac{OpEx} and the overall hashrate of a data center.
+        For these reasons, factor analysis and \ac{OLAP} systems can make sense for all sub-hypotheses.
+        \item \textbf{Cluster Analysis: }This is an algorithm that can identify similarities in data sets.\footcite[Cf.][p. 98]{bihani2014comparative}
+        This allows subsets of the data sets to be classified as contiguous.
+        The umbrella term cluster analysis covers many algorithms that are known from the field of "data mining".
+        These include the "K-Means algorithm" or "Nearest Neighbor".\footcite[Cf.][p. 98]{bihani2014comparative}
+        The goal of using clustering algorithms to subdivide large datasets also provides an opportunity to structure
+        the data to be further explored. Especially for technical \acp{KPI}, this form of analysis is therefore appropriate.
+        Thus, cluster analysis is relevant to all sub-hypotheses and can be of help in the analysis. 
+        \item \textbf{Discriminant function analysis: }The analysis can measure the difference between two measured groups of values
+        and thereby determine whether a separation exists and how strong it is.\footcite[Cf.][p. 98]{bihani2014comparative}
+        The application of this analysis is classically in understanding
+        of demographic factors in the purchase of products.\footcite[Cf.][p. 98]{bihani2014comparative} Of interest is this
+        form of analysis for interpreting identical \acp{KPI} from different data centers. It is precisely the analysis of
+        differences of data between data centers enables the generation of new knowledge and is thus in the field of
+        \ac{BI} of immediate relevance. The application of discriminant function analysis is therefore useful for all partial hypotheses
+        useful as soon as more than one data center is considered.
+        \item \textbf{Structural equation model: }In this process, dependencies between variables are formed and checked by means of linear
+        equation systems to test whether this relationship actually exists.\footcite[Cf.][pp. 98]{bihani2014comparative} As
+        result, the dependence or independence on the given model is determined.\footcite[Cf.][pp. 98]{bihani2014comparative}
+        It is precisely to determine possible dependencies between the individual \acp{KPI} that this form of analysis can be used.
+        A simple example is the dependency of the hashrate to the yield through the mining pool. Because of this
+        the structural equation model also finds useful application in the present partial hypotheses.
     \end{itemize}
-    Zusammenfassend ist feststellbar, dass es eine Vielzahl von verschiedenen Möglichkeiten gibt, die vorliegenden Daten zu
-    analysieren und dadurch Wissen für die Stakeholder generieren zu können. Mit Hilfe der vorliegenden Analyseformen ist
-    ein deskriptiver \ac{BI} Prozess mit den Teilhypothesen durchführbar.
-
-    \item \textbf{Vorhersagende Analyse: }Bei diesem Paradigma werden Modelle zur Vorhersage mittels verschiedener Werkzeuge
-    gebildet. Viele dieser Werkzeuge kommen aus dem Bereich der Statistik und des maschinellen
-    Lernens.\footcite[Cf.][Fig. 1]{bihani2014comparative} Folgende Formen der Analyse kommen zusätzlich zu den bereits
-    genannten Formen hinzu:
+    In summary, it can be stated that there are a variety of different ways to analyze the present data
+    and to generate knowledge for the stakeholders. With the help of the present forms of analysis
+    a descriptive \ac{BI} process with the partial hypotheses is feasible.
+    \item \textbf{Predictive Analysis: }In this paradigm, models for prediction are formed by means of various tools.
+    Many of these tools come from the field of statistics and machine
+    Learning.\footcite[Cf.][Fig. 1]{bihani2014comparative} The following forms of analysis are in addition to those already
+    mentioned above:
     \begin{itemize}
-        \item \textbf{Regressionsanalyse: }Bei dieser Form der Analyse wird die Abhängigkeit einer Variable von einer oder
-        mehreren Variablen geprüft.\footcite[Cf.][pp. 97]{bihani2014comparative} Dabei gibt es mehrere Formen, wie die lineare
-        oder die logistische Regression verwendet werden kann. Diese Analyse kann bei der Prognose der Profitabilität
-        oder von Marktanteilen sehr gut verwendet werden.\footcite[Cf.][p. 99]{bihani2014comparative} Aus diesem Grund kann
-        diese auch für die zu prüfenden Teilhypothesen von Relevanz sein. Eine Anwendung der
-        Regressionsanalyse ist die Prognose des Wertes von Bitcoins.\footcite[Cf.][p. 19]{ibrahim2020bitcoin} Prinzipiell
-        ist eine Vorhersage mit Hilfe dieser Mechanismen gut möglich. Ende 2020 sind Faktoren, wie Social Media dazugekommen,
-        die diese Form der Analyse deutlich erschweren.\footcite[Cf.][]{forbes2021musk} Demzufolge kann die Regressionsanalyse eine
-        Methodik sein, um Kurse vorhersagen zu können, muss allerdings um weitere Analysemodelle erweitert werden, um ein gutes
-        Gesamtbild zu erhalten. 
-        \item \textbf{Stochastische Analyse: }Es ist möglich Vorhersagemodelle auf Basis von stochastischen Modellen zu
-        simulieren. Ein bekanntes Beispiel für eine stochastische Analyse ist die "`Monte-Carlo-Simulation"'. Sie kann
-        beispielsweise verwendet werden, um Preisentwicklungen und Entwicklungen der Gesamthashrate von Bitcoin für die Zukunft
-        einschätzen zu
-        können.\footcite[Cf.][p. 28]{cocco2016modeling}\footcite[Cf.][]{appendix:mcszenarien}\footcite[Cf.][]{appendix:mcpreis}\footcite[Cf.][]{appendix:mchashrate}
-        Auch bei dieser Form der Simulation, die am 06.11.2020 angefertigt wurde ist feststellbar, dass diese die Entwicklungen
-        des Bitcoin Kurses Anfang 2021 nicht vorhersagen konnte.\footcite[Cf.][]{appendix:btcusd} Daher ist dieses Analysemodell für sich nicht direkt aussagekräftig,
-        sondern muss durch weitere Modellierungen unterstützt werden.
+        \item \textbf{Regression analysis: }This form of analysis tests the dependence of a variable on one or
+        several variables.\footcite[Cf.][pp. 97]{bihani2014comparative} There are several forms of this, such as linear
+        or logistic regression. This analysis can be used in forecasting profitability
+        of market shares very well.\footcite[Cf.][p. 99]{bihani2014comparative} For this reason this form of analysis
+        can be relevant for the sub-hypotheses to be tested. One application of
+        regression analysis is the prediction of the value of bitcoins.\footcite[Cf.][p. 19]{ibrahim2020bitcoin} In principle
+        a prediction using these mechanisms is quite possible. At the end of 2020, factors such as social media have been added,
+        which make this form of analysis much more difficult.\footcite[Cf.][]{forbes2021musk} Accordingly, regression analysis can be a
+        methodology to predict rates, but must be extended to include other analytical models to get a good
+        overall picture. 
+        \item \textbf{Stochastic analysis: }It is possible to simulate predictive models based on stochastic models.
+        simulate. A well-known example of a stochastic analysis is the "Monte Carlo simulation". It can
+        be used, for example, to estimate price developments and developments in the overall bitcoin hashrate for the future.\footcite[Cf.][p. 28]{cocco2016modeling}\footcite[Cf.][]{appendix:mcszenarien}\footcite[Cf.][]{appendix:mcpreis}\footcite[Cf.][]{appendix:mchashrate}
+        Also with this form of the simulation, which was made on 06.11.2020, it can be determined that these are the developments
+        of the Bitcoin price at the beginning of 2021 could not be predicted.\footcite[Cf.][]{appendix:btcusd} Therefore, this analysis model is not directly meaningful by itself,
+        but must be supported by further modeling.
     \end{itemize}
 
-    Letztendlich kann festgehalten werden, dass der Bitcoin Preis nur bedingt vorhergesagt werden kann, da einige Einflussfaktoren, wie
-    beispielsweise Social Media, nicht vorhergesagt werden können und sich mathematischen Möglichkeiten der Analyse weitestgehend entziehen.\footcite[Cf.][]{forbes2021musk}\footcite[Cf.][p. 325]{badertscher2017bitcoin}
-    Generell ist dies allerdings kein ausschließliches Problem, das bei Bitcoin auftritt. Bei den klassischen Märkten ist das gleiche
-    Problem bemerkbar. Aufgrund der hohen Volatilität des Bitcoin Kurses ist es in diesem Fall jedoch auffälliger.
-    Andere \acp{KPI}, wie beispielsweise \ac{OpEx} Kosten oder technische \acp{KPI}, sind im Gegensatz dazu prognostizierbar, da diese
-    wenig bis keine Schwankungen unterliegen und somit die Ergebnisse der deskriptiven Analyse unter diesem Paradigma weiterhin
-    verwendet werden können. 
-    Demnach ist feststellbar, dass \ac{HT0.2} und \ac{HT0.4} für Vorhersagemodelle geeignet sind, da diese ausschließlich \acp{KPI} verwendet,
-    die in ausreichender Qualität simuliert werden können. Bei \ac{HT0.1} und \ac{HT0.3} können auch vorhersagende Modelle angewendet werden,
-    wobei eine Limitation durch die Vorhersage des Bitcoin Kurses festgestellt werden kann. Dies kann durch eine geeignete Kombination der
-    Analysemodelle verbessert werden. Falls es möglich ist, die unstrukturierten und inkonsistenten Daten aus Social Media Plattformen passend zu analysieren,
-    sollten diese in die Vorhersagemodellierungen integriert werden. Um einen möglichst guten Eindruck des \ac{BTC} Kurses zu erhalten,
-    ist es wichtig mit Echtzeitverarbeitung dieser Daten zu arbeiten.
-    \item \textbf{Präskriptive Analyse: }Diese ist die höchste Stufe, die mit Hilfe von \ac{BI} Prozessen erreichbar ist. Dabei werden
-    nicht nur Entscheidungshilfen dem Management zur Verfügung gestellt sondern es werden direkt Entscheidungen dem Management durch
-    das System empfohlen. Die Analyse der Hypothese läuft ähnlich zu dem Punkt der Vorhersagemodelle, da diese Stufe von \ac{BI} auch
-    auf diesen Modellen beruht. Demgemäß ist das Ergebnis dieser Analyse identisch mit der vorherigen und \ac{HT0.2} und \ac{HT0.4} sind in dieser 
-    Stufe realisierbar. Wie bei dem vorherigen Punkt bereits aufgezeigt, haben die beiden anderen Hypothesen Limitationen, die aus
-    der schlechten Vorhersagbarkeit des Bitcoin Kurses stammen. Eine Möglichkeit, dass die beiden Teilhypothesen doch für die
-    präskriptive Analyse geeignet sind, wäre die Errechnung verschiedener Szenarien des Bitcoin Kurses und damit die Errechnung
-    verschiedener Mining Erträge. Solche Vorhersagemodelle existieren innerbetrieblich bereits durch die Monte-Carlo-Simulation der Hashrate
-    und des Bitcoin Kurses.\footcite[Cf.][]{appendix:mcpreis}\footcite[Cf.][]{appendix:mchashrate}
-    Da die Antwort auf die Umsetzbarkeit eines solchen Systems nur schwer im Zuge dieser Argumenation gegeben werden kann, wird
-    dies in der Fallstudie in Kapitel \ref{toc:planungeinesbiprozessesfuereinminingrechenzentrum} genauer betrachtet.
+    In the end, it can be stated that the Bitcoin price can only be predicted to a limited extent, as some influencing factors, such as
+    social media, cannot be predicted and largely elude mathematical means of analysis.\footcite[Cf.][]{forbes2021musk}\footcite[Cf.][p. 325]{badertscher2017bitcoin}
+    In general, however, this is not a problem exclusive to Bitcoin. In the case of traditional markets, the same
+    problem is noticeable. However, due to the high volatility of the Bitcoin price, it is more noticeable in this case.
+    In contrast, other \acp{KPI}, such as \ac{OpEx} costs or technical \acp{KPI}, are predictable, as they have
+    little to no variation, and thus the results of descriptive analysis can still be used under this paradigm.
+
+    Accordingly, it can be concluded that \ac{HT0.2} and \ac{HT0.4} are suitable for predictive models, as these exclusively use \acp{KPI}
+    which can be simulated with sufficient quality. For \ac{HT0.1} and \ac{HT0.3}, predictive models can also be applied,
+    where a limit can be established by predicting the bitcoin price. This can be improved by a suitable combination of the
+    analysis models. If it is possible to suitably analyze the unstructured and inconsistent data from social media platforms,
+    these should be integrated into the predictive modeling. To get the best possible impression of the \ac{BTC} price,
+    it is important to work with real-time processing of this data.
+    \item \textbf{Prescriptive Analysis: }This is the highest level that can be achieved using \ac{BI} processes. Thereby
+    not only decision support is provided to the management, but decisions are directly recommended to the management by the system.
+    The analysis of the hypothesis is similar to the point of predictive models, since this level of \ac{BI} is also based on these models.
+    Accordingly, the result of this analysis is identical to the previous one and \ac{HT0.2} and \ac{HT0.4}. 
+    As pointed out in the previous point, the other two hypotheses have limitations arising from
+    the poor predictability of the bitcoin price. One possibility that the two partial hypotheses are suitable for the
+    prescriptive analysis would be the calculation of different scenarios of the Bitcoin price and thus the calculation of
+    different mining yields. Such predictive models already exist in-house through Monte Carlo simulation of the hashrate
+    and the Bitcoin price.\footcite[Cf.][]{appendix:mcpreis}\footcite[Cf.][]{appendix:mchashrate}
+    Since the answer to the feasibility of such a system is difficult to give in the course of this argument, it is
+    this is considered in more detail in the case study in chapter \ref{toc:planungeinesbiprozessesfuereinminingrechenzentrum}.
 \end{itemize}
 
-Außerhalb dieser Auflistung existieren noch zusätzliche Analyseformen, wie beispielsweise die Verbundsanalyse.\footcite[Cf.][p. 97]{bihani2014comparative}
-Diese findet beispielsweise bei Analyse des Kaufverhaltens von Kunden Anwendung. Aufgrund der nicht gefundenen Relevanz für den Anwendungsfall von Kryptomining
-Rechenzentren wird diese Form nicht weiter in Betracht gezogen.
+Outside of this list, there are additional forms of analysis, such as compound analysis.\footcite[Cf.][p. 97]{bihani2014comparative}
+This is used, for example, in analysis of customer buying behavior. Due to no relevance found for the use case of cryptomining
+Data centers, this form is not considered further.
 
-In Tabelle \ref{tbl:hypothesenanalyse} sind die Ergebnisse der vorhergehenden Analyse zusammenfassend visualisiert.
+Table \ref{tbl:hypothesenanalyse} summarizes the visualization of the results of the previous analysis.
 
 \begin{table}[H]
     \caption{Possible forms of analysis of the hypotheses}
@@ -491,19 +481,19 @@ In Tabelle \ref{tbl:hypothesenanalyse} sind die Ergebnisse der vorhergehenden An
     \end{tablenotes}
 \end{table}
 
-Mit Abschluss dieses Kapitels ist geklärt, ob die Einführung eines \ac{BI} Prozesses für die jeweiligen Teilhypothesen möglich ist.
-Im nächsten Kapitel werden schlussendlich die Ergebnisse der vier Teilhypothesen verwendet, um eine erste Aussage über die Haupthypothese
-zu erhalten und damit die Forschungslücke, die diese Arbeit schließen soll, erstmalig zu beantworten.
+With the conclusion of this chapter, it is clarified whether the introduction of an \ac{BI} process is possible for the respective sub-hypotheses.
+Finally, in the next chapter, the results of the four sub-hypotheses are used in order to obtain a first statement about the main hypothesis
+and thus to answer for the first time the research gap that this thesis aims to fill.
 
 \subsection{Summarized view} \label{toc:zusammenfassendebetrachtung}
 
-Nachdem in Kapitel \ref{toc:analyseverfahrenbi} die Prüfung der einzelnen Teilhypothesen vorgenommen wurde,
-wird in diesem Teil dieses Wissen verwendet, um eine Aussage über die Haupthypothese zu erhalten.
+After testing the individual sub-hypotheses in chapter \ref{toc:analyseverfahrenbi},
+in this part this knowledge is used to obtain a statement about the main hypothesis.
 
-Es existieren vier Stufen, die bei der Analyse von Daten erreicht werden können. Diese Stufen finden sich in Abbildung
-\ref{figure:levelofanalysis}. Es wird folgend die Relevanz der Haupthypothese in den einzelnen Stufen evaluiert
-und anhand dessen die Aussagen der Teilhypothesen auf die Haupthypothese projiziert. Die Stufen teilen sich
-folgendermaßen auf:\footcite[Cf.][Fig. 2]{bihani2014comparative}
+There exist four stages that can be reached when analyzing data. These levels can be found in Figure
+\ref{figure:levelofanalysis}. In the following, the relevance of the main hypothesis in the individual levels is evaluated
+and on the basis of this the statements of the partial hypotheses are projected onto the main hypothesis. The levels are divided
+as follows:\footcite[Cf.][Fig. 2]{bihani2014comparative}
 
 \begin{figure}[H]
     \caption{Stages of data analysis}
@@ -514,42 +504,42 @@ folgendermaßen auf:\footcite[Cf.][Fig. 2]{bihani2014comparative}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Management der Daten: }Das Management der verschiedenen Daten ist ohne weiteres möglich. Alle relevanten
-    Daten sind verfügbar und können in ein Data Warehouse eingespeist werden. Diese Analyse findet sich in Kapitel
-    \ref{toc:internedatenquellen} und deren Zusammenfassungen in Tabelle \ref{tbl:klassifizierunginternedaten} und
-    \ref{tbl:klassifizierungexternedaten}. Das Management der Daten ist auch für die Haupthypothese von unmittelbarer
-    Wichtigkeit, da dies die Grundlagen für die Optimierung von Kryptomining Rechenzentren legt. Da bei allen Teilhypothesen
-    das Management der Daten möglich ist, ist es das auch für die Haupthypothese. Es ist feststellbar, dass die erste
-    Stufe ohne Probleme erreichbar ist.
-    \item \textbf{Berichtswesen: }Die zweite Stufe der Verwendung von Daten ist die Errichtung eines Berichtwesens. Ein Berichtswesen
-    verwendet die existierenden Daten der Vergangenheit, um für die Stakeholder des \ac{BI} Prozesses passende Berichte zu generieren.
-    In diesem Fall sind dies Berichte, die die Teilhypothesen abdecken und damit personeller, technischer oder finanzieller
-    Natur sind. Da diese
-    Stufe deskriptiv ist, ist auch dies nach Tabelle \ref{tbl:hypothesenanalyse} für alle vier Teilhypothesen
-    möglich. Daher ist möglich, das Berichtswesen für die Aussagen der Haupthypothese anzuwenden. Gerade diese Stufe ist für
-    die Erreichung der zentralen Aussage der Haupthypothese ("`finanzielle Optimierung"') zentral, weil dies die Grundlage
-    für die Optimierung eines Kryptomining Rechenzentrums legt.
-    \item \textbf{Analyse der Daten: }Im dritten Schritt werden die Daten tiefer analysiert, um mehr Zusammenhänge zwischen den
-    Daten feststellen zu können und damit mehr Wissen generieren zu können, was letztendlich für die Optimierung von Rechenzentren
-    weiterhin verwendet werden kann. Daher ist auch die Haupthypothese in dieser Stufe anzutreffen. Dabei werden die bereits
-    vorhandenen Daten verwendet, um Aussagen und Entscheidungshilfen zu generieren. Zu dieser Stufe gehören die
-    bereits in Kapitel \ref{toc:analyseverfahrenbi} genannten Analyseverfahren, die Unterstützung bei Entscheidungen und auch
-    die Analyse von geschäftlichen Hypothesen.
-    Da diese Stufe wieder auf den vorhandenen Daten beruht und keine direkten Vorhersagen tätigt, ist diese
-    Stufe für alle Teilhypothesen zu erreichen. Daher ist feststellbar, dass die Haupthypothese ebenfalls für diese Stufe positiv beantwortbar ist.
-    Erst ab dieser Stufe ist der eigentliche \ac{BI} Prozess erreicht, weil erst ab diesem Zeitpunkt die Unterstützung
-    bei Entscheidungen mit ins Spiel kommt. Deswegen ist eine finanzielle Optimierung von Kryptomining Rechenzentren mittels
-    \ac{BI} grundsätzlich möglich.
-    \item \textbf{Vorhersagemodelle: }Die letzte Stufe ist die Bildung von Vorhersagemodellen. Das ist der vorhersagende Teil von
-    \ac{BI} und legt die Grundlagen für präskriptive \ac{BI} Systeme. Diese Stufe ist für \ac{HT0.2} und \ac{HT0.4} ohne Probleme
-    zu erreichen. Die Probleme sind bei \ac{HT0.1} und \ac{HT0.3} ausschließlich auf die schlechte Vorhersagbarkeit von Bitcoin
-    Tauschkursen zurückzuführen. Falls es in diesem Bereich Verbesserungen gibt, kann auch diese Stufe erreichbar sein.
-    Mögliche Ansätze zur Verbesserung werden in Kapitel \ref{toc:planungeinesbiprozessesfuereinminingrechenzentrum}
-    evaluiert und letztendlich zur Einschätzung der Haupthypothese hinzugefügt. In diesem Zuge dieser Argumenation ist noch
-    keine finale Antwort auf die Haupthypothese an dieser Stelle zu finden.
+    \item \textbf{Management of data: }Management of various data is readily available. All relevant
+    data are available and can be fed into a data warehouse. This analysis can be found in chap.
+    \ref{toc:internedatenquellen} and their summaries in table \ref{tbl:klassifizierunginternedaten} and
+    \ref{tbl:klassifizierungexternedaten}. The management of the data is also of immediate
+    importance, as this lays the groundwork for optimizing cryptomining data centers. Since for all sub-hypotheses
+    the management of the data is possible, it is also for the main hypothesis. It can be stated that the first
+    stage is achievable without any problems.
+    \item \textbf{Reporting: }The second stage of the use of data is the establishment of a reporting system. A reporting system
+    uses existing past data to generate reports appropriate for the stakeholders in the \ac{BI} process.
+    In this case, these are reports that cover the sub-hypotheses and are thus of a personnel, technical, or financial
+    nature. Since this
+    stage is descriptive, this is also possible according to table \ref{tbl:hypothesenanalyse} for all four subhypotheses.
+    Therefore, it is possible to apply reporting for the statements of the main hypothesis. Just this stage is necessary for
+    achieving the central statement of the main hypothesis ("financial optimization") centrally, because this is the basis
+    for the optimization of a cryptomining data center.
+    \item \textbf{Analysis of the data: }In the third step, the data is analyzed in more depth to be able to determine more correlations between the
+    data and to generate more knowledge, which can be used for the optimization of data centers.
+    Therefore, the main hypothesis is also found in this stage. Here the already
+    existing data is used to generate statements and decision support. To this stage belong the
+    analysis procedures already mentioned in chapter \ref{toc:analyseverfahrenbi}, the support for decisions and also
+    the analysis of business hypotheses.
+    Since this stage is again based on existing data and does not make direct predictions, this
+    Stage is achievable for all sub-hypotheses. Therefore, it can be stated that the main hypothesis can also be answered positively for this stage.
+    Only at this stage the actual \ac{BI} process is reached, because only at this stage the support for decisions comes into play.
+    Therefore, a financial optimization of cryptomining data centers by means of
+    \ac{BI} is possible in principle.
+    \item \textbf{Prediction models: }The last stage is the formation of predictive models. This is the predictive part of
+    \ac{BI} and lays the foundations for prescriptive \ac{BI} Systems. This stage is easily achievable for \ac{HT0.2} and \ac{HT0.4}.
+    For \ac{HT0.1} and \ac{HT0.3}, the problems are entirely due to the poor predictability of bitcoin
+    exchange rates. If there are improvements in this area, this level may also be achievable.
+    Possible approaches to improvement are discussed in chapter \ref{toc:planungeinesbiprozessesfuereinminingrechenzentrum}
+    evaluated and ultimately added to the assessment of the main hypothesis. In this course of this argumentation there is still
+    no final answer to the main hypothesis to be found at this point.
 \end{itemize}
 
-Im nächsten Kapitel werden die Aussagen aus diesem Teil durch eine Fallstudie evaluiert, um belastbare Aussagen über
-die Hypothesen zu bekommen und diese durch zwei Methodiken zu stützen und zu erweitern. Es wird dabei der Fokus
-auf die Prüfung der Teilhypothesen in Bezug auf die Vorhersagemodelle gelegt, um diesen offenen Teil
-letztendlich beantworten zu können.
+In the next chapter, the statements made in this section are evaluated by means of a case study in order to obtain reliable statements about the
+the hypotheses and to support and extend them by two methodologies. The focus will be on the
+on the testing of the partial hypotheses in relation to the prediction models, in order to be able to answer this open part
+finally.
